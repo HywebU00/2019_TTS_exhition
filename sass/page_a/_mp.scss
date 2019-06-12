@@ -1,0 +1,1515 @@
+// 首頁區塊設定
+%common_col {
+    @include gutter;
+    @include screen('mobile') {
+        padding-bottom: 1em;
+    }
+    h2 {
+        margin: 0em -1*($grid-gutter-width/2) 1em;
+    }
+}
+%li_style {
+    padding-left: .8em;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: .5em;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 0 3px 6px;
+        border-color: transparent transparent transparent $My_primaryColor;
+        content: "";
+    }
+}
+.main {
+    .btn_grp {
+        padding: .5em 0;
+        a {
+            display: inline-block;
+        }
+    }
+    a.more {
+        margin: 1em auto .5em 0;
+        @include screen('mobile') {
+            margin: 0 auto .5em;
+            display: block;
+            width: 80%;
+        }
+    }
+    // col
+    .section {
+        padding: 0em;
+        overflow: hidden;
+        position: relative;
+        &+.section {
+            padding: 1.5em 0 2em;
+        }
+        &+.full {
+            padding: 0;
+            .col {
+                padding: 0;
+            }
+        }
+        @include screen('mobile') {
+            background: transparent !important;
+            &:nth-child(2n+1) {
+                background: #F1F1F1 !important;
+            }
+        }
+        h2 {
+            font-size: 2em;
+            text-align: left;
+            @include gutter($grid-gutter-width);
+            @include screen('mobile') {
+                text-align: center;
+            }
+        }
+        h3 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.65;
+            color: #444;
+            margin-top: 0;
+        }
+        &:last-child {
+            background: none !important;
+            &:before {
+                display: none !important;
+            }
+        }
+        &:nth-child(4n+3) {
+            background: #FAFAFA;
+            &:before {
+                content: "";
+                z-index: 0;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: -800px;
+                left: -700px;
+                width: 2000px;
+                height: 2000px;
+                background: #F1F1F1;
+                transform: rotate(-55deg);
+                @include screen('notebook') {
+                    top: -1200px;
+                    left: -1200px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(4n+1) {
+            &:before {
+                content: "";
+                z-index: 0;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: -800px;
+                left: -1400px;
+                width: 2000px;
+                height: 2000px;
+                background: lighten($My_primaryColor, 55);
+                transform: rotate(-55deg);
+                @include screen('notebook') {
+                    top: -1000px;
+                    left: -1000px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(1) {
+            padding: 0 !important;
+        }
+    }
+    .col-12 {
+        h2 {
+            text-align: left;
+            @include screen('mobile') {
+                text-align: center;
+            }
+        }
+    }
+    .col {
+        position: relative;
+        @include gutter;
+        overflow: hidden;
+        @include screen('mobile') {}
+    }
+    // 展覽資訊
+    .ex_info {
+        @include gutter;
+        &:before {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            left: $grid-gutter-width/2;
+            content: "";
+            border-left: 8px solid $My_secondaryColor;
+        }
+        time {
+            font-size: 1em;
+            float: none;
+            width: 100%;
+            display: block;
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 1em;
+            border-right: none;
+            overflow: hidden;
+            margin-left: $grid-gutter-width/2;
+            @include screen('xs_mobile') {
+                width: 100%;
+                float: none;
+                display: block;
+            }
+            span {
+                display: block;
+                font-weight: bold;
+                line-height: 1em;
+                color: #222;
+            }
+            .date {
+                display: inline-block;
+                margin-bottom: .2em;
+                height: 1em;
+                font-size: 2.3em;
+                &~.date {
+                    margin-left: 1em;
+                    position: relative;
+                    &:before {
+                        content: "~";
+                        top: .5em;
+                        left: -.8em;
+                        position: absolute;
+                    }
+                }
+            }
+            .year {
+                display: block;
+                font-size: 2em;
+                float: left;
+                margin-bottom: .2em;
+                line-height: 1em;
+                float: none;
+                font-weight: bold;
+            }
+            .month {
+                position: relative;
+                width: 1em;
+                float: left;
+                height: 1em;
+                text-align: right;
+                margin-right: .6em;
+                font-size: 1.5em;
+                @include screen('tablet') {
+                    font-size: 1.25em;
+                }
+                &:after {
+                    height: 1.25em;
+                    content: "";
+                    right: -.25em;
+                    top: .1em;
+                    position: absolute;
+                    border-left: 1px solid #777;
+                    transform: rotate(30deg);
+                }
+            }
+            .day {
+                float: left;
+                font-size: 1.5em;
+                text-align: left;
+                @include screen('tablet') {
+                    font-size: 1.25em;
+                }
+            }
+        }
+        .location {
+            font-size: 1em;
+            font-weight: bold;
+            display: block;
+            float: none;
+            width: 100%;
+            @extend %clearfix;
+            @include gutter;
+            ul {
+                @include li-reset;
+                overflow: hidden;
+                // margin-top: .5em;
+                li {
+                    margin-bottom: .5em;
+                    line-height: 1.5em;
+                    font-size: .938em;
+                    @extend %li_style;
+                }
+            }
+        }
+    }
+    .ex_btn {
+        ul {
+            @include li-reset;
+            text-align: center;
+            @include gutter;
+            padding-left: 0;
+            @include screen('mobile') {
+                padding: 1em 0;
+            }
+            li {
+                // width: calc(33% -1px);
+                width: calc(33% - 1px);
+                padding: 0;
+                display: block;
+                float: left;
+                margin: 0 1px 0 0px;
+                &:last-child {
+                    margin-right: 0;
+                    width: 34%;
+                }
+                .btn {
+                    border-radius: 0;
+                    color: #FFF;
+                    background: $My_aColor;
+                    height: 120px;
+                    padding: .2em !important;
+                    border: 1px solid $My_aColor;
+                    width: 100%;
+                    font-size: 1.25em;
+                    text-align: center;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    margin: 0;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin: 0px auto .3em;
+                        display: block;
+                    }
+                    &:hover, &:focus {
+                        background: $My_aHover;
+                        border: 1px solid $My_aHover;
+                    }
+                    @include screen('mobile') {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    // ----------------------------------- 大廣告輪播
+    .mp_slider {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @include gutter(0);
+        &:before {
+            content: "";
+            z-index: 3;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -500px;
+            left: -750px;
+            width: 1500px;
+            height: 1000px;
+            background: $My_primaryColor;
+            transform: rotate(-55deg);
+            @include screen('notebook') {
+                width: 1200px;
+            }
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+        &:after {
+            content: "";
+            // background: RGBA(0, 0, 0, .35);
+            @include background-image(linear-gradient(top, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0) 100%));
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            height: 35%;
+            top: 0;
+            left: 0;
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+        .col {
+            padding: 0;
+        }
+        ul {
+            @include li-reset;
+        }
+        .img-container {
+            @include aspect-ratio(5, 2);
+            @include screen('notebook') {
+                @include aspect-ratio(5, 2.5);
+            }
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+            .caption {
+                position: absolute;
+                width: 56%;
+                max-width: 750px;
+                top: 40%;
+                color: #FFF;
+                margin-left: -15%;
+                left: 50%;
+                z-index: 99;
+                text-shadow: 0px 0px 5px RGBA(0, 0, 0, .75);
+                @include screen('notebook') {
+                    top: 35%;
+                }
+                @include screen('mobile') {
+                    margin-left: -25%;
+                    top: 25%;
+                    width: 60%;
+                    margin-left: -30%;
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 4.5em;
+                    line-height: 1.25em;
+                    max-height: 2.5em;
+                    font-weight: bold;
+                    margin: 0;
+                    overflow: hidden;
+                    padding: 0;
+                    @include screen('tablet') {
+                        font-size: 3em;
+                    }
+                    @include screen('mobile') {
+                        font-size: 3em;
+                        max-height: 3.75em;
+                        text-align: center;
+                    }
+                    @include screen('xs_mobile') {
+                        font-size: 2em;
+                        line-height: 1.5em;
+                        max-height: 4.5em;
+                        text-align: center;
+                    }
+                }
+                p {
+                    font-size: 1em;
+                    color: #FFF;
+                    padding-left: 5px;
+                    @include screen('mobile') {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .slick-prev {
+            background: url(../vendor/slick/icon_arrow_left.png) no-repeat center center;
+            background-size: 100%;
+            left: 15px;
+            z-index: 10;
+            @include screen('mobile') {
+                left: 2%;
+            }
+        }
+        .slick-next {
+            background: url(../vendor/slick/icon_arrow_right.png) no-repeat center center;
+            background-size: 100%;
+            right: 15px;
+            z-index: 10;
+            @include screen('mobile') {
+                right: 2%;
+            }
+        }
+    }
+    // ----------------------------------- 跑馬燈
+    .marquee {
+        height: 45px;
+        display: block;
+        overflow: hidden;
+        background: #FFF;
+        margin: .5em 15px;
+        text-align: left;
+        padding: 0 3em 0 2em;
+        position: relative;
+        @include border-radius(6px);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, .2) inset;
+        @include gradient(#E1E1E1, #FEFEFE, vertical);
+        @include gutter;
+        ul {
+            @include li-reset;
+        }
+        .slick-prev {
+            width: 10px;
+            height: 10px;
+            transform: rotate(90deg);
+            right: 0px !important;
+            top: 1px !important;
+            left: auto;
+            opacity: .5;
+            background: url(../vendor/slick/icon_arrow_up_s.png) no-repeat center center;
+            background-size: 16px;
+            width: 20px !important;
+            height: 20px !important;
+            box-shadow: none;
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+            &:before {
+                width: 10px !important;
+                height: 10px !important;
+            }
+        }
+        .slick-next {
+            width: 10px;
+            height: 10px;
+            transform: rotate(-90deg);
+            right: 0px !important;
+            top: 22px !important;
+            left: auto;
+            opacity: .5;
+            width: 20px !important;
+            height: 20px !important;
+            background: url(../vendor/slick/icon_arrow_up_s.png) no-repeat center center;
+            background-size: 16px;
+            box-shadow: none;
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+            &:before {
+                width: 10px !important;
+                height: 10px !important;
+            }
+        }
+        &>div {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: block;
+            line-height: 40px;
+            margin-right: 3em;
+            font-weight: bold;
+            @include text-overflow;
+            @include aSetting_nocolor;
+        }
+    }
+    // ----------------------------------- 最新消息 & 產業消息
+    .news, .industry_news {
+        ul {
+            @include li-reset;
+            li {
+                margin-bottom: .5em;
+                overflow: hidden;
+                padding-bottom: .5em;
+                border-bottom: 1px dashed $My_line;
+                @extend %li_style;
+                time {
+                    display: block;
+                    color: #888;
+                    font-size: .813em;
+                    right: 0em;
+                    float: left;
+                    width: 80px;
+                    top: .1em;
+                    @include screen('mobile') {
+                        top: 1em;
+                    }
+                }
+                span {
+                    border-radius: .3em;
+                    display: inline-block;
+                    padding: .5em .8em;
+                    font-size: .75em;
+                    line-height: 1;
+                    margin: 0px .5em 0 0;
+                    color: #FFF;
+                    min-width: 6em;
+                    float: left;
+                    text-align: center;
+                    &.tag {
+                        background: $color-orange;
+                    }
+                    &.top {
+                        background: $color-red;
+                    }
+                }
+                a {
+                    display: block;
+                    clear: both;
+                    // overflow: hidden;
+                    @include aSetting_nocolor;
+                    @include screen('mobile') {
+                        margin-top: .3em;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .news_list {
+            @extend %common_col;
+            overflow: hidden;
+            @include screen('mobile') {
+                padding: 0 0 1em;
+                clear: both;
+            }
+        }
+        .pic {
+            @extend %common_col;
+            float: right;
+            width: 50%;
+            @include screen('mobile') {
+                width: 100%;
+                float: none;
+                padding: 0 0 1em;
+            }
+            a {
+                p {
+                    color: lighten($My_colorWord, 10);
+                    height: 3em;
+                    line-height: 1.5em;
+                    display: block;
+                    overflow: hidden;
+                    font-size: .938em;
+                }
+                &:hover, &:focus {
+                    p {
+                        color: $My_aHover;
+                    }
+                    .img-container {
+                        &:after {
+                            height: 10em;
+                        }
+                    }
+                }
+            }
+            .img-container {
+                text-shadow: 0px 0px 5px RGBA(0, 0, 0, .8);
+                @include aspect-ratio(2, 1);
+                margin-bottom: .5em;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    object-fit: cover;
+                }
+                &:after {
+                    content: "";
+                    @include gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100), vertical);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 5em;
+                    z-index: 1;
+                    transition: .3s ease-out;
+                }
+                time {
+                    position: absolute;
+                    width: 120px;
+                    height: 60px;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+                    color: #FFF;
+                    font-weight: bold;
+                    span {
+                        position: absolute;
+                    }
+                    .day {
+                        width: 65px;
+                        font-size: 3em;
+                        height: 46px;
+                        bottom: 10px;
+                        left: 5px;
+                        line-height: 1em;
+                        vertical-align: middle;
+                        border-right: 1px solid #EEE;
+                        text-align: right;
+                        padding-right: 5px;
+                    }
+                    .month {
+                        width: 40px;
+                        font-size: 2em;
+                        right: 5px;
+                        font-size: 1em;
+                        top: .2em;
+                    }
+                    .year {
+                        width: 40px;
+                        font-size: 2em;
+                        right: 5px;
+                        font-size: 1em;
+                        top: 1.8em;
+                    }
+                }
+                .title {
+                    position: absolute;
+                    @include text-overflow;
+                    font-weight: bold;
+                    left: 130px;
+                    bottom: 1em;
+                    font-size: 1.25em;
+                    z-index: 2;
+                    color: #FFF;
+                    right: 10px;
+                }
+            }
+        }
+    }
+    // ----------------------------------- 產業消息
+    .industry_news {
+        .pic {
+            float: left;
+        }
+    }
+    // ----------------------------------- 主題報導
+    .topic {
+        .topic_intro {
+            h2 {
+                @include gutter(0);
+                text-align: center;
+            }
+            overflow: hidden;
+            @include gutter($grid-gutter-width*2);
+            @include screen('mobile') {
+                @include gutter;
+            }
+        }
+        .img-container {
+            @include aspect-ratio(5, 2);
+            width: 60%;
+            @include screen('mobile') {
+                width: 100%;
+            }
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+        .item {
+            @extend %clearfix;
+            margin: 0px auto 2em;
+            .img-container {
+                float: left;
+                margin: 0px 1em 1em 0;
+                @include screen('xs_mobile') {
+                    float: none;
+                    margin: 0px auto .5em;
+                }
+            }
+            &:nth-child(2n) {
+                .img-container {
+                    float: right;
+                    margin: 0px 0 1em 1em;
+                }
+            }
+        }
+    }
+    // ----------------------------------- 精選活動
+    .event {
+        .item {
+            height: 180px;
+            @extend %clearfix;
+            overflow: hidden;
+            background: darken($secondaryColor, 30);
+            @include screen('mobile') {
+                height: auto;
+                margin-bottom: 1em;
+                padding-bottom: 1em;
+            }
+            &:nth-child(3n+1) {
+                background: darken($secondaryColor, 40);
+            }
+            &:nth-child(3n+2) {
+                background: darken($secondaryColor, 20);
+            }
+            &:hover {
+                background: darken($primaryColor, 30);
+            }
+            .event_intro {
+                padding: 1em;
+                float: left;
+                width: 70%;
+                position: relative;
+                text-shadow: 0px 0px 5px RGBA(0, 0, 0, .75);
+                @include screen('mobile') {
+                    width: 100%;
+                    float: none;
+                    padding: .2em .5em;
+                }
+                span {
+                    margin: .2em 0;
+                }
+                time {
+                    font-size: 1em;
+                    float: none;
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                    overflow: hidden;
+                    border-right: none;
+                    @include screen('mobile') {
+                        float: none;
+                        display: block;
+                        position: absolute;
+                        max-width: 170px;
+                        min-width: 80px;
+                        height: 60px;
+                        left: 0;
+                        @include gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 0), horizontal);
+                        top: -60px;
+                        z-index: 2;
+                        padding: .5em;
+                    }
+                    span {
+                        display: block;
+                        font-weight: bold;
+                        line-height: 1em;
+                        color: #FFF;
+                    }
+                    .date {
+                        display: inline-block;
+                        margin-bottom: .2em;
+                        min-height: 1em;
+                        &~.date {
+                            margin-left: 1em;
+                            position: relative;
+                            &:before {
+                                content: "~";
+                                top: .5em;
+                                left: -.8em;
+                                position: absolute;
+                            }
+                        }
+                    }
+                    .year {
+                        display: block;
+                        font-size: 1em;
+                        float: left;
+                        margin-bottom: .2em;
+                        line-height: 1em;
+                        float: none;
+                        font-weight: bold;
+                    }
+                    .month {
+                        position: relative;
+                        width: 1em;
+                        float: left;
+                        height: 1em;
+                        text-align: right;
+                        margin-right: 1em;
+                        font-size: 1.5em;
+                        @include screen('mobile') {
+                            font-size: 1.25em;
+                        }
+                        &:after {
+                            height: 1.25em;
+                            content: "";
+                            right: -.5em;
+                            top: -.1em;
+                            position: absolute;
+                            border-left: 1px solid #FFF;
+                            transform: rotate(30deg);
+                        }
+                    }
+                    .day {
+                        float: left;
+                        font-size: 1.5em;
+                        text-align: left;
+                        @include screen('mobile') {
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+                h3 {
+                    font-size: 2em;
+                    line-height: 1em;
+                    @include text-overflow;
+                    margin: 0em 0 .3em;
+                    @include screen('mobile') {
+                        font-size: 1.25em;
+                        line-height: 1.25em;
+                        margin: .3em 0 .5em;
+                        white-space: normal;
+                        overflow: visible;
+                    }
+                }
+                p {
+                    color: #FFF;
+                    line-height: 1.5em;
+                    display: block;
+                    overflow: hidden;
+                    font-size: .938em;
+                    height: 3em;
+                }
+            }
+            a {
+                overflow: hidden;
+                display: block;
+                position: relative;
+                color: #FFF;
+                .img-container {
+                    width: 28%;
+                    float: left;
+                    height: 180px;
+                    margin: 0px .5em 0 0;
+                    @include aspect-ratio(2, 1);
+                    @include screen('mobile') {
+                        width: 100%;
+                        height: auto;
+                        margin: 0;
+                        float: none;
+                    }
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    // ----------------------------------- 論壇/研討會
+    .seminar {
+        .seminar_intro {
+            @extend %common_col;
+            overflow: hidden;
+        }
+        .pic {
+            @extend %common_col;
+            padding: 0;
+            float: right;
+            width: 50%;
+            margin-bottom: 1em;
+            @include screen('mobile') {
+                float: none;
+                width: 100%;
+            }
+        }
+        .img-container {
+            @include aspect-ratio(2, 1);
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: contain;
+            }
+        }
+    }
+    // ----------------------------------- 創新設計獎
+    .award {
+        .img-container {
+            @include aspect-ratio(4, 3);
+            display: block;
+            position: relative;
+            border: 1px solid $My_line;
+            margin-bottom: .5em;
+            background: #FFF;
+            float: right;
+            width: 40%;
+            margin: 0px 0px 1em 2em;
+            @include screen('xs_mobile') {
+                width: 100%;
+                margin: 0px auto 1em;
+                float: none;
+            }
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: contain;
+            }
+        }
+        .award_intro {
+            @include screen('xs_mobile') {
+                height: 3em;
+                overflow: hidden;
+                ul {
+                    display: none;
+                }
+            }
+            h3 {
+                font-size: 1.25em;
+                @include screen('xs_mobile') {
+                    @include text-overflow;
+                }
+            }
+            p {
+                max-height: 9em;
+                overflow: hidden;
+                display: block;
+                line-height: 1.5em;
+                @include screen('xs_mobile') {
+                    display: none;
+                }
+            }
+            overflow: hidden;
+            ul {
+                padding: 0;
+            }
+            li {
+                margin: .5em 0;
+                display: block;
+                color: darken($My_secondaryColor, 15);
+            }
+        }
+        .pic {
+            ul {
+                @include li-reset;
+                padding: 0 $grid-gutter-width;
+                li {
+                    clear: both;
+                    overflow: hidden;
+                    margin-bottom: 1em;
+                    border-bottom: 1px solid darken($My_line, 20);
+                }
+            }
+            .award_intro {
+                ul {
+                    @include li-reset;
+                    li {
+                        margin-bottom: .5em;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .slider {
+            ul {
+                li {
+                    clear: none;
+                    margin-bottom: 0em;
+                    overflow: hidden;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    // ----------------------------------- 精選商品
+    .feature {
+        .feature_intro {
+            @extend %common_col;
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(4);
+            @include make-lg-column(4);
+        }
+        .pic {
+            @extend %common_col;
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(8);
+            @include make-lg-column(8);
+        }
+        .feature_intro {
+            a.more {
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+        }
+        .slider {
+            ul {
+                li {
+                    padding: 0 $grid-gutter-width/2;
+                }
+            }
+            a.more {
+                display: none;
+                @include screen('mobile') {
+                    display: block;
+                }
+            }
+        }
+        ul {
+            @include li-reset;
+            padding: 0 $grid-gutter-width/2;
+            li {
+                padding: $grid-gutter-width;
+                a {
+                    .img-container {
+                        @include aspect-ratio(4, 3);
+                        display: block;
+                        position: relative;
+                        border: 1px solid $My_line;
+                        margin-bottom: .5em;
+                        background: #FFF;
+                        img {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            object-fit: contain;
+                        }
+                    }
+                    .caption {
+                        .title {
+                            font-weight: bold;
+                            margin-bottom: .5em;
+                            color: #222;
+                        }
+                        p {
+                            color: lighten($color-word, 20);
+                            margin: 0;
+                            height: 3em;
+                            line-height: 1.5em;
+                            overflow: hidden;
+                            display: block;
+                        }
+                    }
+                    &:hover, &:focus {
+                        .img-container {
+                            border: 1px solid darken($My_line, 10);
+                        }
+                        .caption {
+                            .title {
+                                color: $aHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ----------------------------------- 產品型錄
+    .product {
+        .slider {
+            @include gutter;
+            .slick-prev {
+                background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+                background-size: 80%;
+                left: -25px;
+            }
+            .slick-next {
+                background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+                background-size: 80%;
+                right: -25px;
+            }
+            ul {
+                overflow: visible;
+            }
+        }
+        ul {
+            @include li-reset;
+            overflow: hidden;
+            li {
+                float: left;
+                display: block;
+                width: 20%;
+                text-align: center;
+                padding: $grid-gutter-width/2;
+                @include screen('tablet') {
+                    width: 25%;
+                }
+                @include screen('xs_mobile') {
+                    width: 50%;
+                }
+                a {
+                    @include aspect-ratio(4, 3);
+                    display: block;
+                    position: relative;
+                    border: 1px solid $My_line;
+                    background: #FFF;
+                    &:hover, &:focus {
+                        border: 1px solid darken($My_line, 10);
+                        span {
+                            bottom: 0;
+                        }
+                    }
+                    span {
+                        @include text-overflow;
+                        background: RGBA(0, 0, 0, .65);
+                        color: #FFF;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -2.5em;
+                        height: 2.5em;
+                        line-height: 2.5em;
+                        padding: 0 .5em;
+                        transition: .3s ease;
+                    }
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    // ----------------------------------- 交通指引
+    .loaction {
+        .loaction_intro {
+            @extend %common_col;
+            padding: 0;
+            float: left;
+            width: 33%;
+            margin-bottom: 1em;
+            @include gutter;
+            @include screen('mobile') {
+                float: none;
+                width: 100%;
+            }
+            h2 {
+                @include gutter(0);
+            }
+        }
+        .pic {
+            @extend %common_col;
+            overflow: hidden;
+        }
+        p {
+            span {
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+        }
+        .pic {
+            min-height: 22em;
+            iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+        ul {
+            @include li-reset;
+            li {
+                margin-bottom: .5em;
+                @extend %li_style;
+            }
+        }
+        .google_map {
+            iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    // 首頁輪播
+    // .mpSlider {
+    //     width: 100%;
+    //     padding-bottom: 3em;
+    //     @include gutter(0);
+    //     .img-container {
+    //         @include aspect-ratio(5, 2);
+    //     }
+    // }
+    // ----------------------------------- 廣告輪播
+    .ad {
+        @include gutter();
+        @include screen('mobile') {
+            @include gutter();
+        }
+        ul {
+            @include li-reset;
+            @include gutter;
+        }
+        .slider {
+            ul {
+                li {
+                    display: block;
+                    @include screen('notebook') {
+                        margin: 0px 15px !important;
+                    }
+                    @media screen and (min-width: 1023px) {
+                        margin: 0px 15px !important;
+                    }
+                    @include screen('mobile') {
+                        margin: 0px 15px !important;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0px 15px !important;
+                    }
+                }
+            }
+        }
+        li {
+            float: left;
+            box-sizing: border-box;
+            width: 198px;
+            height: 70px;
+            margin: 0px 15px 1.5em;
+            background: #FFF;
+            position: relative;
+            @include screen('notebook') {
+                width: 22%;
+                margin: 0px 1.5% 1.5em;
+            }
+            @include screen('mobile') {
+                width: 30%;
+                margin: 0px 1.5% 1.5em;
+            }
+            @include screen('xs_mobile') {
+                width: 45%;
+                margin: 0px 2.5% 1.5em;
+            }
+            a {
+                display: block;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                &:before {
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    position: absolute;
+                    box-shadow: 0px 0px 0px 1px $My_line inset;
+                    z-index: 1;
+                }
+                img {
+                    // position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    // ----------------------------------- 影音專區
+    .video {
+        @include gutter();
+        @include screen('mobile') {
+            @include gutter();
+        }
+        ul {
+            @include li-reset;
+            @include gutter;
+        }
+        .slider {
+            ul {
+                li {
+                    display: block;
+                    margin: 0px 15px 1.5em !important;
+                }
+            }
+        }
+        li {
+            float: left;
+            box-sizing: border-box;
+            margin: 0px 15px 1.5em;
+            position: relative;
+            .img-container {
+                width: 96%;
+                margin: 0px auto .5em;
+                @include aspect-ratio(16, 9);
+                height: auto;
+                p {
+                    display: none;
+                }
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            span.title {
+                @include gutter;
+                text-align: left;
+                font-weight: bold;
+                @include text-overflow;
+            }
+        }
+    }
+    // ----------------------------------- 活動照片
+    .photo {
+        @include gutter();
+        @include screen('mobile') {
+            @include gutter();
+        }
+        ul {
+            @include li-reset;
+            @include gutter();
+        }
+        .slider {
+            ul {
+                li {
+                    display: block;
+                    margin: 0px 20px 1.5em !important;
+                }
+            }
+        }
+        li {
+            float: left;
+            box-sizing: border-box;
+            @include aspect-ratio(4, 3);
+            margin: 0px 15px 1.5em;
+            background: #FFF;
+            position: relative;
+            a {
+                display: block;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                &:hover, &:focus {
+                    span.title {
+                        bottom: 0;
+                    }
+                }
+                span.title {
+                    position: absolute;
+                    bottom: -4em;
+                    width: 100%;
+                    text-align: left;
+                    left: 0;
+                    height: 4em;
+                    line-height: 4em;
+                    color: #FFF;
+                    padding: .5em 1em;
+                    transition: .3s ease-out;
+                    @include text-overflow;
+                    @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .95) 70%));
+                }
+                &:before {
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    position: absolute;
+                    box-shadow: 0px 0px 0px 1px $My_line inset;
+                    z-index: 1;
+                }
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: 0 auto;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    // ----------------------------------- video_bg
+    .video_bg {
+        .video-container {
+            @include aspect-ratio(4, 1.2);
+            position: relative;
+            @media screen and (min-width: 1400px) {
+                @include aspect-ratio(5, 1);
+            }
+            @media screen and (max-width: 767px) {
+                @include aspect-ratio(2, 1);
+            }
+            video, iframe {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+            }
+            iframe {
+                height: 100%;
+            }
+            .caption {
+                position: absolute;
+                left: 50%;
+                width: 40%;
+                margin-left: -20%;
+                top: 10%;
+                z-index: 3;
+                @include screen('xs_mobile') {
+                    width: 80%;
+                    top: 8%;
+                    margin-left: -40%;
+                }
+                h2, h3, h4, p {
+                    text-align: center;
+                    margin-top: 0;
+                    color: #FFF;
+                    text-shadow: 0px 0px 5px RGBA(0, 0, 0, .75);
+                    margin-bottom: .25em;
+                }
+                h2 {
+                    @include text-overflow;
+                }
+                p {
+                    max-height: 3em;
+                    overflow: hidden;
+                    display: block;
+                    line-height: 1.5em;
+                }
+                a.more {
+                    background: RGBA(0, 0, 0, .15);
+                    border: 1px solid #FFF;
+                    transition: .3s ease;
+                    &:hover, &:focus {
+                        background: RGBA(0, 0, 0, .35);
+                    }
+                }
+            }
+            &:after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                @include gradient(darken($primaryColor, 5), adjust_hue(saturate(darken($primaryColor, 4), 12), -27), horizontal);
+                opacity: .8;
+                content: "";
+                z-index: 2;
+            }
+        }
+    }
+}
