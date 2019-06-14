@@ -98,7 +98,6 @@ $(function() {
     });
     _nav.clone(true).prependTo(_mArea);
     _menu.clone(true).prependTo(_mArea);
-    
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
@@ -121,9 +120,10 @@ $(function() {
                 $(this).off('mouseenter,mouseleave');
             });
             // 第一層選單
-            _sidebar.find('.menu').find('li.hasChild>a').off().click(function() {
+            _sidebar.find('.menu').find('li.hasChild>a').off().click(function(e) {
                 $(this).next().stop(true, true).slideToggle();
                 $(this).parent().siblings().find('ul').stop(true, true).slideUp();
+                e.preventDefault();
             });
             // // 第二層選單
             // liHasChild_level2.off().on('click', function(e) {
@@ -141,7 +141,6 @@ $(function() {
             _body.off('touchmove');
             $('.m_search').hide();
             $('.language').find('ul').hide();
-            
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -173,12 +172,12 @@ $(function() {
                     $('.menu').find('li ul').hide();
                 }
             });
-            $("html").niceScroll({
-                cursorborder: "1px solid transparent",
-                emulatetouch: true,
-                scrollspeed: 40,
-                cursorcolor: "RGBA(0,0,0,.3)"
-            });
+            // $("html").niceScroll({
+            //     cursorborder: "1px solid transparent",
+            //     emulatetouch: true,
+            //     scrollspeed: 40,
+            //     cursorcolor: "RGBA(0,0,0,.3)"
+            // });
         }
     }
     //設定resize 計時器
@@ -211,18 +210,19 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    var hh = $('.header').outerHeight(true),
-        menuH = _menu.outerHeight(),
-        navH = $('.navbar').height();
+    var hh = Math.floor($('.header').height()),
+        menuH = Math.floor(_menu.height());
     $(window).bind("load scroll resize", function(e) {
         ww = _window.outerWidth();
         if ($(window).scrollTop() > hh - menuH) {
+            _search.hide();
             if (ww >= wwSmall) {
                 $('.header').addClass('fixed');
                 // $('.header').css('margin-top', menuH - hh);
-                 $('.header').css('margin-top', -46);
+                $('.header').css('margin-top', menuH - hh+40);
                 // $('.main').css('margin-top', -menuH);
-                $('.main').css('margin-top', 0);
+                $('.main').css('margin-top', hh);
+                
             } else {
                 $('.header').removeClass('fixed');
                 $('.header').css('margin-top', 0);
@@ -231,7 +231,6 @@ $(function() {
         } else {
             $('.header').removeClass('fixed');
             $('.header').css('margin-top', 0);
-            $('.header').css('margin-top', -1 * $(this).scrollTop());
             $('.main').css('margin-top', 0);
         }
     });

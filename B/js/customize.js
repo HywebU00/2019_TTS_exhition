@@ -300,4 +300,26 @@ $(function() {
             }
         }]
     });
+    // 
+    $(window).on("load resize", function(e) {
+        var WindowWidth = $(window).outerWidth();
+        var cellDiv1 = $(".col-8-4").find('.col');
+        var loactionH = $('.loaction .pic').height();
+        console.log(loactionH);
+        if (WindowWidth >= 768) {
+            $('.loaction_intro').height(loactionH);
+            $(".col-8-4 .container").each(function() {
+                var highestBox = 0;
+                $(cellDiv1, this).each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+                });
+                $(cellDiv1, this).height(highestBox);
+            });
+        } else {
+            $(cellDiv1, this).removeAttr('style');
+            $('.loaction_intro').removeAttr('style');
+        }
+    });
 });

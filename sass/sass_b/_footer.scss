@@ -1,6 +1,6 @@
 footer {
-    color: $My_WhiteColor;
-    background: $My_footerColor;
+    color: #FFF;
+    background: #333;
     @include box-sizing(border-box);
     @extend %clearfix;
     text-align: left;
@@ -22,7 +22,7 @@ footer {
         a{
             display:inline-block;
             margin: 0px .5em ;
-            color:#FFF;
+            @include aSetting_whitecolor;
             img{
                 height:2em;
                 display:inline-block;
@@ -32,7 +32,7 @@ footer {
         }
     }
     a {
-        @include aSetting;
+        @include aSetting_whitecolor;
     }
     .footer_info {
         @include make-xs-column(12);

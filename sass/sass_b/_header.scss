@@ -1,15 +1,19 @@
 //header
 .header {
-    position: fixed;
+    * {
+        // outline: 1px solid red;
+    }
+    position: relative;
     width: 100%;
     z-index: 99;
     @extend %clearfix;
+    background:#FFF;
+    box-shadow: 0px 3px 5px RGBA(0, 0, 0, .5);
     @include screen('tablet') {
         position: fixed;
         width: 100%;
         height: 60px;
         background: #FFF;
-        box-shadow: 0px 3px 5px RGBA(0, 0, 0, .5);
     }
     .menu {
         @include screen('tablet') {
@@ -17,18 +21,18 @@
         }
     }
     // 虛擬底色 - navigation bg
-    // &:before {
-    //     content: "";
-    //     width: 100%;
-    //     height: 2.4em;
-    //     background: RGBA(0,0,0,.75);
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     @include screen('tablet') {
-    //         display: none;
-    //     }
-    // }
+    &:before {
+        content: "";
+        width: 100%;
+        height: .5em;
+        @include gradient($My_primaryColor,$My_secondaryColor,horizontal);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include screen('tablet') {
+            display: none;
+        }
+    }
     // mobile btn for extend
     %mobileCtrlBtn {
         width: 60px;
@@ -55,9 +59,13 @@
         overflow: visible;
         @include gutter;
         position: relative; // menu
+        @include screen('mobile') {
+            @include gutter(0);
+        }
         .sidebarCtrl {
             display: none;
             left: 0px;
+            
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
@@ -75,16 +83,23 @@
                     top: 65%;
                 }
             }
+            @include screen('mobile') {
+                background: $primaryColor;
+                span{
+                    background: #FFF;
+                }
+            }
         }
         // search
         .searchCtrl {
             display: block;
             font-size: 0em;
             position: absolute;
-            right: 15px;
-            top: 2px;
+            right: 24px;
+            top: 11px;
             width: 36px;
             height: 36px;
+            background: $My_primaryColor;
             @extend %mobileCtrlBtn;
             &:before {
                 width: 24px;
@@ -103,6 +118,7 @@
                 height: 60px;
                 top: 0;
                 right: 0;
+                background: #FFF;
                 &:before {
                     width: 30px;
                     height: 30px;
@@ -116,11 +132,9 @@
     }
     h1 {
         position: relative;
-        top: 0;
-        left: 0;
         width: 300px;
-        height: 100px;
-        margin: 0;
+        height: 80px;
+        margin: -40px 0 0 0;
         float: left;
         padding: 0;
         @include box-sizing;
@@ -139,11 +153,11 @@
             padding: 0px 60px;
             text-align: center;
             height: 60px;
+            margin: 0;
             a {
                 width: 200px;
                 height: 60px;
                 margin: 0px auto;
-                padding-top: 14px;
                 img {
                     width: 100%;
                     height: auto;
@@ -161,10 +175,11 @@
         }
         @extend %clearfix;
         overflow: hidden;
-        width: 100%;
         margin-bottom: .5em;
         box-sizing:border-box;
         font-size:.938em;
+        padding-left: 320px;
+        margin-top: .5em;
         @include screen('tablet') {
             display: none;
         }
@@ -185,21 +200,21 @@
                 display: inline-block;
                 padding: .5em;
                 text-decoration: none;
-                @include aSetting_whitecolor;
+                @include aSetting_nocolor;
             }
         }
         .language {
             position: absolute;
             right: 160px;
-            top: .42em;
+            top: .75em;
             ul {
                 display: none;
             }
         }
         .btn_login {
             position: absolute;
-            right: 60px;
-            top: 0px;
+            right: 65px;
+            top: .75em;
             background: $My_primaryColor;
             color: #FFF;
             border: none;
@@ -216,14 +231,13 @@
 .search {
     width: 400px;
     position: absolute;
-    top: 3em;
-    right: 15px;
+    top: 3.5em;
+    right: 24px;
     vertical-align: middle;
     padding: .5em 1em;
-    background: #FFF;
+    background: rgba(0,0,0,.85);
     z-index: 999;
     @include box-sizing;
-    box-shadow: 1px 1px 5px RGBA(0, 0, 0, .75);
     display: none;
     &:before {
         position: absolute;
@@ -234,7 +248,7 @@
         height: 0;
         border-style: solid;
         border-width: 0 3px 6px 3px;
-        border-color: transparent transparent #ffffff transparent;
+        border-color: transparent transparent rgba(0,0,0,.85) transparent;
     }
     // animation: showSearch .3s ease-out;
     @include screen('mobile') {
@@ -269,19 +283,19 @@
                 }
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
-                    color: #666;
+                    color: #DDD;
                 }
                 &::-moz-placeholder {
                     /* Firefox 19+ */
-                    color: #666;
+                    color: #DDD;
                 }
                 &:-ms-input-placeholder {
                     /* IE 10+ */
-                    color: #666;
+                    color: #DDD;
                 }
                 &:-moz-placeholder {
                     /* Firefox 18- */
-                    color: #666;
+                    color: #DDD;
                 }
             }
             &[type="submit"] {
@@ -382,6 +396,7 @@
                 width: 100%;
                 margin: 0;
                 padding: .5em 45px .4em .5em;
+                color:#FFF;
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
                     color: #FFF;
@@ -452,7 +467,7 @@
     right: 0;
     top: 0;
     box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, .8);
     z-index: 999;
     @include screen('tablet') {
         background: #FFF;
@@ -468,6 +483,15 @@
         >ul {
             border: none;
             >li {
+                &.hasChild {
+                    >a {
+                        &:after {
+                            border: 2px solid #FFF;
+                            border-bottom: none;
+                            border-left: none;
+                        }
+                    }
+                }
                 >a {
                     color: #FFF;
                 }

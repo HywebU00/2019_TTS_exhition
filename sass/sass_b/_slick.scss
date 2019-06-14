@@ -1,13 +1,42 @@
 // slick_arrow
 .slick-prev {
-    background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center transparent;
-    background-size: 80%;
-    left: -10px;
+    background: url(../vendor/slick/icon_arrow_left.png) no-repeat center center $My_primaryColor !important;
+    background-size: 60% !important;
+    left: -100px;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    transition: .3s ease-out;
+    @include screen('mobile') {
+        left: 10px;
+    }
 }
 .slick-next {
-    background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center transparent;
-    background-size: 80%;
-    right: -10px;
+    background: url(../vendor/slick/icon_arrow_right.png) no-repeat center center $My_primaryColor !important;
+    background-size: 60% !important;
+    right: -100px;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    transition: .3s ease-out;
+    @include screen('mobile') {
+        right: 10px;
+    }
+}
+.slick-slider {
+    overflow: hidden;
+    &:hover {
+        .slick-prev {
+            background: url(../vendor/slick/icon_arrow_left.png) no-repeat center center $My_primaryColor;
+            background-size: 60%;
+            left: 10px;
+        }
+        .slick-next {
+            background: url(../vendor/slick/icon_arrow_right.png) no-repeat center center $My_primaryColor;
+            background-size: 60%;
+            right: 10px;
+        }
+    }
 }
 // slick dots
 .slick-dots {

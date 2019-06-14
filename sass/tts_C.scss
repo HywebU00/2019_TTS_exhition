@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+// 共通
+@import "sass_c/_variable_c";				//變數
+@import "common/_normalize";				//reset
+@import "common/_mixin";					//客製MIXIN
+@import "common/_typography";				//CP文字排版
+@import "common/_font";						//文字設定
+
+// 元素
+@import "common/_grid";						//格線
+@import "common/_breadcrumb";				//麵包屑
+@import "common/_divider";					//分隔線
+@import "common/_btn";						//按鈕設定
+@import "common/_hr";						//分隔線
+@import "common/_image";					//圖片
+@import "common/_tooltip";					//tooltip
+@import "common/_tabs";						//頁籤
+@import "common/_table";					//表格
+@import "common/_form";						//表單
+@import "common/_icon";						//圖示
+@import "common/_element";					//小元素
+
+// 模組
+@import "sass_c/_header";					//header
+@import "sass_c/_language";					//語言選單
+@import "sass_c/_menu";						//menu
+@import "sass_c/_footer";					//footer
+@import "sass_c/_fatfooter";				//fatfooter
+@import "sass_c/_function";					//function功能區塊
+@import "sass_c/_modal";					//pop視窗
+@import "common/_paginations";				//分頁
+@import "sass_c/_thumbnail";				//縮圖
+@import "sass_c/_category";					//標籤
+@import "sass_c/_lightbox";					//燈箱
+@import "sass_c/_share";					//社群分享
+@import "sass_c/_tag";						//文章標籤
+@import "sass_c/_fontsize";					//控制文章字體大小
+@import "common/_notice";					//提示
+@import "common/_function_panel";			//內頁功能面板
+
+// 頁面
+@import "page_c/_template";					//版型初始設定
+@import "page_c/_mp";						//首頁
+@import "page_c/_lp";						//LP
+@import "page_c/_np";						//NP
+@import "page_c/_cp";						//CP
+@import "page_c/_fp";						//Forward
+@import "page_c/_qp";						//QP
+@import "page_c/_sitemap";					//Sitemap
+
+// 外掛
+@import "sass_c/_slick";					//slick
+
+// 無障礙
+@import "sass_c/_nojs";						//無障礙關閉js設定
+
+// 列印
+@import "sass_c/_print";					//列印樣式
+
+
+
+
+
+
+
+

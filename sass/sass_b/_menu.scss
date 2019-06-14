@@ -10,7 +10,6 @@
         text-align: left;
         margin: 0;
         padding: 0;
-        border-bottom: 1px solid #FFF;
         padding-right: 50px;
         // 第一層選單樣式
         >li {
@@ -23,11 +22,11 @@
                 min-height: 2.5em;
                 font-weight: bold;
                 line-height: 2.5em;
-                color: #FFF;
+                color: #333;
                 text-align: center;
                 &:hover, &:focus {
                     background: $My_primaryColor;
-                    color: #FFF;
+                    color: $My_aHover;
                 }
             }
             &.hasChild {
@@ -39,7 +38,7 @@
                         display: inline-block;
                         margin-left: .5em;
                         vertical-align: middle;
-                        border: 2px solid #FFF;
+                        border: 2px solid $My_aHover;
                         transform: rotate(135deg);
                         border-bottom: none;
                         border-left: none;
@@ -50,8 +49,9 @@
             &:hover {
                 >a {
                     color: #FFF;
+                    background:$My_aHover;
                     &:after {
-                        border: 2px solid $aHover;
+                        border: 2px solid #FFF;
                         border-bottom: none;
                         border-left: none;
                     }
@@ -374,9 +374,9 @@
             color: #FFF;
             border-radius: 0;
             margin: 1em auto;
-            display:block;
-            min-width:90%;
-            box-shadow:none;
+            display: block;
+            min-width: 90%;
+            box-shadow: none;
             &:hover, &:focus {
                 background: darken($My_primaryColor, 20);
             }

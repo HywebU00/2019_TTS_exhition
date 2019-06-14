@@ -1,0 +1,68 @@
+/*
+Error: File to import not found or unreadable: sass_c/_variable_c.
+       Load paths:
+         /Users/u0096023/CloudStation/【2019】/【專案】/TTS展覽網強化案/TTS強化案/sass
+         /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 4 of /Users/u0096023/CloudStation/【2019】/【專案】/TTS展覽網強化案/TTS強化案/sass/tts_C.scss
+
+1: @charset "utf-8";
+2: 
+3: // 共通
+4: @import "sass_c/_variable_c";				//變數
+5: @import "common/_normalize";				//reset
+6: @import "common/_mixin";					//客製MIXIN
+7: @import "common/_typography";				//CP文字排版
+8: @import "common/_font";						//文字設定
+9: 
+
+Backtrace:
+/Users/u0096023/CloudStation/【2019】/【專案】/TTS展覽網強化案/TTS強化案/sass/tts_C.scss:4
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:23:in `block in render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:22:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/compass:22:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/compass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: sass_c/_variable_c.\A        Load paths:\A          /Users/u0096023/CloudStation/【2019】/【專案】/TTS展覽網強化案/TTS強化案/sass\A          /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 4 of /Users/u0096023/CloudStation/【2019】/【專案】/TTS展覽網強化案/TTS強化案/sass/tts_C.scss\A \A 1: @charset \"utf-8\";\A 2: \A 3: // 共通\A 4: @import \"sass_c/_variable_c\";				//變數\A 5: @import \"common/_normalize\";				//reset\A 6: @import \"common/_mixin\";					//客製MIXIN\A 7: @import \"common/_typography\";				//CP文字排版\A 8: @import \"common/_font\";						//文字設定\A 9: "; }
