@@ -1,4 +1,5 @@
 body {
+    color:$color-word;
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -7,6 +8,10 @@ body {
         overflow-y: hidden !important;
         margin: 0;
         padding: 0;
+    }
+    *{
+        box-sizing: border-box;
+
     }
 }
 
@@ -30,7 +35,7 @@ body {
 
 .main {
     position: relative;
-    margin: 0 auto;
+    margin: 0px auto 0;
     padding: 0; // max-width: $container-max;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     @include screen('mobile') {

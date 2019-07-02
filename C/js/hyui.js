@@ -172,12 +172,12 @@ $(function() {
                     $('.menu').find('li ul').hide();
                 }
             });
-            $("html").niceScroll({
-                cursorborder: "1px solid transparent",
-                emulatetouch: true,
-                scrollspeed: 40,
-                cursorcolor: "RGBA(0,0,0,.3)"
-            });
+            // $("html").niceScroll({
+            //     cursorborder: "1px solid transparent",
+            //     emulatetouch: true,
+            //     scrollspeed: 40,
+            //     cursorcolor: "RGBA(0,0,0,.3)"
+            // });
         }
     }
     //設定resize 計時器
