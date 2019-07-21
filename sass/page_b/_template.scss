@@ -19,10 +19,10 @@ body {
 .wrapper {
     width: 100%;
     margin: 0px auto;
+    overflow: hidden;
+    overflow-y: auto;
     @include screen('mobile') {
         background: #FFF;
-        overflow:hidden;
-        overflow-y: auto;
     }
 }
 

@@ -15,7 +15,7 @@
     <style>
     body {
         background: url('images/bg.jpg') no-repeat center center fixed;
-        background-size: cover;
+        background-size: cover
     }
     .demo_wrap {
         max-width: 1200px;
@@ -23,17 +23,17 @@
         padding: 35px 35px 3em;
         clear: both;
         background: #FFF;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
     .demo_wrap h1 {
         display: block;
         margin: 0px auto;
         float: left;
-        margin-right: 1em;
+        margin-right: 1em
     }
     .demo_wrap h1 img {
         width: 100%;
-        max-width: 60px;
+        max-width: 60px
     }
     @media screen and (max-width:545px) {
         .demo_wrap h1 {
@@ -65,27 +65,27 @@
         counter-increment: num;
         display: block;
         text-align: center;
-        content: counters(num, ".") " ";
+        content: counters(num, ".") " "
     }
     tbody tr td:nth-child(2) {
         width: 35%
     }
-    table{
-        border: none;
+    table {
+        border: none
     }
-    table th, table td{
+    table th, table td {
         border-left: none;
         border-right: none;
-        text-align: left;
+        text-align: left
     }
-    th:first-child{
-        text-align: center;
+    th:first-child {
+        text-align: center
     }
     td a {
-        color: #984f90;
+        color: #984f90
     }
     td a:hover {
-        color: #dd0986;
+        color: #dd0986
     }
     .btn_grp {
         text-align: right
@@ -94,6 +94,11 @@
         .btn_grp {
             text-align: center
         }
+    }
+    img.ok {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.5em;
     }
     </style>
 </head>
@@ -233,6 +238,183 @@
                 </tbody>
             </table>
         </div>
+        <div class="divider">模組列表 & 格線呈現</div>
+        <div class="table_wrapper">
+            <table class="module_table">
+                <thead>
+                    <tr>
+                        <th>編號</th>
+                        <th>模組名稱</th>
+                        <th>檔案名稱</th>
+                        <th>輪播</th>
+                        <th>class名稱</th>
+                        <th>完成狀態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>展覽資訊</td>
+                        <td><a href="module/m_ex_info.htm"></a></td>
+                        <td></td>
+                        <td>ex_info</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>分眾連結</td>
+                        <td><a href="module/m_ex_btn.htm"></a></td>
+                        <td></td>
+                        <td>ex_btn</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>跑馬燈</td>
+                        <td><a href="module/m_marquee.htm"></a></td>
+                        <td></td>
+                        <td>marquee</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產業消息-圖文列表</td>
+                        <td><a href="module/m_industry_news.htm"></a></td>
+                        <td></td>
+                        <td>industry_news</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>最新消息-圖文列表</td>
+                        <td><a href="module/m_ex_news.htm"></a></td>
+                        <td></td>
+                        <td>ex_news</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>最新消息-圖文列表</td>
+                        <td><a href="module/m_news_list.htm"></a></td>
+                        <td></td>
+                        <td>industry_news <span style="color:#CCC;">or</span> ex_news 皆可使用</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>主題報導</td>
+                        <td><a href="module/m_topic.htm"></a></td>
+                        <td></td>
+                        <td>topic</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>精選活動</td>
+                        <td><a href="module/m_event.htm"></a></td>
+                        <td></td>
+                        <td>event</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>論壇/研討會</td>
+                        <td><a href="module/m_seminar.htm"></a></td>
+                        <td></td>
+                        <td>seminar</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>滿版背景影片區塊</td>
+                        <td><a href="module/m_video_bg.htm"></a></td>
+                        <td></td>
+                        <td>video_bg</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】創新設計獎</td>
+                        <td><a href="module/m_award_slider.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>award</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>創新設計獎</td>
+                        <td><a href="module/m_award.htm"></a></td>
+                        <td></td>
+                        <td>award</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】產品型錄</td>
+                        <td><a href="module/m_product_slider.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>product</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄</td>
+                        <td><a href="module/m_product.htm"></a></td>
+                        <td></td>
+                        <td>product</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】精選產品</td>
+                        <td><a href="module/m_feature.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>feature</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】活動照片</td>
+                        <td><a href="module/m_photo.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>photo</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】影音專區</td>
+                        <td><a href="module/m_video.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>video</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>【輪播】合作單位</td>
+                        <td><a href="module/m_ad_slider.htm"></a></td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                        <td>ad</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>合作單位</td>
+                        <td><a href="module/m_ad.htm"></a></td>
+                        <td></td>
+                        <td>ad</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>交通指引</td>
+                        <td><a href="module/m_location.htm"></a></td>
+                        <td></td>
+                        <td>location</td>
+                        <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
@@ -242,6 +424,10 @@
     $(function() {
         $('tbody').find('a').each(function(index, el) {
             var Link = $(this).attr('href').substring(2);
+            $(this).text(Link);
+        });
+        $('.module_table tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href').substring(7);
             $(this).text(Link);
         });
     })
