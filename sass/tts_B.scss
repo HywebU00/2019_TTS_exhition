@@ -42,12 +42,12 @@
 // 頁面
 @import "page_b/_template";					//版型初始設定
 @import "page_b/_mp";						//首頁
-@import "page_b/_lp";						//LP
-@import "page_b/_np";						//NP
-@import "page_b/_cp";						//CP
-@import "page_b/_fp";						//Forward
-@import "page_b/_qp";						//QP
-@import "page_b/_sitemap";					//Sitemap
+@import "common/_lp";						//LP
+@import "common/_np";						//NP
+@import "common/_cp";						//CP
+@import "common/_fp";						//Forward
+@import "common/_qp";						//QP
+@import "common/_sitemap";					//Sitemap
 
 // 外掛
 @import "sass_b/_slick";					//slick

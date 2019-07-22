@@ -78,7 +78,6 @@ $(function() {
         var cellDiv1 = $(".col-8-4").find('.col >div'),
             cellDiv2 = $(".col-4-8").find('.col >div'),
             loactionH = Math.floor($('.loaction .pic').height());
-        console.log(loactionH);
         if (WindowWidth >= 768) {
             $('.col-12.loaction_intro').height(loactionH);
             $(".col-8-4 .container").each(function() {

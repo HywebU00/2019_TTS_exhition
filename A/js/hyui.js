@@ -38,6 +38,10 @@ $(function() {
         liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth();
+    // header add class
+    if($('.innerpage').length > 0){
+        $('header').addClass('inner_header');
+    }
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/

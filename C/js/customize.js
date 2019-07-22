@@ -80,7 +80,6 @@
                 cellDiv2 = $(".topic .item").children('div'),
                 cellDiv3 = $(".topic .award").children('div'),
                 loactionH = $('.loaction .pic').height();
-            console.log(loactionH);
             if (WindowWidth >= 768) {
                 $('.loaction_intro').height(loactionH);
                 $(".col-6-6 .container").each(function() {

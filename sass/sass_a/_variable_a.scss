@@ -23,7 +23,7 @@ $My_WhiteColor:				#FFF;					 //白字
 $color-word:				$My_wordColor;              //一般字的顏色
 // 連結顏色
 $aColor:					$primaryColor;
-$aHover:					lighten($aColor,10);
+$aHover:					lighten($aColor,15);
 
 // 表單focus顏色
 $form-focus:				saturate(lighten($primaryColor, 7), 36);//表單

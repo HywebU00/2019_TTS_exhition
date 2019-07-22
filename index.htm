@@ -52,7 +52,13 @@
         counter-reset: num
     }
     table {
-        margin-bottom: 1em
+        margin-bottom: 1em;
+    }
+    table th:nth-child(1), table td:nth-child(1) {
+        width: 50px;
+    }
+    table th:nth-child(2), table td:nth-child(2) {
+        width: 30%;
     }
     table caption {
         text-align: left;
@@ -102,14 +108,13 @@
     }
     </style>
 </head>
-
 <body>
     <div class="demo_wrap">
         <h1><img src="images/logo.png" alt=""></h1>
         <div class="btn_grp">
-            <a href="#" class="btn">切版檔案請按此下載</a>
+            <a href="https://github.com/hahamimidido/TTS_exhibition" class="btn" target="_blank">請按此下載切版檔案</a>
         </div>
-        <hr>
+        <h2>首頁</h2>
         <div class="table_wrapper">
             <!-- hyUI 標準頁面 -->
             <table>
@@ -127,118 +132,13 @@
                         <td></td>
                         <td>首頁</td>
                         <td><a href="A/mp.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>列表頁</td>
-                        <td><a href="A/lp.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>列表頁-表格</td>
-                        <td><a href="A/lp_table.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>列表頁-相簿</td>
-                        <td><a href="A/lp_album.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>內容頁</td>
-                        <td><a href="A/cp.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>內容頁-照片</td>
-                        <td><a href="A/cp_photo.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>節點頁</td>
-                        <td><a href="A/np.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>轉寄友人</td>
-                        <td><a href="A/fp.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>意見信箱</td>
-                        <td><a href="A/qp.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>網站地圖</td>
-                        <td><a href="A/sitemap.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>404 網站錯誤</td>
-                        <td><a href="A/404.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- 專案客製化頁面 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th class="num">編號</th>
-                        <th>頁面名稱</th>
-                        <th>視覺潮流</th>
-                        <th>頁面名稱</th>
-                        <th>檔案名稱</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>電子報</td>
-                        <td><a href="A/epaper.htm"></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>...</td>
-                        <td><a href="..."></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>...</td>
-                        <td><a href="..."></a></td>
-                        <td><a href="#"></a></td>
-                        <td><a href="#"></a></td>
+                        <td><a href="B/mp.htm"></a></td>
+                        <td><a href="C/mp.htm"></a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="divider">模組列表 & 格線呈現</div>
+        <h2>模組列表 & 格線呈現</h2>
         <div class="table_wrapper">
             <table class="module_table">
                 <thead>
@@ -411,6 +311,445 @@
                         <td></td>
                         <td>location</td>
                         <td><img src="images/ok.png" alt="" class="ok"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>標準共通頁面</h2>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>A視覺潮流</th>
+                        <th>B經典設計</th>
+                        <th>C極簡風格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>一般列表頁</td>
+                        <td><a href="A/lp.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>圖文列表頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>內容頁</td>
+                        <td><a href="A/cp.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>列表頁-表格</td>
+                        <td><a href="A/lp_table.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>相簿列表頁</td>
+                        <td><a href="A/lp_album.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>相片列表頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>相片內容頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>影片列表頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>影片內容頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>網站地圖</td>
+                        <td><a href="A/sitemap.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>404 網站錯誤</td>
+                        <td><a href="A/404.htm"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>創新設計獎</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>參展專區</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>媒體專區</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>大會刊物節點頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>預登</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <!--  <tr>
+                        <td></td>
+                        <td>內容頁-照片</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>轉寄友人</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>意見信箱</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr> -->
+                    <tr>
+                        <td></td>
+                        <td>註冊</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>登入 分眾+輸入表單</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-圖片列表頁(條列式)</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-內容頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>廠商展區列表-卡片式</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-內容頁</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>進階搜尋-產品</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>進階搜尋-廠商</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>進階搜尋-網站全文</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>行事曆</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>贊助廠商-圖片列表頁(卡片式)</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>贊助廠商-圖片列表頁(條列式)</td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>廠商專區</h2>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>A視覺潮流</th>
+                        <th>B經典設計</th>
+                        <th>C極簡風格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>廠商專區登入後首頁</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>型錄列表</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>訊息夾</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>邀請買主</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>貼紙產生器</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>廠商訊息</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 修改密碼</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 公司資料維護</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 隱私權設定</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>買主專區</h2>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>A視覺潮流</th>
+                        <th>B經典設計</th>
+                        <th>C極簡風格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>買主專區登入後首頁</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>預登資料</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>訊息夾</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>收藏廠商</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>貼紙產生器</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>收藏產品/推薦產品</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 修改密碼</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 個人資料維護</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 公司資料維護</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>個人帳號管理- 隱私權設定</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>媒體專區</h2>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>A視覺潮流</th>
+                        <th>B經典設計</th>
+                        <th>C極簡風格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>媒體專區登入後首頁</td>
+                        <td><a href=""></a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <td></td>
+                    <td>媒體專區 - 修改密碼</td>
+                    <td><a href=""></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
                     </tr>
                 </tbody>
             </table>

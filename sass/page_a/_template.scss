@@ -45,11 +45,54 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
-    @include screen('mobile') {
-        padding-top: 5em;
+    padding-top: 7em;
+    position: relative;
+    @include gutter;
+    .inner_img {
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 6em;
+        overflow: hidden;
+        margin-bottom: 1em;
+        img {
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
+    }
+}
+h1, h2 {
+    &.title {
+        position: relative;
+        padding-left: .5em;
+        margin: 1em 0em 0.5em 0;
+        line-height: 1.45em;
+        &:before {
+            content: "";
+            width: .2em;
+            height: 100%;
+            background: #CCC;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            width: .2em;
+            height: 50%;
+            background: lighten($primaryColor, 10);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }

@@ -12,6 +12,8 @@ table {
     }
     td {
         border: #ddd 1px solid;
+        border-left: none;
+        border-right: none;
         word-break: break-all;
         a {
             word-break: break-all;
@@ -23,6 +25,8 @@ table {
         border: #DDD 1px solid;
         text-align: center;
         white-space: nowrap;
+        border-left: none;
+        border-right: none;
     }
     &.table_hover {
         tr:hover {
@@ -33,6 +37,9 @@ table {
         tr:nth-child(even) {
             background: #F5F5F5;
         }
+    }
+    thead{
+        border-bottom: 2px solid #AAA;
     }
 }
 .table_list {
