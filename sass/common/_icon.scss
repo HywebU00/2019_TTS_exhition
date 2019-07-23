@@ -121,6 +121,21 @@
 .i_copy {
     @include hyui_icon('icon_copy');
 }
+.i_download {
+    @include hyui_icon('icon_download');
+}
+.i_search {
+    @include hyui_icon('icon_search');
+}
+.i_photo {
+    @include hyui_icon('icon_photo');
+}
+.i_grid_view {
+    @include hyui_icon('icon_grid_view');
+}
+.i_list_view {
+    @include hyui_icon('icon_list_view');
+}
 
 
 

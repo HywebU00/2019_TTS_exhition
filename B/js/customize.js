@@ -5,6 +5,12 @@ $(function() {
     $(".img-container img").lazyload({
         effect: "fadeIn"
     });
+    $('.choose_date').find('li a').each(function(index, el) {
+        $(this).off().click(function(event) {
+            $(this).parent('li').siblings().removeClass('active');
+            $(this).parent('li').addClass('active');
+        });
+    });
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,
@@ -93,7 +99,7 @@ $(function() {
                 var highestBox = 0;
                 $(cellDiv2, this).each(function() {
                     if ($(this).height() > highestBox) {
-                       highestBox = Math.floor($(this).height());
+                        highestBox = Math.floor($(this).height());
                     }
                 });
                 $(cellDiv2, this).height(highestBox);

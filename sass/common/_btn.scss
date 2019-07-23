@@ -67,6 +67,9 @@ $btn-radius:.4em;
         color: $btn-font-color;
         @include gradient(#fAfAfA, #CDCDCD, vertical);
     }
+    i{
+        margin-right: .5em;
+    }
 }
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);

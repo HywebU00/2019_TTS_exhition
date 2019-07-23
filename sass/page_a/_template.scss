@@ -68,6 +68,9 @@ body {
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
+        @include screen('mobile') {
+            @include gutter(0);
+        }
     }
 }
 h1, h2 {

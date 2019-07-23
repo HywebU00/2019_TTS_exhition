@@ -1087,6 +1087,19 @@ a.more {
     // ----------------------------------- 創新設計獎
     .award {
         .img-container {
+            .award_name{
+                position:absolute;
+                z-index: 1;
+                background:$importantColor;
+                text-align: center;
+                color:#FFF;
+                font-size:.813em;
+                display:block;
+                line-height: 1.75em;
+                top:0;
+                left: 2%;
+                padding:.2em 1em;
+            }
             @include aspect-ratio(4, 3);
             display: block;
             position: relative;

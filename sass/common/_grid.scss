@@ -46,13 +46,13 @@
 }
 // 雙欄 8-4
 .col-8-4 {
-    .col {
+    .col:nth-child(2n+1) {
         @include make-xs-column(12);
         @include make-sm-column(8);
         @include make-md-column(8);
         @include make-lg-column(8);
     }
-    .col:nth-child(2n+1) {
+    .col {
         @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-md-column(4);
@@ -61,13 +61,13 @@
 }
 // 雙欄 4-8
 .col-4-8 {
-    .col {
+    .col:nth-child(2n) {
         @include make-xs-column(12);
         @include make-sm-column(8);
         @include make-md-column(8);
         @include make-lg-column(8);
     }
-    .col:nth-child(2n) {
+    .col {
         @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-md-column(4);
