@@ -125,7 +125,7 @@
             infinite: true,
             speed: 500,
             autoplay: true,
-            // fade: true,
+            fade: true,
             arrow: false,
             pauseOnHover: false,
             cssEase: 'ease'

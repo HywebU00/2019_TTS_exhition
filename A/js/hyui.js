@@ -455,7 +455,7 @@ $(function() {
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            if (ww >= wwSmall) {
+            if (ww >= 768) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
@@ -477,7 +477,7 @@ $(function() {
                     scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= wwSmall) {
+                if (ww <= 767) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
                     $("html,body").stop(true, false).animate({ scrollTop: scollDistance });

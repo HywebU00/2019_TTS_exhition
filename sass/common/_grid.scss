@@ -8,7 +8,7 @@
 // .col{
 //     outline:1px solid red;
 // }
-.full {
+.col-12-full,.full {
     @include make-row;
     .container {
         max-width: 100% !important;
