@@ -223,7 +223,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n) .ad .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n+1) .ad .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -256,7 +256,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n+1) .ad .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n) .ad .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -289,7 +289,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n+1) .ad .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n) .ad .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -322,7 +322,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n) .ad .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n+1) .ad .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -757,7 +757,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n) .video .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n+1) .video .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -790,7 +790,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n+1) .video .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n) .video .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -823,7 +823,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n+1) .video .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n) .video .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -856,7 +856,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n) .video .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n+1) .video .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -1291,7 +1291,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n) .product .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n+1) .product .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -1324,7 +1324,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n+1) .product .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n) .product .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -1361,39 +1361,6 @@ $(function() {
             dots: false,
             infinite: true,
             speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            arrow: true,
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    arrows: true
-                }
-            }, {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: true
-                }
-            }, {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: true
-                }
-            }]
-        });
-        $('.col-4-8 .col:nth-child(2n) .product .slider ul').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
             slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: true,
@@ -1423,6 +1390,40 @@ $(function() {
                 }
             }]
         });
+        $('.col-4-8 .col:nth-child(2n) .product .slider ul').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrow: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: true
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }]
+        });
+        
         $('.col-4-4-4 .col .product .slider ul').slick({
             dots: false,
             infinite: true,
