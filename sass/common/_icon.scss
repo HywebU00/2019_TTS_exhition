@@ -136,6 +136,30 @@
 .i_list_view {
     @include hyui_icon('icon_list_view');
 }
+.i_star {
+    @include hyui_icon('icon_star_yellow');
+}
+.i_star_false {
+    @include hyui_icon('icon_star_gray');
+}
+.i_collect {
+    @include hyui_icon('icon_folder_green');
+}
+.i_collect_false {
+    @include hyui_icon('icon_folder_gray');
+}
+.i_question {
+    @include hyui_icon('icon_question');
+}
+.i_building {
+    @include hyui_icon('icon_building');
+}
+.i_location {
+    @include hyui_icon('icon_location');
+}
+.i_box {
+    @include hyui_icon('icon_box');
+}
 
 
 

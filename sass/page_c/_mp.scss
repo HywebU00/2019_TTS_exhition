@@ -288,15 +288,16 @@ a.more {
         }
     }
     .ex_btn {
-        @include gutter;
         padding-top: 1em;
         padding-bottom: 1em;
         background: #000;
+        overflow:hidden;
         ul {
             @include li-reset;
             text-align: center;
             @include gutter;
             padding-left: 0;
+            overflow:hidden;
             @include screen('mobile') {
                 padding: 1em 0;
             }

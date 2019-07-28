@@ -158,7 +158,7 @@
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">圖文列表頁</h2>
+                <h2 class="title">廠商列表</h2>
                 <!-- function功能區塊 -->
                 <div class="function_panel">
                     <!-- function功能區塊 -->
@@ -183,163 +183,256 @@
                         </ul>
                     </div>
                 </div>
-                <!-- LP Start -->
-                <section class="lp">
-                    <!-- category 有需要才套 -->
-                    <div class="category">
+                <!-- 左側 -->
+                <div class="leftmenu">
+                    <!-- col_2 為雙欄顯示，針對字母分類 -->
+                    <div class="company_menu col_2">
                         <ul>
-                            <li><a href="#">標籤1</a></li>
-                            <li><a href="#">標籤2</a></li>
-                            <li><a href="#">標籤3</a></li>
-                            <li><a href="#">標籤4</a></li>
-                            <li><a href="#">標籤5</a></li>
-                            <li><a href="#">標籤6</a></li>
-                            <li><a href="#">標籤7</a></li>
-                            <li><a href="#">標籤8</a></li>
-                            <li><a href="#">標籤9</a></li>
-                            <li><a href="#">標籤10</a></li>
+                            <li><a href="#">A <span>(2)</span></a></li>
+                            <li><a href="#">B <span>(0)</span></a></li>
+                            <li><a href="#">C <span>(15)</span></a></li>
+                            <li><a href="#">D <span>(4)</span></a></li>
+                            <li><a href="#">E <span>(7)</span></a></li>
+                            <li><a href="#">F <span>(9)</span></a></li>
+                            <li><a href="#">G <span>(4)</span></a></li>
+                            <li><a href="#">H <span>(3)</span></a></li>
+                            <li><a href="#">I <span>(0)</span></a></li>
+                            <li><a href="#">J <span>(14)</span></a></li>
+                            <li><a href="#">K <span>(8)</span></a></li>
+                            <li><a href="#">L <span>(7)</span></a></li>
+                            <li><a href="#">M <span>(2)</span></a></li>
+                            <li><a href="#">N <span>(1)</span></a></li>
+                            <li><a href="#">O <span>(0)</span></a></li>
+                            <li><a href="#">P <span>(0)</span></a></li>
+                            <li><a href="#">Q <span>(3)</span></a></li>
+                            <li><a href="#">R <span>(3)</span></a></li>
+                            <li><a href="#">S <span>(7)</span></a></li>
+                            <li><a href="#">T <span>(11)</span></a></li>
+                            <li><a href="#">U <span>(10)</span></a></li>
+                            <li><a href="#">V <span>(1)</span></a></li>
+                            <li><a href="#">W <span>(0)</span></a></li>
+                            <li><a href="#">X <span>(4)</span></a></li>
+                            <li><a href="#">Y <span>(1)</span></a></li>
+                            <li><a href="#">Z <span>(2)</span></a></li>
                         </ul>
                     </div>
-                    <!-- 圖文列表 -->
-                    <div class="grid">
+                    <div class="company_menu">
+                        <ul>
+                            <li><a href="#">中華民國 <span>(2)</span></a></li>
+                            <li><a href="#">美國 <span>(0)</span></a></li>
+                            <li><a href="#">日本 <span>(15)</span></a></li>
+                            <li><a href="#">新加坡 <span>(4)</span></a></li>
+                            <li><a href="#">馬來西亞 <span>(7)</span></a></li>
+                            <li><a href="#">美國 <span>(9)</span></a></li>
+                            <li><a href="#">巴西 <span>(4)</span></a></li>
+                            <li><a href="#">德國 <span>(3)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- LP Start -->
+                <section class="lp">
+                    <!-- 產品search -->
+                    <div class="product_search">
+                        <form action="" class="form_inline">
+                            <div class="form_grp">
+                                <label for="sampleId">公司查詢:</label>
+                                <input name="sampleId" type="text" placeholder="請輸入文字">
+                            </div>
+                            <div class="btn_grp">
+                                <input name="" type="submit" value="查詢" />
+                            </div>
+                        </form>
+                    </div>
+                    <!-- 頁面控制面板 -->
+                    <div class="control_panel">
+                        <div class="form_grp float_left">
+                                <label for="selectSample" class="form_title">排序方式</label>
+                                <div class="form_content form_inline">
+                                    <select id="selectSample" name="">
+                                        <option value="">優良廠商</option>
+                                        <option value="">相關度</option>
+                                        <option value="">筆畫</option>
+                                    </select>
+                                </div>
+                            </div>
+                       
+                        <div class="btn_grp">
+                            <a href="lp_sponsor.htm" class="view_btn"><i class="i_grid_view"></i></a>
+                             <a href="#" class="view_btn active"><i class="i_list_view"></i></a>
+                        </div>
+                         <div class="btn_grp">
+                            <button class="btn btn-sm">攤位圖顯示</button>
+                        </div>
+                    </div>
+                    <!-- 公司分類導覽 -->
+                    <div class="company_category">
+                        <ul>
+                            <li class="active"><a href="#">廠商名稱A-Z</a></li>
+                            <li><a href="#">品牌名稱A-Z</a></li>
+                            <li><a href="#">展區</a></li>
+                            <li><a href="#">國家</a></li>
+                        </ul>
+                    </div>
+                    <!-- 公司列表 -->
+                    <div class="company_grid">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">1</span>
-                                    <h3>強烈警告!!! 請慎防國外展覽公司詐騙行為 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#"><img src="images/premier_advertiser.png" alt="">廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread口網站開發口網站開發口網站開發口網站開發口網站開發口網站開發口網站開發</li>
+                                    <li><span>主要產品：</span>HySearch 口網站開發口網站開發口網站開發口網站開發口網站開發搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽南港展覽南港展覽南港展覽南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">2</span>
-                                    <h3>自行車及體育用品強強聯手 近7000國際買主來台觀展採購 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>「台北國際自行車展(TAIPEI CYCLE)」暨「台北國際體育用品展(TaiSPO)」2019年再度聯手展出，使用南港展覽館一館四樓、二館全館以及世貿一館三地，吸引1,409家廠商參展，使用4,720個攤位，為亞洲唯一全方位體育用品一站式購足平台，今年雙展以智慧創新應用生態系為主軸呼應產業發展趨勢，截至3月30日中午為止，共計吸引近7,000名海外買主來台觀展，較去年成長4.65%</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">3</span>
-                                    <h3>2019台北國際自行車展及台北國際體育用品展聯手展示產業智能化嶄新生態系 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">4</span>
-                                    <h3>加入外貿協會Line好友、拓銷活動、服務訊息不漏接，立即掃瞄QR Code 或搜尋Line ID：@taitra </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">5</span>
-                                    <h3>Uber X TAIPEI CYCLE 2019 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">6</span>
-                                    <h3>「2019 台北國際自行車展」喜迎南港展覽館二館啟用 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">7</span>
-                                    <h3>強烈警告!!! 請慎防國外展覽公司詐騙行為 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                                <h3><a href="#">廠商名稱</a></h3>
+                                <div class="img-container">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><span>品牌名稱：</span>Hyread</li>
+                                    <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                    <li>
+                                        <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                </ul>
+                                <div class="company_function">
+                                    <a href="#" title="收藏"><i class="i_heart"></i></a>
+                                    <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <a href="#" title="聯絡"><i class="i_chat"></i></a>
+                                </div>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">8</span>
-                                    <h3>2019年裝潢手冊 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                        </ul>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select> 筆， <input type="button" class="btn" value="確定">
+                            </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first">
+                                <a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev">
+                                <a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="next">
+                                <a href="#" title="下一頁">下一頁 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <div class="img-container">
-                                        <img src="images/pic_news.jpg" alt="">
-                                    </div>
-                                    <span class="num">9</span>
-                                    <h3>外貿協會前進歐洲自行車銷售主力市場行銷台灣自行車產業及2019年台北國際自行車展 </h3>
-                                    <time><i class="i_clock"></i>2018-03-09</time>
-                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
-                                </a>
+                            <li class="last">
+                                <a href="#" title="最後一頁">最後一頁 </a>
                             </li>
                         </ul>
                     </div>
                 </section>
                 <!-- LP End -->
-                <!-- Pagination -->
-                <div class="pagination">
-                    <form action="" class="form_inline">
-                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
-                                <option value="">10</option>
-                                <option value="">20</option>
-                                <option value="">30</option>
-                                <option value="">40</option>
-                            </select> 筆， <input type="button" class="btn" value="確定">
-                        </div>
-                    </form>
-                    <ul class="page">
-                        <li class="first">
-                            <a href="#" title="第一頁">第一頁 </a></li>
-                        <li class="prev">
-                            <a href="#" title="回上一頁">回上一頁 </a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="next">
-                            <a href="#" title="下一頁">下一頁 </a>
-                        </li>
-                        <li class="last">
-                            <a href="#" title="最後一頁">最後一頁 </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- fatfooter Start -->

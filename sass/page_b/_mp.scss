@@ -291,7 +291,7 @@
     }
     .ex_btn {
         border: 1px solid #FFF;
-        padding: 1em;
+        padding: 1em 0;
         position: relative;
         &:before {
             position: absolute;
@@ -317,7 +317,6 @@
             @include li-reset;
             text-align: center;
             @include gutter;
-            padding-left: 0;
             @include screen('mobile') {
                 padding: 0em 0;
                 height: 90px;
@@ -382,7 +381,7 @@
                         bottom: 0;
                         left: 0;
                         right: 0;
-                        background: RGBA(0,0,0,.25);
+                        background: RGBA(0, 0, 0, .25);
                         -webkit-transform: scaleX(0);
                         transform: scaleX(0);
                         -webkit-transform-origin: 50%;
@@ -1126,18 +1125,18 @@
     // ----------------------------------- 創新設計獎
     .award {
         .img-container {
-            .award_name{
-                position:absolute;
+            .award_name {
+                position: absolute;
                 z-index: 1;
-                background:$importantColor;
+                background: $importantColor;
                 text-align: center;
-                color:#FFF;
-                font-size:.813em;
-                display:block;
+                color: #FFF;
+                font-size: .813em;
+                display: block;
                 line-height: 1.75em;
-                top:0;
+                top: 0;
                 left: 2%;
-                padding:.2em 1em;
+                padding: .2em 1em;
             }
             @include aspect-ratio(4, 3);
             display: block;
@@ -1456,7 +1455,7 @@
     //     }
     // }
     // ----------------------------------- 廣告輪播
-       .ad {
+    .ad {
         @include gutter();
         @include screen('mobile') {
             @include gutter();

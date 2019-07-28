@@ -39,6 +39,23 @@ select::-ms-expand {
     }
 }
 //---------------------------------------------form setting--------//
+.check_grp,
+.radio_grp {
+    label {
+        display: block;
+        @include screen('mobile') {
+            display: inline-block;
+            margin: .2em .5em 0 0;
+        }
+    }
+    // radio與check個別行內設定
+    &.form_inline {
+        label {
+            display: inline-block;
+            margin: .2em .5em 0 0;
+        }
+    }
+}
 form {
     .form_grp,
     .check_grp,
@@ -46,19 +63,6 @@ form {
     .btn_grp,
     .upload_grp {
         margin-bottom: .2em;
-    }
-    .check_grp,
-    .radio_grp {
-        label {
-            display: block;
-        }
-        // radio與check個別行內設定
-        &.form_inline {
-            label {
-                display: inline-block;
-                margin: .2em .5em 0 0;
-            }
-        }
     }
     .form_grp,
     .upload_grp {
@@ -241,8 +245,8 @@ input[type="radio"] {
     height: 1em;
     background-color: #f7f6ee;
     border: 2px solid $color-gray;
-    outline:none;
-    box-shadow:none;
+    outline: none;
+    box-shadow: none;
 }
 input[type="radio"] {
     border-radius: 50%;

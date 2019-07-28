@@ -72,6 +72,100 @@ body {
             @include gutter(0);
         }
     }
+    .leftmenu, .login_menu {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        background: #F9F9F9;
+        border-right: 2px solid #555;
+        padding: 1em 1em 10em;
+        @include screen('mobile') {
+            padding: 1em;
+        }
+        // @include gutter();
+        &~.lp, &~.cp, &~.np, &~.login_content {
+            @include make-xs-column(12);
+            @include make-sm-column(9);
+            @include make-md-column(9);
+            @include make-lg-column(9);
+            padding-left: 1em;
+            @include screen('mobile') {
+                @include gutter(0);
+            }
+        }
+        h2 {
+            // background: lighten($primaryColor, 5);
+            padding: .8em;
+            color: #FFF;
+            margin: 0 0 1px 0;
+            border-bottom: 1px solid RGBA(255, 255, 255, .4);
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: block;
+                text-align: left;
+                margin-bottom: 1px;
+                // background: $secondaryColor;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    padding: .8em 1em;
+                    color: #FFF;
+                    transition: .3s ease-out;
+                    line-height: 1.45em;
+                    font-weight: bold;
+                    box-shadow: none;
+                    outline: none;
+                    &:hover,
+                    &:focus {
+                        background: darken($primaryColor, 0);
+                    }
+                }
+            }
+        }
+    }
+    .login_menu {
+        border-right: none;
+        background: #FFF;
+        ul {
+            background: darken($secondaryColor, 20);
+            li {
+                position: relative;
+                
+                &.active {
+                    &:before {
+                        position: absolute;
+                        top: 0%;
+                        content:"";
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 24px 12px 24px 0;
+                        border-color: transparent #ffffff transparent transparent;
+                    }
+                }
+                a {
+                    padding-right: 1.2em;
+                    border-bottom: 1px solid RGBA(255,255,255,.2);
+                    &:hover, &:focus {
+                        background: darken($secondaryColor, 10);
+                    }
+                }
+                li{
+                    a{
+                        padding-left: 2em;
+                    }
+                }
+            }
+        }
+    }
 }
 h1, h2 {
     &.title {
