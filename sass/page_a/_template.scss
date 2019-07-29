@@ -79,9 +79,9 @@ body {
         @include make-lg-column(3);
         background: #F9F9F9;
         border-right: 2px solid #555;
-        padding: 1em 1em 10em;
+        padding: 1em 1em 10em 0;
         @include screen('mobile') {
-            padding: 1em;
+            padding: 1em 0 5em;
         }
         // @include gutter();
         &~.lp, &~.cp, &~.np, &~.login_content {
@@ -137,30 +137,38 @@ body {
             background: darken($secondaryColor, 20);
             li {
                 position: relative;
-                
                 &.active {
                     &:before {
                         position: absolute;
                         top: 0%;
-                        content:"";
+                        content: "";
                         right: 0;
                         width: 0;
                         height: 0;
                         border-style: solid;
-                        border-width: 24px 12px 24px 0;
+                        border-width: 20px 10px 20px 0;
                         border-color: transparent #ffffff transparent transparent;
+                        @include screen('mobile') {
+                            left: 0;
+                            right: auto;
+                            border-style: solid;
+                            border-width: 20px 0 20px 10px;
+                            border-color: transparent transparent transparent lighten($secondaryColor, 5); ;
+                        }
                     }
                 }
                 a {
-                    padding-right: 1.2em;
-                    border-bottom: 1px solid RGBA(255,255,255,.2);
+                    padding:.5em 1.2em .5em 1em;
+                    border-bottom: 1px solid RGBA(255, 255, 255, .2);
                     &:hover, &:focus {
                         background: darken($secondaryColor, 10);
                     }
                 }
-                li{
-                    a{
+                li {
+                    a {
+                        background:rgba(0,0,0,.2);
                         padding-left: 2em;
+                        border-bottom: none;
                     }
                 }
             }

@@ -20,6 +20,9 @@
 @import "common/_form";						//表單
 @import "common/_icon";						//圖示
 @import "common/_element";					//小元素
+@import "common/_paginations";				//分頁
+@import "common/_notice";					//提示
+@import "common/_function_panel";			//內頁功能面板
 
 // 模組
 @import "sass_a/_header";					//header
@@ -29,15 +32,12 @@
 @import "sass_a/_fatfooter";				//fatfooter
 @import "sass_a/_function";					//function功能區塊
 @import "sass_a/_modal";					//pop視窗
-@import "common/_paginations";				//分頁
 @import "sass_a/_thumbnail";				//縮圖
 @import "sass_a/_category";					//標籤
 @import "sass_a/_lightbox";					//燈箱
 @import "sass_a/_share";					//社群分享
 @import "sass_a/_tag";						//文章標籤
 @import "sass_a/_fontsize";					//控制文章字體大小
-@import "common/_notice";					//提示
-@import "common/_function_panel";			//內頁功能面板
 
 // 頁面
 @import "page_a/_template";					//版型初始設定
@@ -52,13 +52,10 @@
 
 // 外掛
 @import "sass_a/_slick";					//slick
-
 // 無障礙
 @import "sass_a/_nojs";						//無障礙關閉js設定
-
 // 列印
 @import "sass_a/_print";					//列印樣式
-
 // 首頁模組樣式
 @import "sass_a/_grid_module";				//首頁模組樣式
 

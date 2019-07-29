@@ -490,7 +490,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n) .photo .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n+1) .photo .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -523,7 +523,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-8-4 .col:nth-child(2n+1) .photo .slider ul').slick({
+        $('.col-8-4 .col:nth-child(2n) .photo .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -556,7 +556,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n+1) .photo .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n) .photo .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -589,7 +589,7 @@ $(function() {
                 }
             }]
         });
-        $('.col-4-8 .col:nth-child(2n) .photo .slider ul').slick({
+        $('.col-4-8 .col:nth-child(2n+1) .photo .slider ul').slick({
             dots: false,
             infinite: true,
             speed: 300,
