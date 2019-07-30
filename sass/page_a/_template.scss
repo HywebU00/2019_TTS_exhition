@@ -67,7 +67,7 @@ body {
         }
     }
     >.container {
-        @include gutter(); //gutter 代表左右要留白
+        @include gutter(0); //gutter 代表左右要留白
         @include screen('mobile') {
             @include gutter(0);
         }
@@ -122,6 +122,10 @@ body {
                     font-weight: bold;
                     box-shadow: none;
                     outline: none;
+                    i{
+                        margin-right: .5em;
+                        filter:invert(100%);
+                    }
                     &:hover,
                     &:focus {
                         background: darken($primaryColor, 0);
@@ -167,7 +171,7 @@ body {
                 li {
                     a {
                         background:rgba(0,0,0,.2);
-                        padding-left: 2em;
+                        padding-left: 2.5em;
                         border-bottom: none;
                     }
                 }

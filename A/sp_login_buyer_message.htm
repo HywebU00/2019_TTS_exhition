@@ -177,15 +177,15 @@
                                 </div>
                             </div>
                         </div>
+                        <h3>買主專區</h3>
                         <ul>
-                            <li><a href="#">買主專區</a></li>
-                            <li><a href="#">個人化首頁</a></li>
-                            <li><a href="#">預登資料</a></li>
-                            <li class="active"><a href="#">訊息夾</a></li>
-                            <li><a href="#">收藏廠商</a></li>
-                            <li><a href="#">收藏商品</a></li>
-                            <li><a href="#">推薦產品</a></li>
-                            <li><a href="#">個人帳號管理</a>
+                            <li><a href="#"><i class="i_home"></i>個人化首頁</a></li>
+                            <li><a href="#"><i class="i_edit"></i>預登資料</a></li>
+                            <li class="active"><a href="#"><i class="i_mail"></i>訊息夾</a></li>
+                            <li><a href="#"><i class="i_building"></i>收藏廠商</a></li>
+                            <li><a href="#"><i class="i_heart"></i>收藏商品</a></li>
+                            <li><a href="#"><i class="i_bookmark"></i>推薦產品</a></li>
+                            <li><a href="#"><i class="i_setting"></i>個人帳號管理</a>
                                 <ul>
                                     <li><a href="#">修改密碼</a></li>
                                     <li><a href="#">個人資料維護</a></li>
@@ -197,54 +197,104 @@
                     </div>
                     <div class="login_content">
                         <!-- h2節點 -->
-                        <h2 class="title">訊息夾</h2>
-                        <div class="table_list">
-                            <table summary="" class="table_sprite">
-                                <thead>
-                                    <tr>
-                                        <th>寄件者</th>
-                                        <th>主旨</th>
-                                        <th>日期</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="寄件者"><time>Alex</time> </td>
-                                        <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
-                                        <td data-title="日期"><time>2019/5/30</time></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <h2>訊息夾</h2>
+                        <div class="notice_warning">尚可設定 17 筆產品型錄於前台顯示</div>
+                        <div class="control_panel">
+                            <div class="btn_grp">
+                                <button class="btn btn-red btn-sm btn_icon"><i class="i_close invert"></i>刪除</button>
+                            </div>
+                            <div class="form_grp float_left">
+                                <label for="selectSample" class="form_title">排序方式</label>
+                                <div class="form_content form_inline">
+                                    <select id="selectSample" name="">
+                                        <option value="">全部</option>
+                                        <option value="">草稿</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message_function">
+                                <ul>
+                                    <li class="active"><a href="#">收件夾</a></li>
+                                    <li><a href="#">寄件備份</a></li>
+                                    <li><a href="#">重要公告</a></li>
+                                </ul>
+                            </div>
+                            <div class="table_list">
+                                <table summary="" class="table_hover">
+                                    <thead>
+                                        <tr>
+                                            <th><label><input type="checkbox"></label></th>
+                                            <th>寄件者</th>
+                                            <th>主旨</th>
+                                            <th>日期</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="選擇"><label><input type="checkbox"></label></td>
+                                            <td data-title="寄件者">Alex </td>
+                                            <td data-title="主旨"><a href="#">In this codelab, you'll learn how to add advertisements using AdMob.</a></td>
+                                            <td data-title="日期"><time>2019/5/30</time></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <!-- Pagination -->
                         <div class="pagination">
