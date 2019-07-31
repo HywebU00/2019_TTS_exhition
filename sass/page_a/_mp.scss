@@ -323,6 +323,10 @@
             @include screen('notebook') {
                 width: 1200px;
             }
+            @include screen('tablet') {
+                left:-1000px;
+
+            }
             @include screen('mobile') {
                 display: none;
             }
