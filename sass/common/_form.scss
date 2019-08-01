@@ -168,19 +168,19 @@ input[type="password"],
 input[type="file"] {
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: $color-gray;
+        color: darken($color-gray,15);
     }
     &::-moz-placeholder {
         /* Firefox 19+ */
-        color: $color-gray;
+        color: darken($color-gray,15);
     }
     &:-ms-input-placeholder {
         /* IE 10+ */
-        color: $color-gray;
+        color: darken($color-gray,15);
     }
     &:-moz-placeholder {
         /* Firefox 18- */
-        color: $color-gray;
+        color: darken($color-gray,15);
     }
 }
 button,
