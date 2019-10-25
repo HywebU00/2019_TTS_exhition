@@ -1,0 +1,145 @@
+@charset "utf-8";
+// 共通
+@import "sass_a/_variable_a"; //變數
+@import "common/_normalize"; //reset
+@import "common/_mixin"; //客製MIXIN
+// 以下為404設定
+body{
+    font-family:Lato,"PingFang TC","Helvetica Neue",Helvetica,"微軟正黑體",Arial,sans-serif;
+}
+.wrapper {
+    max-width: 960px;
+    margin: 0px auto;
+}
+.error {
+    position: relative;
+    h1 {
+        line-height: 1.45em;
+    }
+    .face {
+        position: absolute;
+        width: 30%;
+        height: 50%;
+        top: 2em;
+        right: 2em;
+        overflow:hidden;
+        border-radius:1em;
+        @include screen('mobile') {
+            display:none;
+        }
+        .eye_left {
+            position: absolute;
+            background: #444;
+            border-radius: 10px;
+            top: 5em;
+            left: 50%;
+            width: 20px;
+            height: 40px;
+            margin-left: -19%;
+            content: "";
+            &:before {
+                position: absolute;
+                border-radius: 50%;
+                border:10px solid #999;
+                left: 50%;
+                margin-left: -170px;
+                width: 160px;
+                height: 150px;
+                content: "";
+                top:-170px;
+            }
+        }
+        .eye_right {
+            position: absolute;
+            background: #444;
+            border-radius: 10px;
+            top: 5em;
+            left: 50%;
+            width: 20px;
+            height: 40px;
+            margin-left: 15%;
+            content: "";
+            &:before {
+                position: absolute;
+                border-radius: 50%;
+                border:10px solid #999;
+                left: 50%;
+                margin-left: -20px;
+                width: 160px;
+                height: 150px;
+                content: "";
+                top:-170px;
+            }
+        }
+        &:before {
+                position: absolute;
+                border-radius: 50%;
+                border:10px solid #444;
+                bottom:-120px;
+                left: 50%;
+                margin-left: -80px;
+                width: 160px;
+                height: 150px;
+                content: "";
+            }
+    }
+    &:before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #888;
+        background: -webkit-linear-gradient(top, #888, #FFF);
+        background: linear-gradient(to bottom right, #888, #FFF);
+        z-index: -1
+    }
+    width: 90%;
+    padding: 1em 360px 2em 2em;
+    min-height: 400px;
+    position: relative;
+    background: #F1F1F1;
+    margin: 3em auto 1em;
+    @include border-radius(6px);
+    @include box-sizing;
+    @include screen('mobile') {
+        margin: 1em auto 1em;
+    }
+    h3 {
+        font-size: 1.25em;
+        line-height: 1.65em;
+        margin-bottom: 2em;
+        color: $aHover;
+        small {
+            display: block;
+            color: #666;
+            line-height: 1.45em;
+        }
+    }
+    @include screen('mobile') {
+        text-align: center;
+        padding: 1em 1em 3em;
+    }
+    .btn_grp {
+        text-align: center;
+        a {
+            @include box-sizing;
+            padding: .5em 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            @include gradient(#FFF, #DDD, vertical);
+            margin: 0px .2em .5em;
+            color: #222;
+            font-size: 1em;
+            border: 1px solid #CCC;
+            @include border-radius(6px);
+            box-shadow: 0px 2px 5px RGBA(0, 0, 0, .1);
+            &:hover, &:focus {
+                @include gradient(#FFF, #CCC, vertical);
+                border: 1px solid #BBB;
+                box-shadow: 0px 2px 5px RGBA(0, 0, 0, .2);
+            }
+        }
+    }
+}

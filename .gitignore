@@ -2,7 +2,6 @@
 # 忽略 secret.yml 檔案
 
 config.rb
-sass/
 .sass-cache/*
 .sass-cache/
 *.css.map
