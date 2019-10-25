@@ -6,7 +6,6 @@
 //         box-shadow: none;
 //     }
 // }
-
 // 導盲磚
 .accesskey {
     position: absolute;
@@ -16,17 +15,17 @@
     color: $color-word;
     font-size: $font-size;
     opacity: 0;
+    display: none;
     @include screen("mobile") {
         display: none;
     }
 }
-
 // more按鈕
 a.more {
     @extend %clearfix;
     display: block;
     min-width: 12em;
-    max-width:16em;
+    max-width: 16em;
     text-align: center;
     height: 3em;
     margin: 2em auto 1em;
@@ -36,8 +35,8 @@ a.more {
     text-align: center;
     overflow: hidden;
     vertical-align: middle;
-    border-radius:1.5em;
-    background:$primaryColor;
+    border-radius: 1.5em;
+    background: $primaryColor;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px transparent;
@@ -67,7 +66,7 @@ a.more {
         left: 0;
         right: 0;
         bottom: 0;
-        background: lighten($primaryColor,10);
+        background: lighten($primaryColor, 10);
         -webkit-transform: scale(0);
         transform: scale(0);
         -webkit-transition-property: transform;
@@ -90,7 +89,6 @@ a.more {
         }
     }
 }
-
 // scrollTop
 .scrollToTop {
     width: 50px;
@@ -108,12 +106,11 @@ a.more {
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-    &:hover,&:focus{
+    &:hover, &:focus {
         background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-        box-shadow:none;
+        box-shadow: none;
     }
 }
-
 // img
 img.img-responsive {
     @include img-responsive();
@@ -123,7 +120,6 @@ img.img-responsive {
     color: red;
     margin: 0px .2em;
 }
-
 .tooltip {
     text-align: center;
     padding: 40px 0;
@@ -141,13 +137,3 @@ img.img-responsive {
         color: red;
     }
 }
-
-
-
-
-
-
-
-
-
-

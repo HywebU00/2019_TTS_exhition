@@ -5,19 +5,72 @@ $(function() {
     $(".img-container img").lazyload({
         effect: "fadeIn"
     });
-     $('.choose_date').find('li a').each(function(index, el) {
+    $('.choose_date').find('li a').each(function(index, el) {
         $(this).off().click(function(event) {
             $(this).parent('li').siblings().removeClass('active');
             $(this).parent('li').addClass('active');
         });
     });
+    // 左側選單
+    var left_stutus = false;
+    if ($('.leftmenu').length > 0) {
+        $('.leftmenu').append('<a href="#" class="toggle_btn"></a><div class="mask"></div>');
+        $('.toggle_btn').removeClass('fixed');
+        $('.leftmenu').siblings('.lp').addClass('padding-left');
+        $(window).bind("load resize", function(e) {
+            left_W = $('.leftmenu').outerWidth();
+            ww = $(window).outerWidth();
+            console.log(ww);
+            if (ww >= 768) {
+                $('.toggle_btn').removeClass('open');
+                $('.toggle_btn').siblings().show();
+                $('.toggle_btn').parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                $('.leftmenu').removeAttr('style');
+                left_stutus = false;
+            } else {
+                $('.toggle_btn').removeClass('open');
+                $('.toggle_btn').siblings().hide();
+                $('.mask').show();
+                left_stutus = true;
+            }
+            $('.toggle_btn').off().click(function(e) {
+                if (ww >= 768) {
+                    if (!left_stutus) {
+                        $(this).siblings().hide();
+                        $(this).parents('.leftmenu').addClass('hidden').siblings('.lp').addClass('width100');
+                        $('.leftmenu').css('margin-left', left_W * -1);
+                        left_stutus = true;
+                    } else {
+                        $(this).removeClass('open');
+                        $(this).siblings().show();
+                        $(this).parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                        $('.leftmenu').removeAttr('style');
+                        left_stutus = false;
+                    }
+                } else {
+                    if (!left_stutus) {
+                        $(this).removeClass('open');
+                        $(this).siblings().slideUp();
+                        $('.mask').show();
+                        left_stutus = true;
+                    } else {
+                        $(this).addClass('open');
+                        $(this).siblings().slideDown();
+                        $('.mask').hide();
+                        left_stutus = false;
+                    }
+                }
+                e.preventDefault();
+            });
+        });
+    }
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         autoplay: false,
         autoplaySpeed: 1500,
         pauseOnHover: true,
@@ -45,11 +98,10 @@ $(function() {
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
             }
         }]
     });
-    $('.cp_slider').slickLightbox({
+    $('.lightbox_slider').slickLightbox({
         caption: 'caption',
         useHistoryApi: 'true',
         lazy: true
@@ -99,7 +151,7 @@ $(function() {
                 var highestBox = 0;
                 $(cellDiv2, this).each(function() {
                     if ($(this).height() > highestBox) {
-                       highestBox = Math.floor($(this).height());
+                        highestBox = Math.floor($(this).height());
                     }
                 });
                 $(cellDiv2, this).height(highestBox);

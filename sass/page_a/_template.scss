@@ -79,9 +79,10 @@ body {
         @include make-lg-column(3);
         background: #F9F9F9;
         border-right: 2px solid #555;
-        padding: 1em 1em 10em 0;
+        padding: 1em 1em 10em 1em;
         @include screen('mobile') {
-            padding: 1em 0 5em;
+            padding: 1em 1em 2em;
+            border:none;
         }
         // @include gutter();
         &~.lp, &~.cp, &~.np, &~.login_content {
@@ -93,6 +94,7 @@ body {
             @include screen('mobile') {
                 @include gutter(0);
             }
+            
         }
         h2 {
             // background: lighten($primaryColor, 5);
@@ -134,9 +136,7 @@ body {
             }
         }
     }
-    .leftmenu{
-        padding:1em;
-    }
+
     .login_menu {
         border-right: none;
         background: #FFF;

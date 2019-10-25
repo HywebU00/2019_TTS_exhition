@@ -165,9 +165,9 @@
                     <div class="advsearch">
                         <div class="choose_search_item">
                             <ul>
-                                <li class="active"><a href="#">搜尋產品</a></li>
-                                <li><a href="#">搜尋廠商</a></li>
-                                <li><a href="#">全文檢索</a></li>
+                                <li class="active"><a href="sp_advsearch_product.htm">搜尋產品</a></li>
+                                <li><a href="sp_advsearch_company.htm">搜尋廠商</a></li>
+                                <li><a href="sp_advsearch_all.htm">全文檢索</a></li>
                             </ul>
                             <form action="" class="form_grid">
                                 <div class="form_grp">
@@ -219,59 +219,61 @@
                     <div class="result">
                         <p class="result_display">搜尋<span>電動車</span>結果</p>
                         <!-- 左側 -->
-                <div class="leftmenu">
-                    <div class="taitracode_list">
-                        <ul>
-                            <li><a href="#">自行車整車<span>(4碼)</span><span>(100)</span></a></li>
-                            <li><a href="#">自行車車架及組件<span>(4碼)</span><span>(100)</span></a></li>
-                            <li><a href="#">自行車車輪零件<span>(4碼)</span><span>(100)</span></a></li>
-                            <li><a href="#">自行車傳動零件<span>(4碼)</span><span>(100)</span></a></li>
-                            <li><a href="#">運動服<span>(4碼)</span><span>(100)</span></a>
+                        <div class="leftmenu">
+                            <div class="taitracode_list">
                                 <ul>
-                                    <li><a href="#">自行車<span>(100)</span></a></li>
-                                    <li><a href="#">自行車衣<span>(21)</span></a></li>
+                                    <li><a href="#">自行車整車<span>(4碼)</span><span>(100)</span></a></li>
+                                    <li><a href="#">自行車車架及組件<span>(4碼)</span><span>(100)</span></a></li>
+                                    <li><a href="#">自行車車輪零件<span>(4碼)</span><span>(100)</span></a></li>
+                                    <li><a href="#">自行車傳動零件<span>(4碼)</span><span>(100)</span></a></li>
+                                    <li><a href="#">運動服<span>(4碼)</span><span>(100)</span></a>
+                                        <ul>
+                                            <li><a href="#">自行車<span>(100)</span></a></li>
+                                            <li><a href="#">自行車衣<span>(21)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">手機及平板電腦<span>(35)</span><span>(100)</span></a>
+                                        <ul>
+                                            <li><a href="#">智慧穿戴裝置<span>(25)</span></a></li>
+                                            <li><a href="#">平板電腦<span>(10)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">消費性電子配件<span>(20)</span><span>(100)</span></a>
+                                        <ul>
+                                            <li><a href="#">可攜式喇叭<span>(12)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">藍牙及Wi-Fi無線喇叭<span>(24)</span></a>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li><a href="#">手機及平板電腦<span>(35)</span><span>(100)</span></a>
-                                <ul>
-                                    <li><a href="#">智慧穿戴裝置<span>(25)</span></a></li>
-                                    <li><a href="#">平板電腦<span>(10)</span></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">消費性電子配件<span>(20)</span><span>(100)</span></a>
-                                <ul>
-                                    <li><a href="#">可攜式喇叭<span>(12)</span></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">藍牙及Wi-Fi無線喇叭<span>(24)</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- LP Start -->
-                <section class="lp">
-                    <div class="control_panel">
-                        <div class="form_grp float_left">
-                                <label for="selectSample" class="form_title">排序方式</label>
-                                <div class="form_content form_inline">
-                                    <select id="selectSample" name="">
-                                        <option value="">優良廠商</option>
-                                        <option value="">相關度</option>
-                                        <option value="">筆畫</option>
-                                    </select>
+                            </div>
+                        </div>
+                        <!-- LP Start -->
+                        <section class="lp">
+                            <div class="control_panel">
+                                <div class="form_grp float_left">
+                                    <label for="selectSample" class="form_title">排序方式</label>
+                                    <div class="form_content form_inline">
+                                        <select id="selectSample" name="">
+                                            <option value="">優良廠商</option>
+                                            <option value="">相關度</option>
+                                            <option value="">筆畫</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="btn btn-sm">攤位圖顯示</button>
                                 </div>
                             </div>
-                        <div class="btn_grp">
-                            <button class="btn btn-sm">攤位圖顯示</button>
-                        </div>
-                    </div>
-                    <!-- 產品列表 -->
+                            <!-- 產品列表 -->
                     <div class="product_list">
                         <ul>
-                            <li>
+                            <!-- 如果被選取，li 請加上class ="checked" -->
+                            <li class="checked">
+                                <label><input type="checkbox" checked></label>
                                 <div class="img-container">
                                     <a href="#">
-                                    <img src="images/feature_01.jpg" alt="">
+                                        <img src="images/feature_01.jpg" alt="">
                                     </a>
                                 </div>
                                 <h3><a href="#">迷你電動車</a></h3>
@@ -286,9 +288,10 @@
                                 </div>
                             </li>
                             <li>
+                                <label><input type="checkbox"></label>
                                 <div class="img-container">
                                     <a href="#">
-                                    <img src="images/feature_02.jpg" alt="">
+                                        <img src="images/feature_02.jpg" alt="">
                                     </a>
                                 </div>
                                 <h3><a href="#">電動車/自行車/摩托車 配件專用之表面處理噴砂設備</a></h3>
@@ -302,10 +305,11 @@
                                     <a href="#"><i class="i_question"></i></a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="checked">
+                                <label><input type="checkbox" checked></label>
                                 <div class="img-container">
                                     <a href="#">
-                                    <img src="images/feature_03.jpg" alt="">
+                                        <img src="images/feature_03.jpg" alt="">
                                     </a>
                                 </div>
                                 <h3><a href="#">菲斯特電動車</a></h3>
@@ -320,9 +324,10 @@
                                 </div>
                             </li>
                             <li>
+                                 <label><input type="checkbox"></label>
                                 <div class="img-container">
                                     <a href="#">
-                                    <img src="images/feature_01.jpg" alt="">
+                                        <img src="images/feature_01.jpg" alt="">
                                     </a>
                                 </div>
                                 <h3><a href="#">迷你電動車</a></h3>
@@ -336,45 +341,44 @@
                                     <a href="#"><i class="i_question"></i></a>
                                 </div>
                             </li>
-                            
                         </ul>
                     </div>
-                    <!-- Pagination -->
-                <div class="pagination">
-                    <form action="" class="form_inline">
-                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
-                                <option value="">10</option>
-                                <option value="">20</option>
-                                <option value="">30</option>
-                                <option value="">40</option>
-                            </select> 筆， <input type="button" class="btn" value="確定">
-                        </div>
-                    </form>
-                    <ul class="page">
-                        <li class="first">
-                            <a href="#" title="第一頁">第一頁 </a></li>
-                        <li class="prev">
-                            <a href="#" title="回上一頁">回上一頁 </a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="next">
-                            <a href="#" title="下一頁">下一頁 </a>
-                        </li>
-                        <li class="last">
-                            <a href="#" title="最後一頁">最後一頁 </a>
-                        </li>
-                    </ul>
-                </div>
-                </section>
-                <!-- LP End -->
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <form action="" class="form_inline">
+                                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                            <option value="">10</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
+                                            <option value="">40</option>
+                                        </select> 筆， <input type="button" class="btn" value="確定">
+                                    </div>
+                                </form>
+                                <ul class="page">
+                                    <li class="first">
+                                        <a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev">
+                                        <a href="#" title="回上一頁">回上一頁 </a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                    <li class="next">
+                                        <a href="#" title="下一頁">下一頁 </a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#" title="最後一頁">最後一頁 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- LP End -->
                     </div>
                 </section>
                 <!-- SP End -->
