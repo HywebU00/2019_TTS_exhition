@@ -1789,7 +1789,8 @@
         min-height: 30em;
         width: 100%;
         position: relative;
-         overflow-x: hidden;
+        transform: translateZ(0);
+        will-change: transform;
         .col {
             max-width: $container-max*.6;
             margin: 0 auto;
