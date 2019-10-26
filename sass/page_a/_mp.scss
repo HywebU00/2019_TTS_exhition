@@ -1591,7 +1591,6 @@
         width: 100%;
         position: relative;
         transform: translateZ(0);
-        will-change: transform;
         @include screen('mobile') {
             background-attachment: scroll !important;
             -webkit-overflow-scrolling: touch;
