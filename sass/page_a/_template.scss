@@ -1,5 +1,6 @@
 body {
     color: $color-word;
+    -webkit-overflow-scrolling: touch;
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -94,7 +95,7 @@ body {
             @include screen('mobile') {
                 @include gutter(0);
             }
-            
+
         }
         h2 {
             // background: lighten($primaryColor, 5);
