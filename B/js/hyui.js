@@ -678,7 +678,6 @@ $(function() {
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
             fadeTime: 600,
-            // threshold:-300
         });
     }
 });

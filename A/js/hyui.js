@@ -677,8 +677,8 @@ $(function() {
     /*-----------------------------------*/
     ////////////// lazy load //////////////
     /*-----------------------------------*/
-    if ($(".lazy").length > 0) {
-        $(".lazy").show().lazyload({
+    if ($("img.lazy").length > 0) {
+        $("img.lazy").show().lazyload({
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
             fadeTime: 600,
