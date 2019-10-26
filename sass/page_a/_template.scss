@@ -1,7 +1,6 @@
 body {
     color: $color-word;
     -webkit-overflow-scrolling: touch;
-    height:100vh;
     &.noscroll {
         position: static !important;
         width: 100%;
