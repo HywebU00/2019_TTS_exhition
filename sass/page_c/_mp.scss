@@ -1779,7 +1779,11 @@ a.more {
         width: 100%;
         position: relative;
         transform: translateZ(0);
-        will-change: transform;        .col {
+        will-change: transform;
+        @include screen('mobile') {
+            background-attachment:scroll
+        }
+        .col {
             max-width: $container-max*.6;
             margin: 0 auto;
             color: #FFF !important;
