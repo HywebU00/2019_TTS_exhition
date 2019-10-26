@@ -670,4 +670,15 @@ $(function() {
             $('.language').find('ul').hide();
         }
     });
+    /*-----------------------------------*/
+    ////////////// lazy load //////////////
+    /*-----------------------------------*/
+    if ($("img.lazy").length > 0) {
+        $("img.lazy").show().lazyload({
+            placeholder: 'images/basic/placeholder.gif',
+            effect: "fadeIn",
+            fadeTime: 600,
+            // threshold:-300
+        });
+    }
 });

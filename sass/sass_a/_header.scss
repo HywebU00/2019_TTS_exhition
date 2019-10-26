@@ -244,9 +244,11 @@
         .btn_login {
             position: absolute;
             right: 60px;
-            top: 0px;
+            top: .4em;
             background: $My_primaryColor;
             color: #FFF;
+            padding-top: .2em !important;
+            padding-bottom: .25em !important;
             border: none;
             border-radius: 0;
             margin: 0;

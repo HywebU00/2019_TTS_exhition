@@ -222,7 +222,7 @@ $(function() {
                 $('.header').css('margin-top', menuH - hh+40);
                 // $('.main').css('margin-top', -menuH);
                 $('.main').css('margin-top', hh);
-                
+
             } else {
                 $('.header').removeClass('fixed');
                 $('.header').css('margin-top', 0);
@@ -670,4 +670,15 @@ $(function() {
             $('.language').find('ul').hide();
         }
     });
+    /*-----------------------------------*/
+    ////////////// lazy load //////////////
+    /*-----------------------------------*/
+    if ($("img.lazy").length > 0) {
+        $("img.lazy").show().lazyload({
+            placeholder: 'images/basic/placeholder.gif',
+            effect: "fadeIn",
+            fadeTime: 600,
+            // threshold:-300
+        });
+    }
 });

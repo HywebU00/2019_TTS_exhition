@@ -486,7 +486,6 @@ $(function() {
                     _tabItemNow.next().show();
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     _tab.css('min-height', tabContentHeight + tabItemHeight);
-
                 }
                 e.preventDefault();
             }
@@ -675,4 +674,15 @@ $(function() {
             $('.language').find('ul').hide();
         }
     });
+    /*-----------------------------------*/
+    ////////////// lazy load //////////////
+    /*-----------------------------------*/
+    if ($(".lazy").length > 0) {
+        $(".lazy").show().lazyload({
+            placeholder: 'images/basic/placeholder.gif',
+            effect: "fadeIn",
+            fadeTime: 600,
+        });
+    }
+
 });
