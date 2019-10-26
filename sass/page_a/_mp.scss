@@ -1592,6 +1592,10 @@
         position: relative;
         transform: translateZ(0);
         will-change: transform;
+        @include screen('mobile') {
+            background-attachment: scroll !important;
+            -webkit-overflow-scrolling: touch;
+        }
         .col {
             max-width: $container-max*.6;
             margin: 0 auto;
