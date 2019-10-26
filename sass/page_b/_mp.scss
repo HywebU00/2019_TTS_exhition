@@ -1821,3 +1821,14 @@
         }
     }
 }
+img:not([src]):not([srcset]) {
+    visibility: hidden;
+}
+/*
+Fixes Firefox anomaly during images load time
+*/
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}

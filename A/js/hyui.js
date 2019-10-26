@@ -678,12 +678,11 @@ $(function() {
     ////////////// lazy load //////////////
     /*-----------------------------------*/
     if ($("img.lazy").length > 0) {
-        $("img.lazy").lazyload({
+        $("img.lazy").show().lazyload({
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
             fadeTime: 600,
         });
     }
-
 
 });
