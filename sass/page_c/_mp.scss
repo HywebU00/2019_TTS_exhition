@@ -1778,6 +1778,7 @@ a.more {
         min-height: 30em;
         width: 100%;
         position: relative;
+         overflow-x: hidden;
         .col {
             max-width: $container-max*.6;
             margin: 0 auto;
