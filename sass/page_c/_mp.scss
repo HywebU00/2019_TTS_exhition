@@ -1781,7 +1781,8 @@ a.more {
         transform: translateZ(0);
         will-change: transform;
         @include screen('mobile') {
-            background-attachment:scroll
+            background-attachment:scroll;
+            -webkit-overflow-scrolling: touch;
         }
         .col {
             max-width: $container-max*.6;
