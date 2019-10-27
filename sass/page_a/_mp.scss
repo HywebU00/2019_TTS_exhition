@@ -1612,6 +1612,7 @@
             height: 100%;
             background-attachment: scroll !important;
             -webkit-overflow-scrolling: touch;
+            z-index: -1;
         }
         .col {
             max-width: $container-max*.6;
