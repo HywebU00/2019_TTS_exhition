@@ -1600,6 +1600,7 @@
         position: relative;
         transform: translateZ(0);
         will-change: transform;
+        padding-top: 4em;
         @include screen('mobile') {
             position:fixed;
             padding-top: 5em;
