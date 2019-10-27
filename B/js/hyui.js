@@ -677,7 +677,9 @@ $(function() {
         $("img.lazy").show().lazyload({
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
-            fadeTime: 600,
+            fadeTime: 400,
+            threshold: 400,
+            failure_limit: 100
         });
     }
 });

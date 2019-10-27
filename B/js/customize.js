@@ -1,10 +1,17 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    // lazyload  
-    //可以指定你想要的元素做lazyload
-    $(".img-container img").lazyload({
-        effect: "fadeIn"
+    // 修正parallax 顯示
+    $(window).scroll(function() {
+        var threshold = 200; // number of pixels before bottom of page that you want to start fading
+        var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+        if (op <= 0) {
+            $(".parallax").hide();
+        } else {
+            $(".parallax").show();
+        }
+        $(".parallax").css("opacity", op);
     });
+    //
     $('.choose_date').find('li a').each(function(index, el) {
         $(this).off().click(function(event) {
             $(this).parent('li').siblings().removeClass('active');
@@ -78,7 +85,7 @@ $(function() {
         focusOnSelect: true,
         infinite: true,
     });
-    // 
+    //
     $(window).on("load resize", function(e) {
         var WindowWidth = $(window).outerWidth();
         var cellDiv1 = $(".col-8-4").find('.col >div'),
@@ -1423,7 +1430,6 @@ $(function() {
                 }
             }]
         });
-        
         $('.col-4-4-4 .col .product .slider ul').slick({
             dots: false,
             infinite: true,

@@ -682,8 +682,8 @@ $(function() {
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
             fadeTime: 400,
-            threshold : 400,
-            failure_limit : 10
+            threshold: 400,
+            failure_limit: 100
         });
     }
 
