@@ -2,7 +2,7 @@
 $(function() {
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
-        $(this).parents('section').addClass('parallax_sec');
+        $('.parallax').parents('section').addClass('parallax_sec');
     }
     //
     $('.choose_date').find('li a').each(function(index, el) {

@@ -1,8 +1,9 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     // 修正parallax 點不到
-    if($('.parallax').length>0){
-        $(this).parents('section').addClass('parallax_sec');
+    if($('.parallax').length > 0){
+        $('.parallax').parents('section').addClass('parallax_sec');
+
     }
     //
     $('.choose_date').find('li a').each(function(index, el) {
