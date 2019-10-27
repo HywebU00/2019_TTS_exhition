@@ -4,8 +4,7 @@ $(function() {
     $("img.lazy").show().lazyload({
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
-        fadeTime: 400,
-        threshold: 400,
+        fadeTime: 600,
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {

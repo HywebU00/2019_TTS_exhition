@@ -26,6 +26,14 @@ a.goCenter {
 }
 // no-js
 .no-js{
+	.mp_slider{
+		.img-container{
+			display:none;
+			&:first-child{
+				display:block;
+			}
+		}
+	}
 	noscript{
 		display:block;
 		padding:.5em;
@@ -41,7 +49,7 @@ a.goCenter {
 		a{
 			color:$primaryColor;
 			&:hover,&:focus {
-			color:$aHover;	
+			color:$aHover;
 			}
 		}
 	}
