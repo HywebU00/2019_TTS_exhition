@@ -1,16 +1,9 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    // 修正parallax 顯示
-    $(window).scroll(function() {
-        var threshold = 200; // number of pixels before bottom of page that you want to start fading
-        var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
-        if (op <= 0) {
-            $(".parallax").hide();
-        } else {
-            $(".parallax").show();
-        }
-        $(".parallax").css("opacity", op);
-    });
+    // 修正parallax 點不到
+    if($('.parallax').length>0){
+        $(this).parents('section').addClass('parallax_sec');
+    }
     //
     $('.choose_date').find('li a').each(function(index, el) {
         $(this).off().click(function(event) {

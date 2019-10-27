@@ -53,6 +53,12 @@
         overflow: hidden;
         position: relative;
         background: #FFF;
+        &.parallax_sec {
+            @include screen('mobile') {
+                background: transparent !important;
+                z-index: 0 !important;
+            }
+        }
         @include screen('mobile') {
              z-index: 1;
              .container{
