@@ -1581,6 +1581,14 @@
         }
     }
     // ----------------------------------- parallax
+    .clip {
+        @include screen('mobile') {
+            clip-path: inset(0px);
+            clip: rect(0px auto auto 0px);
+            position: relative;
+            min-height: 30em;
+        }
+    }
     .parallax {
         text-align: center;
         background-position: center center !important;
@@ -1593,7 +1601,9 @@
         transform: translateZ(0);
         will-change: transform;
         @include screen('mobile') {
-            background-attachment: scroll !important;
+            position:absolute;
+            top:0;
+            left: 0;
             -webkit-overflow-scrolling: touch;
         }
         .col {
