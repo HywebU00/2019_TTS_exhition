@@ -682,7 +682,7 @@ $(function() {
             placeholder: 'images/basic/placeholder.gif',
             effect: "fadeIn",
             fadeTime: 400,
-            threshold : 200,
+            threshold : 400,
             failure_limit : 10
         });
     }
