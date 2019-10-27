@@ -1,9 +1,23 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // lazyload
+    $("img.lazy").show().lazyload({
+        placeholder: 'images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 400,
+        threshold: 400,
+        failure_limit: 100
+    });
+    $(".img-container img").show().lazyload({
+        placeholder: 'images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 400,
+        threshold: 400,
+        failure_limit: 100
+    });
     // 修正parallax 點不到
-    if($('.parallax').length > 0){
+    if ($('.parallax').length > 0) {
         $('.parallax').parents('section').addClass('parallax_sec');
-
     }
     //
     $('.choose_date').find('li a').each(function(index, el) {

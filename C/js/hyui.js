@@ -670,16 +670,4 @@ $(function() {
             $('.language').find('ul').hide();
         }
     });
-    /*-----------------------------------*/
-    ////////////// lazy load //////////////
-    /*-----------------------------------*/
-    if ($("img.lazy").length > 0) {
-        $("img.lazy").show().lazyload({
-            placeholder: 'images/basic/placeholder.gif',
-            effect: "fadeIn",
-            fadeTime: 400,
-            threshold: 400,
-            failure_limit: 100
-        });
-    }
 });
