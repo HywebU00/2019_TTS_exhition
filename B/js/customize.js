@@ -6,14 +6,12 @@ $(function() {
         effect: "fadeIn",
         fadeTime: 400,
         threshold: 400,
-        failure_limit: 100
     });
     $(".img-container img").show().lazyload({
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 400,
         threshold: 400,
-        failure_limit: 100
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {

@@ -1,21 +1,17 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    if ($("img.lazy").length > 0) {
-        $("img.lazy").show().lazyload({
-            placeholder: 'images/basic/placeholder.gif',
-            effect: "fadeIn",
-            fadeTime: 400,
-            threshold: 400,
-            failure_limit: 100
-        });
-        $(".img-container img").show().lazyload({
-            placeholder: 'images/basic/placeholder.gif',
-            effect: "fadeIn",
-            fadeTime: 400,
-            threshold: 400,
-            failure_limit: 100
-        });
-    }
+    $("img.lazy").show().lazyload({
+        placeholder: 'images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 400,
+        threshold: 400,
+    });
+    $(".img-container img").show().lazyload({
+        placeholder: 'images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 400,
+        threshold: 400,
+    });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
         $('.parallax').parents('section').addClass('parallax_sec');
