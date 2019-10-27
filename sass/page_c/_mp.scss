@@ -1769,6 +1769,14 @@ a.more {
         }
     }
     // ----------------------------------- parallax
+    .clip {
+        @include screen('mobile') {
+            clip-path: inset(0px);
+            clip: rect(0px auto auto 0px);
+            position: relative;
+            min-height: 40em;
+        }
+    }
     .parallax {
         text-align: center;
         background-position: center center !important;
