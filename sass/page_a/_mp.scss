@@ -44,6 +44,7 @@
         overflow: hidden;
         position: relative;
         background: #FFF;
+        z-index: 1;
         &+.section {
             padding: 1.5em 0 2em;
         }
@@ -1613,7 +1614,7 @@
             transform: translateZ(0px);
             background-attachment: scroll !important;
             -webkit-overflow-scrolling: touch;
-            z-index: -1;
+            z-index: 0;
         }
         .col {
             max-width: $container-max*.6;
