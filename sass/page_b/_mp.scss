@@ -1463,7 +1463,7 @@
         ul {
             @include li-reset;
             @include gutter;
-            overflow:hidden;
+            overflow: hidden;
         }
         .slider {
             ul {
@@ -1641,7 +1641,6 @@
         ul {
             @include li-reset;
             @include gutter();
-
         }
         .slider {
             ul {
@@ -1779,7 +1778,6 @@
             }
         }
     }
-    // ----------------------------------- parallax
     .parallax {
         text-align: center;
         background-position: center center !important;
@@ -1789,11 +1787,21 @@
         min-height: 30em;
         width: 100%;
         position: relative;
-        transform: translateZ(0);
         will-change: transform;
+        padding-top: 4em;
         @include screen('mobile') {
+            position: fixed;
+            padding-top: 5em;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(0px);
             background-attachment: scroll !important;
             -webkit-overflow-scrolling: touch;
+            z-index: -1;
         }
         .col {
             max-width: $container-max*.6;
@@ -1803,8 +1811,8 @@
             padding-left: 30px !important;
             padding-right: 30px !important;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
-            position:relative;
-            z-index: 1;
+            position: relative;
+            z-index: 0;
             h2 {
                 text-align: center;
             }
@@ -1822,19 +1830,10 @@
             height: 100%;
             top: 0;
             left: 0;
+            pointer-events: none;
             margin-left: 0;
             @include gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .1), vertical);
+            z-index: -2;
         }
-    }
-}
-img:not([src]):not([srcset]) {
-    visibility: hidden;
-}
-/*
-Fixes Firefox anomaly during images load time
-*/
-@-moz-document url-prefix() {
-    img:-moz-loading {
-        visibility: hidden;
     }
 }
