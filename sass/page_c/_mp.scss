@@ -111,7 +111,12 @@ a.more {
         overflow: hidden;
         position: relative;
         background:#FFF;
-        z-index: 1;
+        @include screen('mobile') {
+             z-index: 1;
+             .container{
+                z-index: 2;
+             }
+        }
         &+.section {
             padding: .5em 0;
         }
