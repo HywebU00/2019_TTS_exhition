@@ -1,5 +1,6 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // lazyload
     $("img.lazy").show().lazyload({
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
