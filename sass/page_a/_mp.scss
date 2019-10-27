@@ -1602,6 +1602,7 @@
         will-change: transform;
         @include screen('mobile') {
             position:fixed;
+            padding-top: 3em;
             top:0;
             left: 0;
             bottom:0;
