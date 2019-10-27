@@ -110,6 +110,8 @@ a.more {
         padding: 0em;
         overflow: hidden;
         position: relative;
+        background:#FFF;
+        z-index: 1;
         &+.section {
             padding: .5em 0;
         }
@@ -120,9 +122,9 @@ a.more {
             }
         }
         @include screen('mobile') {
-            background: transparent !important;
+            background: #FFF;
             &:nth-child(2n+1) {
-                background: #F1F1F1 !important;
+                background: #F1F1F1;
             }
         }
         h2 {
@@ -1800,7 +1802,7 @@ a.more {
             transform: translateZ(0px);
             background-attachment: scroll !important;
             -webkit-overflow-scrolling: touch;
-            z-index: -1;
+            z-index: 0;
         }
         .col {
             max-width: $container-max*.6;
