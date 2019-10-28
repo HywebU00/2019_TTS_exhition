@@ -4,8 +4,8 @@ $(function() {
     if ($('.login_menu').length > 0) {
         $('.scrollToTop').addClass('has_bottom');
         $('footer').addClass('has_bottom');
-        $('.sp .login_menu').clone().appendTo('body').addClass('m_loginmenu');
-        $('.sp .login_menu>ul').clone().appendTo('body').addClass('bottom_menu');
+        $('.sp .login_menu').clone().appendTo('.wrapper').addClass('m_loginmenu');
+        $('.sp .login_menu>ul').clone().appendTo('.wrapper').addClass('bottom_menu');
         $('.bottom_menu').append("<div class='open_m_function'><a href='#'>more</a></div>");
         var _m_loginmenu = $('.m_loginmenu'),
             _bottom_menu = $('.bottom_menu');

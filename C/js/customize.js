@@ -4,23 +4,23 @@ $(function() {
     if ($('.login_menu').length > 0) {
         $('.scrollToTop').addClass('has_bottom');
         $('footer').addClass('has_bottom');
-        $('.sp .login_menu').clone().appendTo('body').addClass('m_loginmenu');
-        $('.sp .login_menu>ul').clone().appendTo('body').addClass('bottom_menu');
-        $('.bottom_menu').append("<div class='open_m_function'><a href='#'>more</a></div>")
+        $('.sp .login_menu').clone().appendTo('.wrapper').addClass('m_loginmenu');
+        $('.sp .login_menu>ul').clone().appendTo('.wrapper').addClass('bottom_menu');
+        $('.bottom_menu').append("<div class='open_m_function'><a href='#'>more</a></div>");
         var _m_loginmenu = $('.m_loginmenu'),
             _bottom_menu = $('.bottom_menu');
         _m_loginmenu.hide();
         $(window).on("load resize", function(e) {
             _W_Height = $(this).height();
             _m_loginmenu.css('top', _W_Height);
-            _open_m_function =$('.open_m_function a');
+            _open_m_function = $('.open_m_function a');
             _m_loginmenu.stop(true, true).animate({ 'top': _W_Height }, 400, 'easeOutQuint');
-                $('body').removeClass('noscroll');
-                _open_m_function.html('more');
-                _m_menustatus = false;
+            $('body').removeClass('noscroll');
+            _open_m_function.html('more');
+            _m_menustatus = false;
         });
         var _m_menustatus = false;
-        _bottom_menu.off().click(function(e) {
+        _bottom_menu.find('.open_m_function a').off().click(function(e) {
             if (!_m_menustatus) {
                 _m_loginmenu.show().stop(true, true).animate({ 'top': 0 }, 400, 'easeOutQuint');
                 $('body').addClass('noscroll');
