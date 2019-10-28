@@ -191,7 +191,14 @@
                             <li>更新日期:2019/12/5</li>
                         </ul>
                         <div class="photo_pic">
-                            <img src="images/pic_mpslider02.jpg">
+                            <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/pic_mpslider02.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/pic_mpslider02.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/pic_mpslider02.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/pic_mpslider02.jpg">
+                                            <img data-original="images/pic_mpslider02.jpg" class="lazy">
+                                            <noscript><img src="images/pic_mpslider02.jpg"></noscript>
+                                        </picture>
                             <ul>
                             <li>說明:Show Photo-03.JPG</li>
                             <li>活動日期 : 2019/03/29</li>

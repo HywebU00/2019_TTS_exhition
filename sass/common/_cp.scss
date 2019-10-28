@@ -11,11 +11,44 @@ h1.title {
         img {
             width: 100%;
         }
-        .btn_grp{
-            button{
+        .btn_grp {
+            button {
                 @include screen('xs_mobile') {
                     width: 100%;
                 }
+            }
+        }
+    }
+    .video_block {
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 3em;
+        @include gutter();
+        .video_container {
+            @include aspect-ratio(4, 3);
+            position: relative;
+            width: 40%;
+            float: left;
+            margin: 0 1em 1em 0;
+            @include screen('tablet') {
+                width: 55%;
+            }
+            @include screen('mobile') {
+                float: none;
+                width: 100%;
+                margin: 0 auto 1em;
+            }
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+            }
+            p {
+                overflow: hidden;
             }
         }
     }
