@@ -45,11 +45,9 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
+    padding-top: 7em;
+    position: relative;
     @include gutter;
-    @include screen('mobile') {
-        padding-top: 5em;
-    }
     .inner_img {
         position: absolute;
         content: "";
