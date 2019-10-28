@@ -14,7 +14,7 @@ $(function() {
             _W_Height = $(this).height();
             _m_loginmenu.css('top', _W_Height);
             _open_m_function = $('.open_m_function a');
-            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+200 }, 400, 'easeOutQuint');
+            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
             $('body').removeClass('noscroll');
             _open_m_function.html('more');
             _m_menustatus = false;
@@ -27,7 +27,7 @@ $(function() {
                 _open_m_function.html('close');
                 _m_menustatus = true;
             } else {
-                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+200 }, 400, 'easeOutQuint');
+                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
                 $('body').removeClass('noscroll');
                 _open_m_function.html('more');
                 _m_menustatus = false;
@@ -40,6 +40,7 @@ $(function() {
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 600,
+        threshold : 200
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
