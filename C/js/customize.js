@@ -14,7 +14,7 @@ $(function() {
             _W_Height = $(this).height();
             _m_loginmenu.css('top', _W_Height);
             _open_m_function = $('.open_m_function a');
-            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height }, 400, 'easeOutQuint');
+            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 200 }, 400, 'easeOutQuint');
             $('body').removeClass('noscroll');
             _open_m_function.html('more');
             _m_menustatus = false;
@@ -27,7 +27,7 @@ $(function() {
                 _open_m_function.html('close');
                 _m_menustatus = true;
             } else {
-                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height }, 400, 'easeOutQuint');
+                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 200 }, 400, 'easeOutQuint');
                 $('body').removeClass('noscroll');
                 _open_m_function.html('more');
                 _m_menustatus = false;
@@ -167,6 +167,7 @@ $(function() {
     // -------------------------------------------KV區塊
     if ($('.mp_slider').length > 0) {
         $('.mp_slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 500,
@@ -180,6 +181,7 @@ $(function() {
     // -------------------------------------------創新設計獎
     if ($('.award').length > 0) {
         $('.award .slider>ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 500,
@@ -193,6 +195,7 @@ $(function() {
     // -------------------------------------------跑馬燈
     if ($('.marquee').length > 0) {
         $('.marquee ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             vertical: true,
@@ -210,6 +213,7 @@ $(function() {
     // -------------------------------------------ad_slider
     if ($('.ad .slider').length > 0) {
         $('.col-12 .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -243,6 +247,7 @@ $(function() {
             }]
         });
         $('.col-6-6 .col .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -276,6 +281,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n) .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -309,6 +315,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n+1) .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -342,6 +349,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n+1) .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -375,6 +383,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n) .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -408,6 +417,7 @@ $(function() {
             }]
         });
         $('.col-4-4-4 .col .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -441,6 +451,7 @@ $(function() {
             }]
         });
         $('.col-3-3-3-3 .col .ad .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -477,6 +488,7 @@ $(function() {
     // -------------------------------------------photo_slider
     if ($('.photo .slider').length > 0) {
         $('.col-12  .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -510,6 +522,7 @@ $(function() {
             }]
         });
         $('.col-6-6  .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -543,6 +556,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n+1) .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -576,6 +590,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n) .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -609,6 +624,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n) .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -642,6 +658,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n+1) .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -675,6 +692,7 @@ $(function() {
             }]
         });
         $('.col-4-4-4 .col .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -708,6 +726,7 @@ $(function() {
             }]
         });
         $('.col-3-3-3-3 .col .photo .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -744,6 +763,7 @@ $(function() {
     // -------------------------------------------video_slider
     if ($('.video .slider').length > 0) {
         $('.col-12 .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -777,6 +797,7 @@ $(function() {
             }]
         });
         $('.col-6-6 .col .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -810,6 +831,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n) .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -843,6 +865,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n+1) .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -876,6 +899,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n+1) .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -909,6 +933,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n) .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -942,6 +967,7 @@ $(function() {
             }]
         });
         $('.col-4-4-4 .col .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -975,6 +1001,7 @@ $(function() {
             }]
         });
         $('.col-3-3-3-3 .col .video .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1011,6 +1038,7 @@ $(function() {
     // -------------------------------------------feature_slider
     if ($('.feature .slider').length > 0) {
         $('.col-12 .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1044,6 +1072,7 @@ $(function() {
             }]
         });
         $('.col-6-6 .col .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1077,6 +1106,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n) .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1110,6 +1140,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n+1) .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1143,6 +1174,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n+1) .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1176,6 +1208,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n)  .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1209,6 +1242,7 @@ $(function() {
             }]
         });
         $('.col-4-4-4 .col .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1242,6 +1276,7 @@ $(function() {
             }]
         });
         $('.col-3-3-3-3 .col .feature .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1278,6 +1313,7 @@ $(function() {
     // -------------------------------------------product_slider
     if ($('.product .slider').length > 0) {
         $('.col-12 .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1311,6 +1347,7 @@ $(function() {
             }]
         });
         $('.col-6-6 .col .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1344,6 +1381,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n) .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1377,6 +1415,7 @@ $(function() {
             }]
         });
         $('.col-8-4 .col:nth-child(2n+1) .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1410,6 +1449,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n+1) .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1443,6 +1483,7 @@ $(function() {
             }]
         });
         $('.col-4-8 .col:nth-child(2n) .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1476,6 +1517,7 @@ $(function() {
             }]
         });
         $('.col-4-4-4 .col .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
@@ -1509,6 +1551,7 @@ $(function() {
             }]
         });
         $('.col-3-3-3-3 .col .product .slider ul').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
             speed: 300,
