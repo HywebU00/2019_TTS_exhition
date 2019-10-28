@@ -1,8 +1,8 @@
 //header
 .header {
-    position: fixed;
+    position: relative;
     width: 100%;
-    z-index: 999998;
+    z-index: 99;
     @extend %clearfix;
     @include screen('tablet') {
         width: 100%;
