@@ -1,19 +1,21 @@
 //header
 .header {
-    * {
-        // outline: 1px solid red;
-    }
     position: relative;
     width: 100%;
     z-index: 99;
     @extend %clearfix;
-    background:#FFF;
+    background: #FFF;
     box-shadow: 0px 3px 5px RGBA(0, 0, 0, .5);
     @include screen('tablet') {
         position: fixed;
         width: 100%;
         height: 60px;
         background: #FFF;
+        transform: translateZ(0);
+        -moz-transform: translatez(0);
+        -ms-transform: translatez(0);
+        -o-transform: translatez(0);
+        -webkit-transform: translateZ(0);
     }
     .menu {
         @include screen('tablet') {
@@ -25,7 +27,7 @@
         content: "";
         width: 100%;
         height: .5em;
-        @include gradient($My_primaryColor,$My_secondaryColor,horizontal);
+        @include gradient($My_primaryColor, $My_secondaryColor, horizontal);
         position: absolute;
         top: 0;
         left: 0;
@@ -65,7 +67,6 @@
         .sidebarCtrl {
             display: none;
             left: 0px;
-            
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
@@ -85,7 +86,7 @@
             }
             @include screen('mobile') {
                 background: $primaryColor;
-                span{
+                span {
                     background: #FFF;
                 }
             }
@@ -235,7 +236,7 @@
     right: 24px;
     vertical-align: middle;
     padding: .5em 1em;
-    background: rgba(0,0,0,.85);
+    background: rgba(0, 0, 0, .85);
     z-index: 999;
     @include box-sizing;
     display: none;
@@ -248,7 +249,7 @@
         height: 0;
         border-style: solid;
         border-width: 0 3px 6px 3px;
-        border-color: transparent transparent rgba(0,0,0,.85) transparent;
+        border-color: transparent transparent rgba(0, 0, 0, .85) transparent;
     }
     // animation: showSearch .3s ease-out;
     @include screen('mobile') {
@@ -396,7 +397,7 @@
                 width: 100%;
                 margin: 0;
                 padding: .5em 45px .4em .5em;
-                color:#FFF;
+                color: #FFF;
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
                     color: #FFF;
