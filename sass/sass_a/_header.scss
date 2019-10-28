@@ -3,7 +3,7 @@
     position: fixed;
     width: 100%;
     z-index: 99;
-    clear:both;
+    clear: both;
     @include screen('tablet') {
         width: 100%;
         height: 60px;
@@ -14,8 +14,10 @@
         -ms-transform: translatez(0);
         -o-transform: translatez(0);
         -webkit-transform: translateZ(0);
+        transform: translate3d(0, 0, 0);
+        top: 0;
+        will-change: transform; // creates a new paint layer
     }
-
     // 內頁的header設定
     &.inner_header {
         background: #000;
