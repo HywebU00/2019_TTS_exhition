@@ -80,16 +80,16 @@
         transition: .3s ease-out;
         @include border-radius(6px);
     }
-    .slick-prev {
-        left: -30px;
-        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5);
-        background-size: 80%;
-    }
-    .slick-next {
-        right: -30px;
-        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5);
-        background-size: 80%;
-    }
+    // .slick-prev {
+    //     left: -30px;
+    //     background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5);
+    //     background-size: 80%;
+    // }
+    // .slick-next {
+    //     right: -30px;
+    //     background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5);
+    //     background-size: 80%;
+    // }
     .slick-dots li {
         width: 10px;
         height: 10px;
@@ -306,20 +306,20 @@
             display: none;
         }
     }
-    .slick-next {
-        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
-        background-size: 80%;
-        @include screen('mobile') {
-            right: .5em;
-        }
-    }
-    .slick-prev {
-        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
-        background-size: 80%;
-        @include screen('mobile') {
-            left: .5em;
-        }
-    }
+    // .slick-next {
+    //     background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+    //     background-size: 80%;
+    //     @include screen('mobile') {
+    //         right: .5em;
+    //     }
+    // }
+    // .slick-prev {
+    //     background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+    //     background-size: 80%;
+    //     @include screen('mobile') {
+    //         left: .5em;
+    //     }
+    // }
     .Slider-for {
         width: 80%;
         min-width: 260px;

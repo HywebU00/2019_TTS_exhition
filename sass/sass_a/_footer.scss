@@ -6,9 +6,14 @@ footer {
     text-align: left;
     font-size: .938em;
     padding: 2em 0;
+    &.has_bottom {
+        @include screen('mobile') {
+            bottom: 6em;
+        }
+    }
     @include screen('mobile') {
-         padding: 2em 0 1em;
-         font-size:.813em;
+        padding: 2em 0 1em;
+        font-size: .813em;
     }
     .container {
         @include gutter;
@@ -19,15 +24,15 @@ footer {
     p {
         line-height: 1.45em;
         margin-bottom: .2em;
-        a{
-            display:inline-block;
-            margin: 0px .5em ;
-            color:#FFF;
-            img{
-                height:2em;
-                display:inline-block;
-                vertical-align:middle;
-                margin-right:.5em;
+        a {
+            display: inline-block;
+            margin: 0px .5em;
+            color: #FFF;
+            img {
+                height: 2em;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: .5em;
             }
         }
     }
@@ -49,7 +54,7 @@ footer {
         @include gutter();
     }
     // 版權連結
-    .footer_link,.footer_share {
+    .footer_link, .footer_share {
         @include li-reset();
         @extend %clearfix;
         li {
@@ -58,15 +63,14 @@ footer {
             margin: 0px 1em .5em 0px;
             a {
                 @include aSetting_whitecolor;
-                display:block;
+                display: block;
             }
-            img{
-                width:45px;
+            img {
+                width: 45px;
                 height: 45px;
             }
         }
     }
-
     .update,
     .counter {
         display: inline-block;

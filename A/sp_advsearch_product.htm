@@ -273,7 +273,14 @@
                                 <label><input type="checkbox" checked></label>
                                 <div class="img-container">
                                     <a href="#">
-                                        <img src="images/feature_01.jpg" alt="">
+                                        <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/feature_01.jpg">
+                                                <img data-original="images/feature_01.jpg" class="lazy" src="images/feature_01.jpg" >
+                                                <noscript><img src="images/feature_01.jpg"></noscript>
+                                            </picture>
                                     </a>
                                 </div>
                                 <h3><a href="#">迷你電動車</a></h3>
@@ -291,7 +298,14 @@
                                 <label><input type="checkbox"></label>
                                 <div class="img-container">
                                     <a href="#">
-                                        <img src="images/feature_02.jpg" alt="">
+                                        <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/feature_02.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/feature_02.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/feature_02.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/feature_02.jpg">
+                                                <img data-original="images/feature_02.jpg" class="lazy" src="images/feature_02.jpg" >
+                                                <noscript><img src="images/feature_02.jpg"></noscript>
+                                            </picture>
                                     </a>
                                 </div>
                                 <h3><a href="#">電動車/自行車/摩托車 配件專用之表面處理噴砂設備</a></h3>
@@ -309,7 +323,14 @@
                                 <label><input type="checkbox" checked></label>
                                 <div class="img-container">
                                     <a href="#">
-                                        <img src="images/feature_03.jpg" alt="">
+                                        <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/feature_03.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/feature_03.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/feature_03.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/feature_03.jpg">
+                                                <img data-original="images/feature_03.jpg" class="lazy" src="images/feature_03.jpg" >
+                                                <noscript><img src="images/feature_03.jpg"></noscript>
+                                            </picture>
                                     </a>
                                 </div>
                                 <h3><a href="#">菲斯特電動車</a></h3>
@@ -327,7 +348,14 @@
                                  <label><input type="checkbox"></label>
                                 <div class="img-container">
                                     <a href="#">
-                                        <img src="images/feature_01.jpg" alt="">
+                                        <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/feature_01.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/feature_01.jpg">
+                                                <img data-original="images/feature_01.jpg" class="lazy" src="images/feature_01.jpg" >
+                                                <noscript><img src="images/feature_01.jpg"></noscript>
+                                            </picture>
                                     </a>
                                 </div>
                                 <h3><a href="#">迷你電動車</a></h3>
@@ -462,11 +490,11 @@
                 <!-- footer資訊模組 -->
                 <div class="footer_info">
                     <ul class="footer_share">
-                        <li><a href="#"><img src="images/basic/icon_facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_twitter.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_pinterest.svg" alt=""></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_facebook.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_twitter.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_youtube.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_instagram.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_pinterest.svg" alt="" class="lazy"></a></li>
                     </ul>
                     <ul class="footer_link">
                         <li><a href="#">服務條款和隱私權政策內容</a></li>
@@ -482,15 +510,15 @@
                     <h3>下載APP</h3>
                     <div class="app_download">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/google_play.png" alt="">
+                            <img data-original="images/google_play.png" alt="" class="lazy">
                         </a>
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/app_store.png" alt="">
+                            <img data-original="images/app_store.png" alt="" class="lazy">
                         </a>
                     </div>
                     <div class="qr_code">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/qrcode.jpg" alt="">
+                            <img data-original="images/qrcode.jpg" alt="" class="lazy">
                         </a>
                     </div>
                 </div>
@@ -506,11 +534,7 @@
     <script src="vendor/slick/slick.min.js "></script>
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
-    <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!-- AddEvent script -->
-    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->

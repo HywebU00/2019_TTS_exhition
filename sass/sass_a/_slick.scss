@@ -9,7 +9,7 @@
     background-size: 80%;
     right: -10px;
 }
-.basic_slider{
+.basic_slider {
     h3 {
         font-size: 1.5em;
         padding: 12px 0px 15px 0px;
@@ -22,15 +22,20 @@
     .img-container {
         width: 100%;
         margin: 0 2em 1em;
+        border: 1px solid #DDD;
+        &:hover {
+            .infotxt {
+                bottom: 0;
+            }
+        }
         a {
             @include aspect-ratio(4, 3);
             height: 150px;
             width: 100%;
             position: relative;
-            border: 1px solid #DDD;
             &:hover, &:focus {
-                outline:none;
-                box-shadow:none;
+                outline: none;
+                box-shadow: none;
                 &:after {
                     content: "";
                     position: absolute;
@@ -51,11 +56,23 @@
             }
         }
         .infotxt {
-            max-height: 2.9em;
+            height: 2.5em;
             overflow: hidden;
             display: block;
-            line-height: 1.45em;
+            line-height: 2.5em;
             text-align: center;
+            background: rgba(0, 0, 0, .7);
+            color: #FFF;
+            transition: .3s ease-out;
+            position: absolute;
+            left: 0;
+            bottom: -4em;
+            right: 0;
+            margin: 0;
+            @include text-overflow;
+            @include screen('mobile') {
+                bottom: 0;
+            }
         }
     }
     // dots
@@ -114,35 +131,35 @@
         border-bottom: 1px solid $primaryColor;
     }
     background: #fff;
-    padding: 30px 0px 50px;
+    padding: 2em 0px 3em;
     clear: both;
-    .imgOuter {
+    .img-container {
         margin: 0px 15px;
-        @include aspect-ratio(4, 3);
-        height: 200px;
+        @include aspect-ratio(16, 9);
         overflow: hidden;
+        a {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
         img {
             vertical-align: middle;
             max-width: 100% !important;
             max-height: 100% !important;
             width: auto !important;
             height: auto !important;
-            display: inline-block;
             position: absolute;
             left: 0 !important;
             top: 0 !important;
             object-fit: contain;
         }
     }
-    .infotxt {
-        margin: 0px 10px 0px 20px;
-        padding: 0px;
-    }
     // dots
     .slick-dots {
-        bottom: 0px;
+        bottom: -2em;
         @include screen('mobile') {
-            bottom: 0px;
+            bottom: -3em;
             padding: 0;
         }
     }
@@ -155,16 +172,16 @@
         transition: .3s ease-out;
         @include border-radius(6px);
     }
-    .slick-prev {
-        left: -30px;
-        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5);
-        background-size: 80%;
-    }
-    .slick-next {
-        right: -30px;
-        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5);
-        background-size: 80%;
-    }
+    // .slick-prev {
+    //     left: -30px;
+    //     background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5);
+    //     background-size: 80%;
+    // }
+    // .slick-next {
+    //     right: -30px;
+    //     background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5);
+    //     background-size: 80%;
+    // }
     .slick-dots li {
         width: 10px;
         height: 10px;

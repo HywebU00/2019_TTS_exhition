@@ -6,6 +6,11 @@ footer {
     text-align: left;
     font-size: .938em;
     padding: 2em 0;
+    &.has_bottom {
+        @include screen('mobile') {
+            bottom: 6em;
+        }
+    }
     @include screen('mobile') {
         padding: 2em 0 1em;
         font-size: .813em;

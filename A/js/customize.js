@@ -1,5 +1,40 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 會員登入後
+    if ($('.login_menu').length > 0) {
+        $('.scrollToTop').addClass('has_bottom');
+        $('footer').addClass('has_bottom');
+        $('.sp .login_menu').clone().appendTo('body').addClass('m_loginmenu');
+        $('.sp .login_menu>ul').clone().appendTo('body').addClass('bottom_menu');
+        $('.bottom_menu').append("<div class='open_m_function'><a href='#'>more</a></div>");
+        var _m_loginmenu = $('.m_loginmenu'),
+            _bottom_menu = $('.bottom_menu');
+        _m_loginmenu.hide();
+        $(window).on("load resize", function(e) {
+            _W_Height = $(this).height();
+            _m_loginmenu.css('top', _W_Height);
+            _open_m_function = $('.open_m_function a');
+            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height }, 400, 'easeOutQuint');
+            $('body').removeClass('noscroll');
+            _open_m_function.html('more');
+            _m_menustatus = false;
+        });
+        var _m_menustatus = false;
+        _bottom_menu.find('.open_m_function a').off().click(function(e) {
+            if (!_m_menustatus) {
+                _m_loginmenu.show().stop(true, true).animate({ 'top': 0 }, 400, 'easeOutQuint');
+                $('body').addClass('noscroll');
+                _open_m_function.html('close');
+                _m_menustatus = true;
+            } else {
+                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height }, 400, 'easeOutQuint');
+                $('body').removeClass('noscroll');
+                _open_m_function.html('more');
+                _m_menustatus = false;
+            }
+            e.preventDefault();
+        });
+    }
     // lazyload
     $("img.lazy").show().lazyload({
         placeholder: 'images/basic/placeholder.gif',
@@ -23,14 +58,21 @@ $(function() {
         $('.leftmenu').append('<a href="#" class="toggle_btn"></a><div class="mask"></div>');
         $('.toggle_btn').removeClass('fixed');
         $('.leftmenu').siblings('.lp').addClass('padding-left');
+        $('.leftmenu').siblings('.cp').addClass('padding-left');
         $(window).bind("load resize", function(e) {
             left_W = $('.leftmenu').outerWidth();
             ww = $(window).outerWidth();
-            console.log(ww);
+            // console.log(ww);
+            if ($('.product_search').length > 0 && ww <= 768) {
+                $('.product_search').prependTo('.leftmenu');
+            }if ($('.product_search').length > 0 && ww > 768) {
+                $('.product_search').prependTo('.lp').show().removeAttr('style');
+            }
             if (ww >= 768) {
                 $('.toggle_btn').removeClass('open');
                 $('.toggle_btn').siblings().show();
                 $('.toggle_btn').parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                $('.toggle_btn').parents('.leftmenu').removeClass('hidden').siblings('.cp').removeClass('width100');
                 $('.leftmenu').removeAttr('style');
                 left_stutus = false;
             } else {
@@ -44,12 +86,14 @@ $(function() {
                     if (!left_stutus) {
                         $(this).siblings().hide();
                         $(this).parents('.leftmenu').addClass('hidden').siblings('.lp').addClass('width100');
+                        $(this).parents('.leftmenu').addClass('hidden').siblings('.cp').addClass('width100');
                         $('.leftmenu').css('margin-left', left_W * -1);
                         left_stutus = true;
                     } else {
                         $(this).removeClass('open');
                         $(this).siblings().show();
                         $(this).parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                        $(this).parents('.leftmenu').removeClass('hidden').siblings('.cp').removeClass('width100');
                         $('.leftmenu').removeAttr('style');
                         left_stutus = false;
                     }

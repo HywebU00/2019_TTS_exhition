@@ -6,13 +6,224 @@
     }
 }
 .sp {
-    @include gutter;
     padding-bottom: 4em;
+    overflow:hidden;
     @include screen('mobile') {
-        @include gutter(0);
+        @include gutter;
+    }
+}
+.bottom_menu {
+    position: fixed;
+    width: 100%;
+    height: 3.5em;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    margin: 0;
+    padding: .25em 0;
+    border-top: 1px solid #CCC;
+    @include gradient(#FEFEFE, #DDD, vertical);
+    display: none;
+    @include screen('mobile') {
+        display: block;
+    }
+    .open_m_function {
+        position: absolute;
+        width: 20%;
+        right: 0;
+        height: 3.8em;
+        font-size: .75em;
+        text-align: center;
+        a {
+            @include aSetting_nocolor;
+            display: block;
+            border-radius: 4px;
+            margin-left: 1px;
+            margin-right: 1px;
+            &:before {
+                display: block;
+                content: "...";
+                font-size: 2.5em;
+                vertical-align: top;
+            }
+            @include aSetting_nocolor;
+            &:hover, &:focus {
+                background: rgba(0, 0, 0, .45);
+                color: #FFF;
+                &:before {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    li {
+        float: left;
+        width: 20%;
+        display: none;
+        text-align: center;
+        font-size: .75em;
+        height: 3.5em;
+        border-right: 1px solid #CCC;
+        a {
+            @include aSetting_nocolor;
+            display: block;
+            border-radius: 4px;
+            margin-left: 1px;
+            margin-right: 1px;
+            &:hover, &:focus {
+                background: rgba(0, 0, 0, .45);
+                color: #FFF;
+                i {
+                    filter: invert(100%);
+                }
+            }
+        }
+        i {
+            display: block;
+            font-size: 1.5em;
+        }
+        &:nth-child(1) {
+            display: block;
+        }
+        &:nth-child(2) {
+            display: block;
+        }
+        &:nth-child(3) {
+            display: block;
+        }
+        &:nth-child(4) {
+            display: block;
+        }
+    }
+}
+.leftmenu {
+    .product_search {
+        display: none;
+        @include screen('mobile') {
+            display: block;
+            padding: .5em;
+            border-bottom: 2px solid $primaryColor;
+        }
+        @include screen('xs_mobile') {
+            text-align: left;
+            label {
+                display: block;
+            }
+        }
+    }
+}
+.leftmenu, .login_menu {
+    @include make-xs-column(12);
+    @include make-sm-column(4);
+    @include make-md-column(3);
+    @include make-lg-column(3);
+    background: #F9F9F9;
+    border-right: 1px solid #DDD;
+    padding: 1em 1em 10em 1em;
+    @include screen('mobile') {
+        padding: 3em 1em 0em;
+        border: none;
+    }
+    // @include gutter();
+    &~.lp, &~.cp, &~.np, &~.login_content {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(9);
+        @include make-lg-column(9);
+        padding-left: 1em;
+        @include screen('mobile') {
+            @include gutter(0);
+        }
+    }
+    h2 {
+        // background: lighten($primaryColor, 5);
+        padding: .8em;
+        color: #FFF;
+        margin: 0 0 1px 0;
+        border-bottom: 1px solid RGBA(255, 255, 255, .4);
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: block;
+            text-align: left;
+            margin-bottom: 1px;
+            // background: $secondaryColor;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                display: block;
+                padding: .8em 1em;
+                color: #FFF;
+                transition: .3s ease-out;
+                line-height: 1.45em;
+                font-weight: bold;
+                box-shadow: none;
+                outline: none;
+                i {
+                    margin-right: .5em;
+                    filter: invert(100%);
+                }
+                &:hover,
+                &:focus {
+                    background: darken($primaryColor, 0);
+                }
+            }
+        }
     }
 }
 .login_menu {
+    border-right: none;
+    background: #FFF;
+    ul {
+        background: darken($secondaryColor, 20);
+        li {
+            position: relative;
+            &.active {
+                &:before {
+                    position: absolute;
+                    top: 0%;
+                    content: "";
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 20px 10px 20px 0;
+                    border-color: transparent #ffffff transparent transparent;
+                    @include screen('mobile') {
+                        left: 0;
+                        right: auto;
+                        border-style: solid;
+                        border-width: 20px 0 20px 10px;
+                        border-color: transparent transparent transparent lighten($secondaryColor, 5);
+                        ;
+                    }
+                }
+            }
+            a {
+                padding: .5em 1.2em .5em 1em;
+                border-bottom: 1px solid RGBA(255, 255, 255, .2);
+                &:hover, &:focus {
+                    background: darken($secondaryColor, 10);
+                }
+            }
+            li {
+                a {
+                    background: rgba(0, 0, 0, .2);
+                    padding-left: 2.5em;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.login_menu {
+    @include screen('mobile') {
+        display: none;
+    }
     .info {
         padding: 1em;
         background: darken($primaryColor, 40);
@@ -42,6 +253,23 @@
         margin: 0;
         color: #FFF;
         padding: 1em .8em;
+    }
+    &.m_loginmenu {
+        position: fixed;
+        z-index: 98;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: auto;
+        margin: 0;
+        padding: 4em 0 5em 0;
+        background: darken($primaryColor, 25);
+        display: none;
+        @include screen('mobile') {
+            display: block;
+        }
     }
 }
 .login_content {
@@ -187,11 +415,14 @@
         margin-bottom: .5em;
         overflow: hidden;
         @include screen('mobile') {
-            text-align: center;
+            text-align: left;
         }
         .more {
             float: right;
-            font-size: .75em;
+            font-size: .938em;
+            @include screen('mobile') {
+                float: none;
+            }
         }
     }
 }
@@ -721,12 +952,15 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     }
 }
 .prelogin_info {
+    @include screen('mobile') {
+        background: #F5F5F5;
+    }
     ul {
         overflow: hidden;
         @include li-reset;
         border: 1px solid #DEDEDE;
         @include screen('mobile') {
-            border:none;
+            border: none;
             border-left: 5px solid lighten($primaryColor, 10);
         }
         li {
@@ -754,22 +988,21 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
             border-right:1px solid #DEDEDE;
             @include screen('mobile') {
                 width: 100%;
-                display:block;
-                float:none;
-                border:none;
-                background:#FFF;
+                display: block;
+                float: none;
+                border: none;
                 height: auto;
-                padding:.5em;
+                padding: .5em;
+                background: none;
             }
             span {
-                color: #999;
+                color: #555;
                 overflow: hidden;
                 margin-bottom: 1em;
                 display: block;
-                font-size: .813em;
+                font-size: .938em;
                 line-height: 1.45;
                 @include screen('mobile') {
-                    font-size: .75em;
                     margin-bottom: .5em;
                 }
                 time {
@@ -779,13 +1012,25 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 &.show {
                     color: #222;
                     font-weight: bold;
-                    font-size:1em;
+                    font-size: 1.5em;
+                }
+                em {
+                    font-style: normal;
+                    color: inherit;
+                    &:after {
+                        content: "、";
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
     }
 }
-.prelogin{
+.prelogin {
     font-size: .938em;
     border-left: 5px solid lighten($primaryColor, 10);
     padding: 1em;
@@ -854,40 +1099,39 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
-.signup{
-    position:relative;
-    background:#FFF;
-    box-shadow:0px 4px 15px rgba(0,0,0,.25);
-    clear:both;
+.signup {
+    position: relative;
+    background: #FFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, .25);
+    clear: both;
     width: 90%;
     margin: .5em auto 1em;
-    min-height:480px;
-    padding:1em;
+    min-height: 480px;
+    padding: 1em;
     padding-right: 25%;
     font-size: .938em;
-     @include screen('xs_mobile') {
-        padding:1em .5em;
+    @include screen('xs_mobile') {
+        padding: 1em .5em;
         width: 100%;
-        box-shadow:none;
-     }
-    &:before{
-        position:absolute;
-        background:url('../images/signup.jpg') no-repeat center center;
-        background-size:cover;
-        top:0;
-        width:25%;
+        box-shadow: none;
+    }
+    &:before {
+        position: absolute;
+        background: url('../images/signup.jpg') no-repeat center center;
+        background-size: cover;
+        top: 0;
+        width: 25%;
         right: 0;
         height: 100%;
-        content:"";
+        content: "";
         @include screen('xs_mobile') {
-            display:none;
+            display: none;
         }
     }
-    .form_grp{
+    .form_grp {
         border-bottom: none;
     }
-    .form_title{
-        
+    .form_title {
         font-weight: bold;
         text-align: right;
         @include screen('mobile') {

@@ -41,6 +41,9 @@ table {
     }
     thead{
         border-bottom: 2px solid #AAA;
+        @include screen('mobile') {
+            border:none;
+        }
     }
 }
 .table_list {
@@ -60,22 +63,24 @@ table {
         }
         tr {
             border: 1px solid #ccc;
+            border-left: none;
+            border-right: none;
             margin-bottom: 10px; // background-color: #333;
+             border-top: 2px solid #AAA;
         }
         td {
             // Behave  like a "row"
             border: none !important;
             border-bottom: 1px solid #eee !important;
             position: relative;
-            padding-left: 35% !important;
             white-space: normal;
             text-align: left;
             &:before {
-                content: attr(data-title);
+                content:"";
                 position: absolute;
                 top: .5em;
                 left: .5em;
-                width: 30%;
+                width: 2%;
                 padding-right: 10px;
                 // white-space: nowrap;
                 text-align: left;

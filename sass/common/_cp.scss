@@ -11,6 +11,13 @@ h1.title {
         img {
             width: 100%;
         }
+        .btn_grp{
+            button{
+                @include screen('xs_mobile') {
+                    width: 100%;
+                }
+            }
+        }
     }
     &.small_size {
         font-size: .938em;
@@ -29,6 +36,7 @@ h1.title {
             float: left;
             margin: 0px 1em 1em 0;
             width: auto;
+            display: block;
             max-width: 55%;
             @include screen('mobile') {
                 float: none;
@@ -375,28 +383,28 @@ div.tag {
         width: 100%;
         min-width: 260px;
         padding: .2em;
-        .prev,.next {
+        .prev, .next {
             &:before {
                 width: 20px;
                 height: 20px;
-                top:30%;
+                top: 30%;
                 left: 0px;
             }
-            &:hover{
-                &:before{
-                    left:0px;
+            &:hover {
+                &:before {
+                    left: 0px;
                 }
             }
         }
         .next {
             &:before {
-                left:auto;
+                left: auto;
                 right: 0px;
             }
-            &:hover{
-                &:before{
-                    left:auto;
-                    right:0px;
+            &:hover {
+                &:before {
+                    left: auto;
+                    right: 0px;
                 }
             }
         }

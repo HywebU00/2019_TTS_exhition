@@ -179,7 +179,7 @@
                             <li>
                                 <img src="images/icon_location.svg" alt="">
                                 <span>活動地點：</span>
-                                <span class="show"> 台北世貿一館、台北世貿二館 </span>
+                                <span class="show"> <em>台北世貿一館</em><em>台北世貿二館 </em></em>
                             </li>
                         </ul>
                     </div>
@@ -390,8 +390,8 @@
                         </div>
                     </form>
                     <div class="btn_grp">
-                        <input name="" type="reset" value="清除" />
-                        <input name="" type="submit" value="確認" />
+                        <button class="btn btn-reset">清除</button>
+                        <button class="btn btn-primary">確認</button>
                     </div>
                 </section>
                 <!-- SP End -->
@@ -475,11 +475,11 @@
                 <!-- footer資訊模組 -->
                 <div class="footer_info">
                     <ul class="footer_share">
-                        <li><a href="#"><img src="images/basic/icon_facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_twitter.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_pinterest.svg" alt=""></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_facebook.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_twitter.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_youtube.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_instagram.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_pinterest.svg" alt="" class="lazy"></a></li>
                     </ul>
                     <ul class="footer_link">
                         <li><a href="#">服務條款和隱私權政策內容</a></li>
@@ -495,15 +495,15 @@
                     <h3>下載APP</h3>
                     <div class="app_download">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/google_play.png" alt="">
+                            <img data-original="images/google_play.png" alt="" class="lazy">
                         </a>
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/app_store.png" alt="">
+                            <img data-original="images/app_store.png" alt="" class="lazy">
                         </a>
                     </div>
                     <div class="qr_code">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/qrcode.jpg" alt="">
+                            <img data-original="images/qrcode.jpg" alt="" class="lazy">
                         </a>
                     </div>
                 </div>
@@ -519,9 +519,10 @@
     <script src="vendor/slick/slick.min.js "></script>
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
-    <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- AddEvent script -->
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->

@@ -183,7 +183,6 @@
                             </ul>
                         </div>
                     </div>
-                   
                     <!-- CP Start -->
                     <section class="cp">
                         <ul class="info">
@@ -194,7 +193,14 @@
                         <!-- 產品資訊 -->
                         <div class="company_info">
                             <div class="img-container">
-                                <img src="https://logos-download.com/wp-content/uploads/2016/06/Giant_Bicycles_logo_blue.png">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                    <img data-original="images/hyweb.jpg" class="lazy" src="images/hyweb.jpg" style="">
+                                    <noscript><img src="images/hyweb.jpg"></noscript>
+                                </picture>
                             </div>
                             <div class="qrcode">
                                 <img src="images/qrcode.jpg" alt="">
@@ -206,7 +212,7 @@
                                 <li><i class="i_global"></i><a href="https://www.giantcyclingworld.com/inc/">https://www.giantcyclingworld.com/inc/</a></li>
                             </ul>
                             <div class="company_function">
-                                <a href="#" title="收藏"><i class="i_heart_added"></i></a>
+                                <a href="#" title="收藏"><i class="i_heart_false"></i></a>
                                 <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                             </div>
                         </div>
@@ -254,25 +260,53 @@
                             <div class="cp_slider">
                                 <div class="img-container">
                                     <a href="#" data-caption="第一張圖說">
-                                        <img src="images/feature_01.jpg" alt="">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(min-width: 992px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(min-width: 576px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(max-width: 575px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <img data-lazy="images/feature_03.jpg" class="cover" src="images/feature_03.jpg">
+                                            <noscript><img src="images/feature_03.jpg"></noscript>
+                                        </picture>
                                     </a>
                                     <p class="infotxt">第一張圖說</p>
                                 </div>
                                 <div class="img-container">
                                     <a href="#" data-caption="第二張圖說">
-                                        <img src="images/feature_02.jpg" alt="">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(min-width: 992px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(min-width: 576px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(max-width: 575px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <img data-lazy="images/feature_01.jpg" class="cover" src="images/feature_01.jpg">
+                                            <noscript><img src="images/feature_01.jpg"></noscript>
+                                        </picture>
                                     </a>
                                     <p class="infotxt">第二張圖說</p>
                                 </div>
                                 <div class="img-container">
                                     <a href="#" data-caption="第三張圖說">
-                                        <img src="images/feature_03.jpg" alt="">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(min-width: 992px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(min-width: 576px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <source media="(max-width: 575px)" data-lazy-srcset="images/feature_01.jpg">
+                                            <img data-lazy="images/feature_01.jpg" class="cover" src="images/feature_01.jpg">
+                                            <noscript><img src="images/feature_01.jpg"></noscript>
+                                        </picture>
                                     </a>
                                     <p class="infotxt">第三張圖說</p>
                                 </div>
                                 <div class="img-container">
                                     <a href="#" data-caption="第四張圖說">
-                                        <img src="images/feature_04.jpg" alt="">
+                                       <picture>
+                                            <source media="(min-width: 1200px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(min-width: 992px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(min-width: 576px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <source media="(max-width: 575px)" data-lazy-srcset="images/feature_03.jpg">
+                                            <img data-lazy="images/feature_03.jpg" class="cover" src="images/feature_03.jpg">
+                                            <noscript><img src="images/feature_03.jpg"></noscript>
+                                        </picture>
                                     </a>
                                     <p class="infotxt">第四張圖說</p>
                                 </div>
@@ -426,11 +460,11 @@
                 <!-- footer資訊模組 -->
                 <div class="footer_info">
                     <ul class="footer_share">
-                        <li><a href="#"><img src="images/basic/icon_facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_twitter.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/basic/icon_pinterest.svg" alt=""></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_facebook.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_twitter.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_youtube.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_instagram.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-original="images/basic/icon_pinterest.svg" alt="" class="lazy"></a></li>
                     </ul>
                     <ul class="footer_link">
                         <li><a href="#">服務條款和隱私權政策內容</a></li>
@@ -446,15 +480,15 @@
                     <h3>下載APP</h3>
                     <div class="app_download">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/google_play.png" alt="">
+                            <img data-original="images/google_play.png" alt="" class="lazy">
                         </a>
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/app_store.png" alt="">
+                            <img data-original="images/app_store.png" alt="" class="lazy">
                         </a>
                     </div>
                     <div class="qr_code">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img src="images/qrcode.jpg" alt="">
+                            <img data-original="images/qrcode.jpg" alt="" class="lazy">
                         </a>
                     </div>
                 </div>
@@ -470,7 +504,6 @@
     <script src="vendor/slick/slick.min.js "></script>
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
-    <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

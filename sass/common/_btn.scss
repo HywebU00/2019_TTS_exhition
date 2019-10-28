@@ -17,29 +17,30 @@ $btn-radius:.4em;
     }
 }
 // 按鈕的共用設定
-@mixin btn_setting($btn-bg:#DDD, $btn-font-color:$btn-font-color) {
-    background: $btn-bg;
-    border: 1px solid darken($btn-bg, 10);
+@mixin btn_setting($btn-bg:#f5f5f5, $btn-font-color:$btn-font-color) {
+    background-color: $btn-bg;
+    border: 1px solid darken($btn-bg, 15);
     color: $btn-font-color;
-    box-shadow:0px 2px 2px RGBA(0, 0, 0, .08);
-    border-radius:$btn-radius;
-    &:hover,&:focus {
-        background: darken($btn-bg, 10);
+    text-shadow:1px 1px 1px RGBA(0,0,0,.3);
+    @include border-radius($btn-radius);
+    @include gradient(lighten($btn-bg, 5), darken($btn-bg, 10), vertical);
+    &:hover, &:focus {
+        background-color: darken($btn-bg, 3); // Old browsers
+        border: 1px solid darken($btn-bg, 10) !important;
         cursor: pointer;
         color: #FFF;
-    }
-    &:focus{
-        @include box-shadow(0px 0px 0px 3px lighten($btn-bg, 25));
         outline:none;
+        @include gradient(lighten($btn-bg, 0), darken($btn-bg, 2), vertical);
     }
     &.active {
-        background: lighten($btn-bg, 5);
+        background: lighten($btn-bg, 2);
         cursor: pointer;
     }
 }
 // 按鈕預設陰影
 %btn {
     font-size: $font-size;
+    touch-action: manipulation;
     background-image: none; //修正firefox
     display: inline-block;
     text-align: center;
@@ -48,27 +49,25 @@ $btn-radius:.4em;
     white-space: nowrap;
     line-height: normal;
     width: auto;
+    padding: $btn-padding;
     min-width: 4em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin: .25em .1em;
+
+    i {
+        margin-right: .3em;
+        margin-left: .3em;
+    }
 }
+// 按鈕基本樣式
 .btn {
     @extend %btn;
-    padding: $btn-padding !important;
-    touch-action: manipulation;
     @include box-sizing;
-    @include btn_setting();
-    text-shadow:RGBA(0, 0, 0, .3) 0px 0px 0px;
-    @include gradient(#f7f7f7, #DADADA, vertical);
-    transition: .3s ease-out;
+    @include btn_setting;
+    text-shadow:none;
     &:hover,
     &:focus {
         color: $btn-font-color;
-        @include gradient(#fAfAfA, #CDCDCD, vertical);
-    }
-    i{
-        margin-right: .5em;
+        outline: none;
     }
 }
 //按鈕顏色
@@ -96,6 +95,13 @@ $btn-radius:.4em;
 .btn-purple {
     @extend %btn;
     @include btn_setting($color-purple, #FFF);
+}
+.btn-reset {
+    @extend %btn;
+    color:lighten($color-word,15);
+}
+.btn-primary {
+   @include btn_setting(lighten($My_secondaryColor,10), #FFF);
 }
 // 按鈕大小
 .btn-xl {
