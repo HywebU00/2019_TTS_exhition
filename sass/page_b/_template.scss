@@ -1,5 +1,5 @@
 body {
-    color:$color-word;
+    color: $color-word;
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -9,12 +9,10 @@ body {
         margin: 0;
         padding: 0;
     }
-    *{
+    * {
         box-sizing: border-box;
-
     }
 }
-
 // 最外圍預設為100%
 .wrapper {
     width: 100%;
@@ -25,14 +23,12 @@ body {
         background: #FFF;
     }
 }
-
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
     padding: 0;
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
 }
-
 .main {
     position: relative;
     margin: 0px auto 0;
@@ -40,20 +36,39 @@ body {
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     @include screen('mobile') {
         padding-top: 55px;
-    } // 內頁標題設定
+    }
+    // 內頁標題設定
     h2 {
         line-height: 1.25em;
     }
 }
-
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-top: 2em;
+    @include gutter;
     @include screen('mobile') {
         padding-top: 5em;
     }
-     >.container {
+    .inner_img {
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 6em;
+        overflow: hidden;
+        margin-bottom: 1em;
+        img {
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+    }
+    >.container {
         @include gutter(); //gutter 代表左右要留白
         @include screen('mobile') {
             @include gutter(0);

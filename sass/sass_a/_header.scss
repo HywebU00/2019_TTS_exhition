@@ -1,6 +1,6 @@
 //header
 .header {
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 99;
     @extend %clearfix;
