@@ -1583,7 +1583,7 @@
                 }
                 width: 96%;
                 margin: 0px auto .5em;
-                @include aspect-ratio(16, 9);
+                @include aspect-ratio(4, 3);
                 height: auto;
                 p {
                     display: none;
