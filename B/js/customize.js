@@ -1,5 +1,11 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // fixed_sidebar
+    if ($('.fixed_bar').length > 0) {
+        $('footer').addClass('has_bottom');
+        $('.scrollToTop').addClass('padding-bottom');
+        $('.scrollToTop').addClass('has_bottom');
+    }
     // 會員登入後
     if ($('.login_menu').length > 0) {
         $('.scrollToTop').addClass('has_bottom');
@@ -14,7 +20,7 @@ $(function() {
             _W_Height = $(this).height();
             _m_loginmenu.css('top', _W_Height);
             _open_m_function = $('.open_m_function a');
-            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
+            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 300 }, 400, 'easeOutQuint');
             $('body').removeClass('noscroll');
             _open_m_function.html('more');
             _m_menustatus = false;
@@ -27,7 +33,7 @@ $(function() {
                 _open_m_function.html('close');
                 _m_menustatus = true;
             } else {
-                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
+                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 300 }, 400, 'easeOutQuint');
                 $('body').removeClass('noscroll');
                 _open_m_function.html('more');
                 _m_menustatus = false;
@@ -40,7 +46,7 @@ $(function() {
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 600,
-        threshold : 200
+        threshold: 200
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
@@ -53,6 +59,69 @@ $(function() {
             $(this).parent('li').addClass('active');
         });
     });
+    // 左側選單
+    var left_stutus = false;
+    if ($('.leftmenu').length > 0) {
+        $('.leftmenu').append('<a href="#" class="toggle_btn"></a><div class="mask"></div>');
+        $('.toggle_btn').removeClass('fixed');
+        $('.leftmenu').siblings('.lp').addClass('padding-left');
+        $('.leftmenu').siblings('.cp').addClass('padding-left');
+        $(window).bind("load resize", function(e) {
+            left_W = $('.leftmenu').outerWidth();
+            ww = $(window).outerWidth();
+            // console.log(ww);
+            if ($('.product_search').length > 0 && ww <= 768) {
+                $('.product_search').prependTo('.leftmenu');
+            }
+            if ($('.product_search').length > 0 && ww > 768) {
+                $('.product_search').prependTo('.lp').show().removeAttr('style');
+            }
+            if (ww >= 768) {
+                $('.toggle_btn').removeClass('open');
+                $('.toggle_btn').siblings().show();
+                $('.toggle_btn').parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                $('.toggle_btn').parents('.leftmenu').removeClass('hidden').siblings('.cp').removeClass('width100');
+                $('.leftmenu').removeAttr('style');
+                left_stutus = false;
+            } else {
+                $('.toggle_btn').removeClass('open');
+                $('.toggle_btn').siblings().hide();
+                $('.mask').show();
+                left_stutus = true;
+            }
+            $('.toggle_btn').off().click(function(e) {
+                if (ww >= 768) {
+                    if (!left_stutus) {
+                        $(this).siblings().hide();
+                        $(this).parents('.leftmenu').addClass('hidden').siblings('.lp').addClass('width100');
+                        $(this).parents('.leftmenu').addClass('hidden').siblings('.cp').addClass('width100');
+                        $('.leftmenu').css('margin-left', left_W * -1);
+                        left_stutus = true;
+                    } else {
+                        $(this).removeClass('open');
+                        $(this).siblings().show();
+                        $(this).parents('.leftmenu').removeClass('hidden').siblings('.lp').removeClass('width100');
+                        $(this).parents('.leftmenu').removeClass('hidden').siblings('.cp').removeClass('width100');
+                        $('.leftmenu').removeAttr('style');
+                        left_stutus = false;
+                    }
+                } else {
+                    if (!left_stutus) {
+                        $(this).removeClass('open');
+                        $(this).siblings().slideUp();
+                        $('.mask').show();
+                        left_stutus = true;
+                    } else {
+                        $(this).addClass('open');
+                        $(this).siblings().slideDown();
+                        $('.mask').hide();
+                        left_stutus = false;
+                    }
+                }
+                e.preventDefault();
+            });
+        });
+    }
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,
@@ -153,7 +222,7 @@ $(function() {
             $('.loaction_intro').removeAttr('style');
         }
     });
-     //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
     // -------------------------------------------KV區塊
     if ($('.mp_slider').length > 0) {
         $('.mp_slider ul').slick({

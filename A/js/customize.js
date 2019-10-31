@@ -1,5 +1,11 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // fixed_sidebar
+    if ($('.fixed_bar').length > 0) {
+        $('footer').addClass('has_bottom');
+        $('.scrollToTop').addClass('padding-bottom');
+        $('.scrollToTop').addClass('has_bottom');
+    }
     // 會員登入後
     if ($('.login_menu').length > 0) {
         $('.scrollToTop').addClass('has_bottom');
@@ -14,7 +20,7 @@ $(function() {
             _W_Height = $(this).height();
             _m_loginmenu.css('top', _W_Height);
             _open_m_function = $('.open_m_function a');
-            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
+            _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 300 }, 400, 'easeOutQuint');
             $('body').removeClass('noscroll');
             _open_m_function.html('more');
             _m_menustatus = false;
@@ -27,7 +33,7 @@ $(function() {
                 _open_m_function.html('close');
                 _m_menustatus = true;
             } else {
-                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height+300 }, 400, 'easeOutQuint');
+                _m_loginmenu.stop(true, true).animate({ 'top': _W_Height + 300 }, 400, 'easeOutQuint');
                 $('body').removeClass('noscroll');
                 _open_m_function.html('more');
                 _m_menustatus = false;
@@ -40,7 +46,7 @@ $(function() {
         placeholder: 'images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 600,
-        threshold : 200
+        threshold: 200
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
@@ -66,7 +72,8 @@ $(function() {
             // console.log(ww);
             if ($('.product_search').length > 0 && ww <= 768) {
                 $('.product_search').prependTo('.leftmenu');
-            }if ($('.product_search').length > 0 && ww > 768) {
+            }
+            if ($('.product_search').length > 0 && ww > 768) {
                 $('.product_search').prependTo('.lp').show().removeAttr('style');
             }
             if (ww >= 768) {
