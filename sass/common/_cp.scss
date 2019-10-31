@@ -354,6 +354,11 @@ div.tag {
         line-height: 1.5;
         font-size: 1.125em;
         @include text-overflow;
+        @include screen('mobile') {
+            height:4em;
+            text-overflow: inherit;
+            white-space:normal;
+        }
         span {
             font-size: .75em;
             color: #888;

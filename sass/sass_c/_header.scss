@@ -213,7 +213,7 @@
         .btn_login {
             position: absolute;
             right: 69px;
-            top: 0px;
+            top: -1px;
             background: $My_primaryColor;
             color: #FFF;
             border: none;
@@ -222,6 +222,7 @@
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;
+                border:none !important;
             }
         }
     }

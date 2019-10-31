@@ -7,7 +7,7 @@
 }
 .sp {
     padding-bottom: 4em;
-    overflow:hidden;
+    overflow: hidden;
     @include screen('mobile') {
         @include gutter;
     }
@@ -819,6 +819,12 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
             }
         }
         tbody {
+            tr.read {
+                background: #F1F1F1;
+                td {
+                    background: #F1F1F1;
+                }
+            }
             td {
                 text-align: left;
                 label {
@@ -1137,5 +1143,29 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         @include screen('mobile') {
             text-align: left;
         }
+    }
+}
+// 上傳進度
+.progress_bar {
+    background: #DDD;
+    border-radius: 3px;
+    height: .5em;
+    width: 100%;
+    span {
+        position: absolute;
+        height: .5em;
+        border-radius: 3px;
+        background: $color-blue;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+        background-size: 1em 1em;
+        animation: progress-bar-stripes 1s linear infinite;
+    }
+}
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0;
+    }
+    to {
+        background-position: 0 0;
     }
 }

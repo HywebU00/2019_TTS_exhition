@@ -266,6 +266,7 @@
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;
+                border:none !important;
             }
         }
     }
