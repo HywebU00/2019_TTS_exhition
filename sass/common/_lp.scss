@@ -1,6 +1,6 @@
-.lp{
+.lp {
     padding-bottom: 4em;
-    overflow:hidden;
+    overflow: hidden;
     @include screen('mobile') {
         @include gutter(0);
     }
@@ -53,10 +53,10 @@
             box-shadow: -1px -1px 0px 1px darken($secondaryColor, 10) inset;
         }
         &.open {
-            position: fixed;
-            left: 0;
+            position: absolute;
+            right: -31px;
             &:before {
-                transform: rotate(225deg);
+                transform: rotate(-135deg);
                 left: 10%;
             }
             @include screen('mobile') {
@@ -66,9 +66,9 @@
                 right: 0;
                 left: 0%;
                 &:before {
-                    transform: rotate(135deg);
                     left: 47%;
-                    top: 40%;
+                    top: 18%;
+                    transform: rotate(0deg);
                 }
             }
         }
@@ -86,7 +86,13 @@
             @include screen('mobile') {
                 transform: rotate(-45deg);
                 left: 47%;
-                top: 15%;
+                top: 18%;
+                background: url(../images/basic/icon_search_white.png) no-repeat center center;
+                background-size: contain;
+                width: 24px;
+                height: 24px;
+                border: none;
+                transform: rotate(0deg);
             }
         }
         &:hover, &:focus {
@@ -149,7 +155,6 @@
     }
     .taitracode_list {
         margin-bottom: 1em;
-
         ul {
             @include li-reset;
             li {
@@ -304,7 +309,7 @@
                     i {
                         margin-right: .5em;
                         opacity: .5;
-                        &:before{
+                        &:before {
                             margin-left: 0
                         }
                     }
@@ -403,12 +408,11 @@
                             top: .3em;
                             font-weight: bold;
                             text-align: left;
-                            &+h3{
-                                display:block;
+                            &+h3 {
+                                display: block;
                                 text-indent: .8em;
                                 margin-top: 0;
                             }
-
                         }
                     }
                     overflow: hidden;
@@ -1358,7 +1362,7 @@ $companyWidth :$companyUL/$companyLength;
             height: 2em;
             i {
                 opacity: .4;
-                &:before{
+                &:before {
                     margin-left: 0
                 }
             }

@@ -49,11 +49,30 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
-    @include screen('mobile') {
-        padding-top: 5em;
+    padding-top: 11em;
+    position: relative;
+    @include gutter;
+
+    .inner_img {
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        top: 3em;
+        height: 7em;
+        overflow: hidden;
+        margin-bottom: 1em;
+        background:$My_primaryColor;
+        img {
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
     }
-     >.container {
+    >.container {
         @include gutter(); //gutter 代表左右要留白
         @include screen('mobile') {
             @include gutter(0);

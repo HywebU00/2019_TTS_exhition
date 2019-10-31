@@ -3,7 +3,7 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor:				#d6307a;				//主色 
+$primaryColor:				#d6307a;				//主色
 $secondaryColor:			#f5850c; 				//輔色
 $lightColor:				#FCC211;				//點綴
 $linkColor:					#21BAFF;				//連結
@@ -29,7 +29,7 @@ $aHover:					lighten($aColor,10);
 $form-focus:				saturate(lighten($primaryColor, 7), 36);//表單
 
 // 替換顏色
-$My_primaryColor:			$primaryColor;				//客製主色 
+$My_primaryColor:			$primaryColor;				//客製主色
 $My_secondaryColor:			$secondaryColor; 			//客製輔色
 $My_aColor:					$aColor;					//連結顏色
 $My_aHover:					$aHover;					//滑過顏色

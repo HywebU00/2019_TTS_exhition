@@ -178,7 +178,6 @@
                 <!-- SP Start -->
                 <section class="sp">
                     <h3>參觀者預登</h3>
-                    <!-- 判斷區塊 -->
                     <div class="prelogin_info">
                         <ul>
                             <li>
@@ -200,6 +199,38 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- 先判斷區塊是否會員 -->
+                    <div class="now_join">
+                        <div class="btn_grp">
+                            <button class="btn btn-primary">我是會員，登入報名</button>
+                        </div>
+                        <p>非會員請直接填寫報名資料</p>
+                    </div>
+                    <!--開登入視窗視窗-->
+                    <div class="modal" style="display: block">
+                        <a href="#" class="close"></a>
+                        <h2>登入會員</h2>
+                        <form class="form_grid">
+                            <div class="form_grp">
+                                <input type="text" class="id" value="" placeholder="請輸入帳號">
+                            </div>
+                            <div class="form_grp">
+                                <input type="password" class="pw" value="" placeholder="請輸入密碼">
+                            </div>
+                                <span class="red">您輸入的帳號或是密碼不正確，請重新輸入</span>
+
+                            <div class="btn_grp">
+                                <button class="btn btn-primary">登入</button>
+                                <button class="btn btn-reset">取消</button>
+                            </div>
+                        </form>
+                        <ul class="member_function">
+                            <li><a href="#">忘記帳號</a></li>
+                            <li><a href="#">忘記密碼</a></li>
+                            <li><a href="#">註冊會員</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal_overlay"></div>
                     <form>
                         <h3>個人資訊</h3>
                         <div class="prelogin">

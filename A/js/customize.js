@@ -92,6 +92,7 @@ $(function() {
             $('.toggle_btn').off().click(function(e) {
                 if (ww >= 768) {
                     if (!left_stutus) {
+                        $(this).addClass('open');
                         $(this).siblings().hide();
                         $(this).parents('.leftmenu').addClass('hidden').siblings('.lp').addClass('width100');
                         $(this).parents('.leftmenu').addClass('hidden').siblings('.cp').addClass('width100');
