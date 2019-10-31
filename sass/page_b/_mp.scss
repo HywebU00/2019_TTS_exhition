@@ -60,10 +60,10 @@
             }
         }
         @include screen('mobile') {
-             z-index: 1;
-             .container{
+            z-index: 1;
+            .container {
                 z-index: 2;
-             }
+            }
         }
         &+.section {
             padding: .5em 0em;
@@ -178,9 +178,7 @@
         padding: 1em;
         border: 1px solid #FFF;
         position: relative;
-        @include screen('mobile') {
-            background: $My_primaryColor;
-        }
+        background: $My_primaryColor;
         &:before {
             position: absolute;
             background: $My_primaryColor;
@@ -1549,7 +1547,7 @@
             }
         }
     }
-     // ----------------------------------- 影音專區
+    // ----------------------------------- 影音專區
     .video {
         @include gutter();
         @include screen('mobile') {
@@ -1611,7 +1609,7 @@
                         width: 3.6em;
                         height: 3.6em;
                         border-radius: 50%;
-                        top: 34%;
+                        top: 40%;
                         left: 50%;
                         margin-left: -1.8em;
                         background: url(../images/play.png) no-repeat center center;
@@ -1842,15 +1840,28 @@
         }
     }
 }
+//animation
+@keyframes fixed_bar {
+    0% {
+        right:-100px;
+    }
+    50% {
+        right:-100px;
+    }
+    100% {
+        right: 0px;
+    }
+}
 .fixed_bar {
     width: 4.5em;
     background: RGBA(0, 0, 0, .75);
     height: auto;
-    top: 20%;
+    bottom: 100px;
     border-radius: 8px 0 0 8px;
     position: fixed;
-    right: 0%;
+    right: 0px;
     z-index: 15;
+    animation: fixed_bar 2s $cubic;
     @media screen and (max-width: 1280px) {
         border-radius: 8px 0 0 8px;
     }
@@ -1892,7 +1903,7 @@
         height: 60px;
         bottom: 0;
         left: 0;
-        top:auto;
+        top: auto;
         border-radius: 0;
         ul {
             li {

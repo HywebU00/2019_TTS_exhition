@@ -110,7 +110,7 @@ a.more {
         padding: 0em;
         overflow: hidden;
         position: relative;
-        background:#FFF;
+        background: #FFF;
         &.parallax_sec {
             @include screen('mobile') {
                 background: transparent !important;
@@ -118,10 +118,10 @@ a.more {
             }
         }
         @include screen('mobile') {
-             z-index: 1;
-             .container{
+            z-index: 1;
+            .container {
                 z-index: 2;
-             }
+            }
         }
         &+.section {
             padding: .5em 0;
@@ -169,7 +169,7 @@ a.more {
                 margin-top: 0;
             }
             .container {
-                background: darken($primaryColor,30);
+                background: darken($primaryColor, 30);
             }
         }
     }
@@ -192,7 +192,7 @@ a.more {
         @include gutter;
         padding-top: 1em;
         padding-bottom: 1em;
-        background: darken($My_primaryColor,30);
+        background: darken($My_primaryColor, 30);
         color: #FFF;
         // &:before {
         //     position: absolute;
@@ -303,7 +303,7 @@ a.more {
     .ex_btn {
         padding-top: 1em;
         padding-bottom: 1em;
-        background: darken($My_primaryColor,30);
+        background: darken($My_primaryColor, 30);
         overflow: hidden;
         ul {
             @include li-reset;
@@ -333,10 +333,10 @@ a.more {
                 .btn {
                     border-radius: 0;
                     color: #FFF;
-                    background: darken($My_primaryColor,30);
+                    background: darken($My_primaryColor, 30);
                     height: 120px;
                     padding: .2em !important;
-                     border:none !important;
+                    border: none !important;
                     width: 100%;
                     font-size: 1.25em;
                     text-align: center;
@@ -344,8 +344,8 @@ a.more {
                     box-sizing: border-box;
                     margin: 0;
                     position: relative;
-                    &:hover,&:focus {
-                        border:none !important;
+                    &:hover, &:focus {
+                        border: none !important;
                     }
                     &:after {
                         height: 120px;
@@ -1467,7 +1467,7 @@ a.more {
         ul {
             @include li-reset;
             @include gutter;
-            overflow:hidden;
+            overflow: hidden;
         }
         .slider {
             ul {
@@ -1540,7 +1540,7 @@ a.more {
             }
         }
     }
-     // ----------------------------------- 影音專區
+    // ----------------------------------- 影音專區
     .video {
         @include gutter();
         @include screen('mobile') {
@@ -1602,7 +1602,7 @@ a.more {
                         width: 3.6em;
                         height: 3.6em;
                         border-radius: 50%;
-                        top: 34%;
+                        top: 40%;
                         left: 50%;
                         margin-left: -1.8em;
                         background: url(../images/play.png) no-repeat center center;
@@ -1832,15 +1832,28 @@ a.more {
         }
     }
 }
+//animation
+@keyframes fixed_bar {
+    0% {
+        right: -100px;
+    }
+    50% {
+        right: -100px;
+    }
+    100% {
+        right: 0px;
+    }
+}
 .fixed_bar {
     width: 4.5em;
     background: RGBA(0, 0, 0, .75);
     height: auto;
-    top: 20%;
+    top: 40%;
     border-radius: 8px 0 0 8px;
     position: fixed;
     right: 0%;
     z-index: 15;
+    animation: fixed_bar 2s $cubic;
     @media screen and (max-width: 1280px) {
         border-radius: 8px 0 0 8px;
     }
@@ -1882,7 +1895,7 @@ a.more {
         height: 60px;
         bottom: 0;
         left: 0;
-        top:auto;
+        top: auto;
         border-radius: 0;
         ul {
             li {

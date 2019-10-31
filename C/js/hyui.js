@@ -42,7 +42,7 @@ $(function() {
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
     _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
-    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
+    $('header>.container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
     var menu_status = false;
     var _sidebar = $('.sidebar'),
         _search = $('.search'),
@@ -114,6 +114,7 @@ $(function() {
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
+            _mArea.find('.language').prependTo('.sidebar .have_language');
             // 副選單點出
             _sidebar.find('li.liHasChild').off().on('mouseenter,mouseleave');
             liHasChild.on('touchstart', function() {
@@ -203,6 +204,10 @@ $(function() {
             $('.search').hide();
             search_mode = false;
         }
+    });
+    $('.search .close').on('click touchend', function(e) {
+        $('.search').hide();
+        search_mode = false;
     });
     // 如果點在外面
     $('.main').off().on('click touchend', function(e) {

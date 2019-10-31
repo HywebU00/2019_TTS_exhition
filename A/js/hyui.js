@@ -118,6 +118,7 @@ $(function() {
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
+            _mArea.find('.language').prependTo('.sidebar .have_language');
             // 副選單點出
             _sidebar.find('li.liHasChild').off().on('mouseenter,mouseleave');
             liHasChild.on('touchstart', function() {
