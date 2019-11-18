@@ -1382,3 +1382,85 @@ $companyWidth :$companyUL/$companyLength;
         }
     }
 }
+// 名詞解釋
+.accordion {
+    .pic {
+        @include aspect-ratio(16, 9);
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        &:hover,
+        &:focus {
+            img {
+                transform: none;
+            }
+        }
+    }
+    ul {
+        counter-reset: num;
+        @include li-reset;
+        li {
+            text-align: left;
+            display: block;
+            border-bottom: 1px solid #FFF;
+            a {
+                display: block;
+                background: #F1F1F1;
+                padding: 1em 3em 1em 1em;
+                color: #555;
+                position: relative;
+                &:before {
+                    counter-increment: num;
+                    content: counter(num) '. ';
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    right: 1em;
+                    top: 1.2em;
+                    width: 8px;
+                    height: 8px;
+                    border: 2px solid #666;
+                    border-top: none;
+                    border-left: none;
+                    transform: rotate(45deg);
+                }
+                &:hover,
+                &:focus {
+                    background: lighten($primaryColor, 2);
+                    box-shadow: none;
+                    color: #FFF;
+                    &:after {
+                        border: 2px solid #FFF;
+                        border-top: none;
+                        border-left: none;
+                    }
+                }
+                &.active {
+                    color: #333;
+                   background: #F1F1F1;
+                    &:hover,
+                    &:focus {
+                        background: lighten($primaryColor, 5);
+                        box-shadow: none;
+                    }
+                    &:focus {
+                        color:#FFF;
+                    }
+                    &:after {
+                        top:1.4em;
+                        transform: rotate(225deg);
+                    }
+                }
+            }
+            .accordion-content {
+                position: relative;
+                padding: 1em 1em 2em 1em;
+                background: #FFF;
+                line-height: 1.65em;
+            }
+        }
+    }
+}

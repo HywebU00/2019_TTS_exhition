@@ -1647,10 +1647,10 @@
 //animation
 @keyframes fixed_bar {
     0% {
-        right:-100px;
+        right: -100px;
     }
     50% {
-        right:-100px;
+        right: -100px;
     }
     100% {
         right: 0px;
@@ -1665,7 +1665,8 @@
     position: fixed;
     right: 0%;
     z-index: 15;
-     animation: fixed_bar 2s $cubic;
+    animation: fixed_bar 2s $cubic;
+    transform: translateZ(0);
     @media screen and (max-width: 1280px) {
         border-radius: 8px 0 0 8px;
     }
@@ -1707,7 +1708,7 @@
         height: 60px;
         bottom: 0;
         left: 0;
-        top:auto;
+        top: auto;
         border-radius: 0;
         ul {
             li {

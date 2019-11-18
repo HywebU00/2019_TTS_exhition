@@ -16,7 +16,6 @@
         -webkit-transform: translateZ(0);
         transform: translate3d(0, 0, 0);
         top: 0;
-        will-change: transform; // creates a new paint layer
     }
     // 內頁的header設定
     &.inner_header {
