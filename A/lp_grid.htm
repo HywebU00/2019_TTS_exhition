@@ -59,7 +59,7 @@
                         <a href="#" class="close"></a>
                         <div class="form_grp cate">
                             <button class="btn">全文檢索</button>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content" style="display: none;" >
                                 <ul>
                                     <li><a href="#">全文檢索</a></li>
                                     <li><a href="#">找廠商</a></li>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="form_grp text">
                             <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                            <div class="dropdown-content" style="display: none;">
+                            <div class="dropdown-content">
                                 <ul>
                                     <li><a href="#"><span>產品名稱</span>產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱</a></li>
                                     <li><a href="#"><span>產品名稱</span>說明說明</a></li>
@@ -174,7 +174,7 @@
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">圖文列表頁</h2>
+                <h2 class="title">一般列表頁</h2>
                 <!-- LP Start -->
                 <section class="lp">
                     <!-- category 有需要才套 -->
@@ -195,26 +195,25 @@
                     <!-- 切換 -->
                     <div class="control_panel">
                         <div class="btn_grp">
-                            <a href="lp.htm" class="view_btn "><i class="i_line_view"></i></a>
-                            <a href="lp_grid.htm" class="view_btn active"><i class="i_grid_view"></i></a>
-                             <a href="lp_imglist.htm" class="view_btn "><i class="i_list_view"></i></a>
+                            <a href="lp.htm" class="view_btn">
+                                <i class="i_line_view"></i>
+                            </a>
+                            <a href="lp_grid.htm" class="view_btn active">
+                                <i class="i_grid_view"></i>
+                            </a>
+                            <a href="lp_imglist.htm" class="view_btn">
+                                <i class="i_list_view"></i>
+                            </a>
+                            <a href="lp_table.htm" class="view_btn">
+                                <i class="i_table_view"></i>
+                            </a>
                         </div>
                     </div>
-                    <!-- 圖文列表 -->
-                    <div class="grid">
+                    <!-- 文字列表 -->
+                    <div class="list">
                         <ul>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">1</span>
                                     <h3>強烈警告!!! 請慎防國外展覽公司詐騙行為 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -223,16 +222,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">2</span>
                                     <h3>自行車及體育用品強強聯手 近7000國際買主來台觀展採購 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -241,16 +230,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">3</span>
                                     <h3>2019台北國際自行車展及台北國際體育用品展聯手展示產業智能化嶄新生態系 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -259,16 +238,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">4</span>
                                     <h3>加入外貿協會Line好友、拓銷活動、服務訊息不漏接，立即掃瞄QR Code 或搜尋Line ID：@taitra </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -277,16 +246,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">5</span>
                                     <h3>Uber X TAIPEI CYCLE 2019 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -295,16 +254,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">6</span>
                                     <h3>「2019 台北國際自行車展」喜迎南港展覽館二館啟用 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -313,16 +262,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">7</span>
                                     <h3>強烈警告!!! 請慎防國外展覽公司詐騙行為 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -331,16 +270,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">8</span>
                                     <h3>2019年裝潢手冊 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
@@ -349,18 +278,16 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/pic_news.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/pic_news.jpg">
-                                            <img data-original="images/pic_news.jpg" class="lazy">
-                                            <noscript><img src="images/pic_news.jpg"></noscript>
-                                        </picture>
-                                    </div>
                                     <span class="num">9</span>
                                     <h3>外貿協會前進歐洲自行車銷售主力市場行銷台灣自行車產業及2019年台北國際自行車展 </h3>
+                                    <time><i class="i_clock"></i>2018-03-09</time>
+                                    <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="num">10</span>
+                                    <h3>2019年廠商報名時間公告 </h3>
                                     <time><i class="i_clock"></i>2018-03-09</time>
                                     <p>近日接獲廠商反應，有詐騙公司打著本會各專業展之名義對廠商徵展、詢問「廠商名錄」更新需求或廣告宣傳，騙取廠商回傳同意書之後，即寄送索款通知給廠商，並要求廠商繳交費用，如不理會則不斷以電話、電子郵件等方式騷擾甚至恐嚇提告，令廠商不堪其擾。</p>
                                 </a>
@@ -483,11 +410,11 @@
                 <!-- footer資訊模組 -->
                 <div class="footer_info">
                     <ul class="footer_share">
-                        <li><a href="#"><img data-original="images/basic/icon_facebook.svg" alt="" class="lazy"></a></li>
-                        <li><a href="#"><img data-original="images/basic/icon_twitter.svg" alt="" class="lazy"></a></li>
-                        <li><a href="#"><img data-original="images/basic/icon_youtube.svg" alt="" class="lazy"></a></li>
-                        <li><a href="#"><img data-original="images/basic/icon_instagram.svg" alt="" class="lazy"></a></li>
-                        <li><a href="#"><img data-original="images/basic/icon_pinterest.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-src="images/basic/icon_facebook.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-src="images/basic/icon_twitter.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-src="images/basic/icon_youtube.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-src="images/basic/icon_instagram.svg" alt="" class="lazy"></a></li>
+                        <li><a href="#"><img data-src="images/basic/icon_pinterest.svg" alt="" class="lazy"></a></li>
                     </ul>
                     <ul class="footer_link">
                         <li><a href="#">服務條款和隱私權政策內容</a></li>
@@ -503,15 +430,15 @@
                     <h3>下載APP</h3>
                     <div class="app_download">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img data-original="images/google_play.png" alt="" class="lazy">
+                            <img data-src="images/google_play.png" alt="" class="lazy">
                         </a>
                         <a target="_blank" href="#" title="另開視窗">
-                            <img data-original="images/app_store.png" alt="" class="lazy">
+                            <img data-src="images/app_store.png" alt="" class="lazy">
                         </a>
                     </div>
                     <div class="qr_code">
                         <a target="_blank" href="#" title="另開視窗">
-                            <img data-original="images/qrcode.jpg" alt="" class="lazy">
+                            <img data-src="images/qrcode.jpg" alt="" class="lazy">
                         </a>
                     </div>
                 </div>

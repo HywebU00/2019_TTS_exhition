@@ -5,6 +5,29 @@ h1.title {
     margin: .4em 0;
 }
 .cp {
+    .float_left {
+        float: left;
+        margin: 0px 1em 1em 0;
+        width: auto;
+        display: block;
+        max-width: 55%;
+        @include screen('mobile') {
+            float: none;
+            max-width: 100%;
+            margin: 0px auto;
+        }
+    }
+    .float_right {
+        float: right;
+        margin: 0px 0 1em 1em;
+        width: auto;
+        max-width: 55%;
+        @include screen('mobile') {
+            float: none;
+            max-width: 100%;
+            margin: 0px auto;
+        }
+    }
     .photo_pic {
         width: 75%;
         margin: 0px auto 1em;
@@ -355,9 +378,9 @@ div.tag {
         font-size: 1.125em;
         @include text-overflow;
         @include screen('mobile') {
-            height:4em;
+            height: 4em;
             text-overflow: inherit;
-            white-space:normal;
+            white-space: normal;
         }
         span {
             font-size: .75em;

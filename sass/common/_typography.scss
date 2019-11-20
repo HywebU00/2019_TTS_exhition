@@ -78,6 +78,7 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
         margin-right: .5em;
         @include leader(0);
         @include trailer(2);
+        clear:both;
     }
     img {
         max-width: 100%;

@@ -42,11 +42,18 @@ $(function() {
         });
     }
     // lazyload
-    $("img.lazy").show().lazyload({
-        placeholder: 'images/basic/placeholder.gif',
+    // $("img.lazy").show().lazyload({
+    //     placeholder: 'images/basic/placeholder.gif',
+    //     effect: "fadeIn",
+    //     fadeTime: 600,
+    //     threshold: 200
+    // });
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: "img.lazy",
+        placeholder: '/images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 600,
-        threshold: 200
+        threshold: 0
     });
     // 修正parallax 點不到
     if ($('.parallax').length > 0) {
