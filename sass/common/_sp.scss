@@ -809,6 +809,60 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
+.result {
+    ul {
+        @include li-reset;
+        border-top: 1px solid #777;
+        li {
+            position: relative;
+            min-height: 4em;
+            border-bottom: 1px solid #dedede;
+            margin: 0px 1em .3em;
+            overflow: hidden;
+            padding: .5em 0;
+            .num {
+                position: absolute;
+                top: .6em;
+                left: 0;
+                &:after {
+                    content: ".";
+                }
+            }
+            .keyword {
+                color: red;
+                display: inline-block;
+                margin: 0 .2em;
+            }
+            h3 {
+                color:#333;
+                margin: 0 0 .5em 30px;
+            }
+            p {
+                font-size: .938em;
+                margin: 0 0 0 30px;
+            }
+            a {
+                color: #666;
+                &:hover, &:focus {
+                    h3{
+                        color:$aHover;
+                    }
+                    color: #222;
+                }
+            }
+            .pic {
+                width: 80px;
+                float: right;
+                margin: 0 .2em .2em 0;
+                border: 1px solid #DDD;
+                padding: .2em;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 .form_mobile {
     input[type="text"]:nth-of-type(1) {
         width: 20%;
