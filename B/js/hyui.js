@@ -456,9 +456,9 @@ $(function() {
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            if (ww >= wwSmall) {
+            if (ww >= 200) {
                 _tabContent.css('top', tabItemHeight);
-                _tab.height(tabContentHeight + tabItemHeight);
+                _tab.height((tabContentHeight + tabItemHeight) * 1.125);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 _tabItem.first().css('margin-left', 0);
@@ -478,7 +478,7 @@ $(function() {
                     scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= wwSmall) {
+                if (ww <= 200) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
                     $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
@@ -486,7 +486,7 @@ $(function() {
                     _tabItem.not('.active').next().hide();
                     _tabItemNow.next().show();
                     tabContentHeight = _tabItemNow.next().innerHeight();
-                    _tab.height(tabContentHeight + tabItemHeight);
+                    _tab.css('min-height', tabContentHeight + tabItemHeight);
                 }
                 e.preventDefault();
             }

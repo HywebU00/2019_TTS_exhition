@@ -59,7 +59,7 @@
         &+.section {
             padding: 1.5em 0 2em;
         }
-        &+.full {
+        &+.full,&+.col-12-full {
             padding: 0;
             .col {
                 padding: 0;
@@ -266,25 +266,39 @@
         }
     }
     .ex_btn {
+        @for $i from 1 through 4 {
+            &.has_#{$i} {
+                ul {
+                    li {
+                        width: calc(100%/#{$i} - 1px);
+                    }
+                }
+            }
+        }
+        &.has_4 {
+            @include screen('tablet') {
+                ul {
+                    li {
+                        width: calc(100%/2 - 1px);
+                        margin-bottom: 1px;
+                    }
+                }
+            }
+        }
         ul {
             @include li-reset;
-            text-align: center;
             @include gutter;
+            text-align: center;
             padding-left: 0;
             @include screen('mobile') {
                 padding: 1em 0;
             }
             li {
                 // width: calc(33% -1px);
-                width: calc(33% - 1px);
                 padding: 0;
                 display: block;
                 float: left;
                 margin: 0 1px 0 0px;
-                &:last-child {
-                    margin-right: 0;
-                    width: 34%;
-                }
                 .btn {
                     border-radius: 0;
                     color: #FFF;

@@ -1,5 +1,18 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 判斷ex_btn個數
+    if($('.ex_btn').length>0){
+        var _btnLength = $('.ex_btn ul li').length;
+        if(_btnLength ==1){
+            $('.ex_btn').addClass('has_1');
+        }else if(_btnLength ==2){
+            $('.ex_btn').addClass('has_2');
+        }else if(_btnLength ==3){
+            $('.ex_btn').addClass('has_3');
+        }else if(_btnLength ==4){
+            $('.ex_btn').addClass('has_4');
+        }
+    }
     // fixed_sidebar
     if ($('.fixed_bar').length > 0) {
         $('footer').addClass('has_bottom');
@@ -279,7 +292,7 @@ $(function() {
     }
     // -------------------------------------------ad_slider
     if ($('.ad .slider').length > 0) {
-        $('.col-12 .ad .slider ul').slick({
+        $('.col-12 .ad .slider ul,.col-12-full .ad .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
@@ -554,7 +567,7 @@ $(function() {
     }
     // -------------------------------------------photo_slider
     if ($('.photo .slider').length > 0) {
-        $('.col-12  .photo .slider ul').slick({
+        $('.col-12  .photo .slider ul,col-12-full .photo .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
@@ -829,7 +842,7 @@ $(function() {
     }
     // -------------------------------------------video_slider
     if ($('.video .slider').length > 0) {
-        $('.col-12 .video .slider ul').slick({
+        $('.col-12 .video .slider ul,.col-12-full .video .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
@@ -1104,7 +1117,7 @@ $(function() {
     }
     // -------------------------------------------feature_slider
     if ($('.feature .slider').length > 0) {
-        $('.col-12 .feature .slider ul').slick({
+        $('.col-12 .feature .slider ul,.col-12-full .feature .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,
@@ -1379,7 +1392,7 @@ $(function() {
     }
     // -------------------------------------------product_slider
     if ($('.product .slider').length > 0) {
-        $('.col-12 .product .slider ul').slick({
+        $('.col-12 .product .slider ul,.col-12-full .product .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,

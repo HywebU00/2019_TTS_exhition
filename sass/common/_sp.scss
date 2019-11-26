@@ -444,6 +444,9 @@
     }
     .tabItem {
         font-size: 1.25em;
+        @include screen('mobile') {
+            font-size: 1em;
+        }
         &.blue {
             a {
                 background: darken($color-blue, 10);
@@ -463,8 +466,10 @@
     .tabContent {
         padding: 1em 0;
         overflow: hidden;
+        background: #DEDEDE;
         @include screen('mobile') {
             padding: 0;
+            background: #F1F1F1;
         }
         .form_grp {
             border-bottom: none;
@@ -542,7 +547,70 @@
             float: none;
             margin: 0 auto .2em;
             box-shadow: none;
-            padding: .4em;
+            padding: 1em .4em;
+        }
+    }
+    .login_function {
+        overflow: hidden;
+        margin-right: 1em;
+        @include screen('mobile') {
+            padding: 1em;
+        }
+        ul {
+            @include li-reset;
+            li {
+                margin-bottom: .2em;
+                border-bottom: 1px dashed rgba(0, 0, 0, .2);
+                a {
+                    display: block;
+                    color: #555;
+                    font-size: .813em;
+                    padding: .5em .5em .5em 1.2em;
+                    position: relative;
+                    &:hover, &:focus {
+                        &:before {
+                            border: 2px solid $primaryColor;
+                            border-bottom: none;
+                            border-left: none;
+                            left: .3em;
+                        }
+                        @include screen('mobile') {
+                            &:before {
+                                border: 2px solid $primaryColor;
+                                border-bottom: none;
+                                border-left: none;
+                            }
+                        }
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 1em;
+                        left: 0;
+                        width: 4px;
+                        height: 4px;
+                        border: 2px solid $primaryColor;
+                        border-bottom: none;
+                        border-left: none;
+                        transform: rotate(45deg);
+                        content: "";
+                        transition: .3s ease;
+                        @include screen('mobile') {
+                            border: 2px solid $primaryColor;
+                            border-bottom: none;
+                            border-left: none;
+                        }
+                    }
+                    &:hover, &:focus {
+                        color: #222;
+                    }
+                    @include screen('mobile') {
+                        color: #555;
+                        &:hover, &:focus {
+                            color: #000;
+                        }
+                    }
+                }
+            }
         }
     }
     .accordion {
@@ -954,7 +1022,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         height: 0;
         border-style: solid;
         border-width: 15px 15px 0 0;
-        border-color: lighten($primaryColor, 10) transparent transparent transparent;
+        border-color: lighten($color-yellow, 0) transparent transparent transparent;
     }
 }
 .prelogin_info {
@@ -1169,7 +1237,6 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         background-position: 0 0;
     }
 }
-
 .now_join {
     box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, .3);
     border-radius: .3em;
@@ -1220,4 +1287,3 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
-
