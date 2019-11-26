@@ -834,18 +834,21 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 margin: 0 .2em;
             }
             h3 {
-                color:#333;
+                color:#1a0dab;
+                font-weight: normal;
+                line-height: 1.35em;
+                font-size:1.125em;
                 margin: 0 0 .5em 30px;
             }
             p {
-                font-size: .938em;
+                font-size: .813em;
                 margin: 0 0 0 30px;
             }
             a {
                 color: #666;
                 &:hover, &:focus {
                     h3{
-                        color:$aHover;
+                        text-decoration: underline;
                     }
                     color: #222;
                 }
