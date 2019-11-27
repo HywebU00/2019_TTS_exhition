@@ -59,7 +59,7 @@
                         <a href="#" class="close"></a>
                         <div class="form_grp cate">
                             <button class="btn">全文檢索</button>
-                            <div class="dropdown-content" style="display: none;" >
+                            <div class="dropdown-content" style="display: none;">
                                 <ul>
                                     <li><a href="#">全文檢索</a></li>
                                     <li><a href="#">找廠商</a></li>
@@ -260,15 +260,14 @@
                                 <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star"></i></a>
-                                    <a href="#"><i class="i_question"></i></a>
-
+                                    <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
                                 <div class="img-container">
                                     <a href="#">
-                                       <picture>
+                                        <picture>
                                             <source media="(min-width: 1200px)" data-srcset="images/feature_02.jpg">
                                             <source media="(min-width: 992px)" data-srcset="images/feature_02.jpg">
                                             <source media="(min-width: 576px)" data-srcset="images/feature_02.jpg">
@@ -286,7 +285,7 @@
                                 <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star_false"></i></a>
-                                    <a href="#"><i class="i_question"></i></a>
+                                    <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
                             </li>
                             <li class="checked">
@@ -311,7 +310,7 @@
                                 <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star_false"></i></a>
-                                    <a href="#"><i class="i_question"></i></a>
+                                    <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
                             </li>
                             <li>
@@ -336,7 +335,7 @@
                                 <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star_false"></i></a>
-                                    <a href="#"><i class="i_question"></i></a>
+                                    <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -450,7 +449,7 @@
             </div>
         </section>
         <!-- fatfooter End -->
-       <!-- footer Start-->
+        <!-- footer Start-->
         <footer>
             <div class="container">
                 <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
@@ -501,6 +500,59 @@
             <li><a href="#"><img src="images/icon/icon_charactor_media.svg" alt="">媒體</a></li>
         </ul>
     </div>
+    <!--視窗-->
+    <div class="modal question_colorbox" style="display:block;">
+        <button type="button" class="close">關閉</button>
+        <h2>燈箱標題</h2>
+        <div class="modal_content">
+            <form action="" class="form_grid">
+                <div class="form_grp">
+                    <label for="" class="form_title">公司名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content">
+                        <input name="" type="text">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="selectSample" class="form_title">國家<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content form_inline">
+                        <select id="selectSample" name="">
+                            <option value="">請選擇</option>
+                            <option value="">美國</option>
+                            <option value="">台灣</option>
+                            <option value="">日本</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content">
+                        <input name="" type="text">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content">
+                        <input name="" type="text">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content tel"> + <input name="" type="text"> - <input name="" type="text"> - <input name="" type="text">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="address" class="form_title">內容<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content">
+                        <textarea name="" id="address" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <button class="btn btn-reset">清除</button>
+                    <button class="btn btn-submit">送出</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <a href="#" class="scrollToTop">回頁首</a>
     <!-- JQ -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -514,6 +566,31 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <script>
+    /*-----------------------------------*/
+    /////////////modal設定/////////////
+    /*-----------------------------------*/
+    $(function() {
+        $('.modal').after('<div class="modal_overlay"></div>'); //新增透明底
+        //按鈕動作
+        $('#openModal').click(function(e) {
+            $('.modal').show();
+            $('.modal_overlay').fadeIn(100);
+            $('body').addClass('noscroll');
+            $('body').addClass('noscroll');
+            e.preventDefault();
+        });
+        //關閉function
+        function closeModal() {
+            $('.modal').hide();
+            $('.modal_overlay').hide();
+            $('body').removeClass('noscroll');
+        }
+        //點選關閉按鈕及透明底都可關閉
+        $('.modal_overlay').click(closeModal);
+        $('.modal .close').click(closeModal);
+    });
+    </script>
 </body>
 
 </html>

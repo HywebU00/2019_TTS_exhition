@@ -168,19 +168,19 @@ input[type="password"],
 input[type="file"] {
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: darken($color-gray,15);
+        color: darken($color-gray, 15);
     }
     &::-moz-placeholder {
         /* Firefox 19+ */
-        color: darken($color-gray,15);
+        color: darken($color-gray, 15);
     }
     &:-ms-input-placeholder {
         /* IE 10+ */
-        color: darken($color-gray,15);
+        color: darken($color-gray, 15);
     }
     &:-moz-placeholder {
         /* Firefox 18- */
-        color: darken($color-gray,15);
+        color: darken($color-gray, 15);
     }
 }
 button,
@@ -340,4 +340,28 @@ img.captcha {
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
+}
+//
+// 電話專屬
+.tel {
+    // input[type="text"]:first-child {
+    //     // background: url(../images/icon/icon_add.svg) no-repeat .5em center;
+    //     background-size: 12px;
+    //     padding-left: 1.5em;
+    // }
+    input[type="text"]:first-child,input[type="text"]:nth-child(2), select:first-child {
+        width: 20% !important;
+        max-width:60px;
+
+    }
+    input[type="text"]:last-child{
+        width:50%;
+    }
+    // input {
+    //         min-width:50px;
+    //         @include screen('xs_mobile') {
+    //             width: 100% !important;
+    //             display: block !important;
+    //         }
+    //     }
 }

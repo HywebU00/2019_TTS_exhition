@@ -1,4 +1,27 @@
 .modal {
+    .modal_content{
+        position:relative;
+        width:100%;
+        height:80%;
+        overflow-y:scroll;
+    }
+    &.question_colorbox{
+        width:60%;
+        height:75%;
+        margin-left: 0;
+        top:50%;
+        margin-top: -25%;
+        left:20%;
+        @include screen('tablet') {
+            width:90%;
+            left:5%;
+            top:5%;
+            margin-top: 0 !important;
+        }
+    }
+    .form_grp{
+        border-bottom: 1px dashed #DEDEDE;
+    }
     position: fixed;
     display: none;
     width: 420px;
