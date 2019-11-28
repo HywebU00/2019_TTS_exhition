@@ -169,7 +169,7 @@ a.more {
                 margin-top: 0;
             }
             .container {
-                background: darken($primaryColor, 30);
+                background: darken($primaryColor, 0);
             }
         }
     }
@@ -192,7 +192,7 @@ a.more {
         @include gutter;
         padding-top: 1em;
         padding-bottom: 1em;
-        background: darken($My_primaryColor, 30);
+        background: darken($primaryColor, 0);
         color: #FFF;
         @include screen('mobile') {
             @include gutter(0);
@@ -298,7 +298,7 @@ a.more {
     .ex_btn {
         padding-top: 1em;
         padding-bottom: 1em;
-        background: darken($My_primaryColor, 30);
+        background: darken($primaryColor, 0);
         overflow: hidden;
         @for $i from 1 through 4 {
             &.has_#{$i} {
@@ -329,10 +329,10 @@ a.more {
                                 box-shadow: 0px 0px 1px 100px rgba(255, 255, 255, .2) inset;
                             }
                             &:hover, &:focus {
-                                border:transparent !important;
-                                background: rgba(0,0,0,.4) !important;
+                                border: transparent !important;
+                                background: rgba(0, 0, 0, .4) !important;
                                 &:before {
-                                    display:block;
+                                    display: block;
                                     box-shadow: 0px 0px 1px 1px lighten($My_primaryColor, 10) inset;
                                 }
                             }
@@ -371,7 +371,7 @@ a.more {
                 .btn {
                     border-radius: 0;
                     color: #FFF;
-                    background: darken($My_primaryColor, 30);
+                    background: darken($primaryColor, 0);
                     height: 120px;
                     padding: .2em !important;
                     border: none !important;
@@ -387,7 +387,7 @@ a.more {
                     }
                     &:after {
                         height: 120px;
-                        border-left: 1px solid $My_primaryColor;
+                        border-left: 1px solid lighten($My_primaryColor, 10);
                         transform: rotate(15deg);
                         position: absolute;
                         top: 0;
@@ -1081,6 +1081,21 @@ a.more {
                     .img-container {
                         img {
                             transform: scale(1.1);
+                        }
+                    }
+                    h3, span, p {
+                        color: #FFF;
+                    }
+                    .date {
+                        &~.date {
+                            &:before {
+                                color: #FFF;
+                            }
+                        }
+                    }
+                    .month {
+                        &:after {
+                            border-left: 1px solid #FFF;
                         }
                     }
                 }

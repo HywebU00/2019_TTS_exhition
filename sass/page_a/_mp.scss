@@ -127,7 +127,8 @@
                 left: -1400px;
                 width: 2000px;
                 height: 2000px;
-                background: lighten($My_primaryColor, 55);
+                background: lighten($primaryColor, 0);
+                opacity: .1;
                 transform: rotate(-55deg);
                 @include screen('notebook') {
                     top: -1000px;
@@ -762,20 +763,20 @@
             height: 180px;
             @extend %clearfix;
             overflow: hidden;
-            background: darken($secondaryColor, 30);
+            background: darken($primaryColor, 13);
             @include screen('mobile') {
                 height: auto;
                 margin-bottom: 1em;
                 padding-bottom: 1em;
             }
             &:nth-child(3n+1) {
-                background: darken($secondaryColor, 40);
+                background: darken($primaryColor, 18);
             }
             &:nth-child(3n+2) {
-                background: darken($secondaryColor, 20);
+                background: darken($primaryColor, 8);
             }
             &:hover {
-                background: darken($primaryColor, 30);
+                background: darken($primaryColor, 20);
             }
             .event_intro {
                 padding: 1em;
@@ -1025,7 +1026,7 @@
             li {
                 margin: .5em 0;
                 display: block;
-                color: darken($My_secondaryColor, 15);
+                color: darken($My_primaryColor, 15);
             }
         }
         .pic {
