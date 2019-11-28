@@ -12,6 +12,9 @@
         top:50%;
         margin-top: -25%;
         left:20%;
+        @include screen('notebook') {
+             margin-top: -35%;
+        }
         @include screen('tablet') {
             width:90%;
             left:5%;
