@@ -720,20 +720,34 @@
                     }
                 }
                 span {
+                    border-radius: .3em;
                     display: inline-block;
-                    padding: .5em .8em;
+                    padding: .5em .3em;
                     font-size: .75em;
                     line-height: 1;
-                    margin: 0px .5em 0 0;
+                    margin: 0px .5em .5em 0;
                     color: #FFF;
                     min-width: 6em;
                     float: left;
                     text-align: center;
-                    &.tag {
+                    background: $color-orange;
+                    &.top,&.tag_01 {
                         background: $color-orange;
                     }
-                    &.top {
+                    &.hot,&.tag_02{
                         background: $color-red;
+                    }
+                    &.tag_03 {
+                        background: $color-blue;
+                    }
+                    &.tag_04 {
+                        background: $color-green;
+                    }
+                    &.tag_05 {
+                        background: $color-purple;
+                    }
+                    &.tag_06 {
+                        background: lighten($color-word,15);
                     }
                 }
                 a {
