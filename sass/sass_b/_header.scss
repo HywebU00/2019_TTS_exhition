@@ -396,7 +396,7 @@ $menuItems:2;
             }
             &.cate {
                 width: 30%;
-                animation: showSearch_cat 1s $cubic, opacity 1s $cubic;
+                animation: showSearch_cat .5s $cubic, opacity .5s $cubic;
                 @include screen('mobile') {
                     width: 100%;
                     float: none;
@@ -439,7 +439,7 @@ $menuItems:2;
             }
             &.text {
                 width: 50%;
-                animation: showSearch_text 1.2s $cubic, opacity 1.2s $cubic;
+                animation: showSearch_text .8s $cubic, opacity .8s $cubic;
                 @include screen('mobile') {
                     width: 100%;
                     float: none;
@@ -528,7 +528,7 @@ $menuItems:2;
             right: 0;
             float: left;
             padding: 0 !important;
-            animation: showBtn 1.8s $cubic, opacity 1.8s $cubic;
+            animation: showBtn 1s $cubic, opacity 1s $cubic;
             position: relative;
             @include screen('mobile') {
                 animation: none;
