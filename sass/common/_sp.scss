@@ -834,22 +834,22 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 margin: 0 .2em;
             }
             h3 {
-                color:#1a0dab;
+                color: #1a0dab;
                 font-weight: normal;
                 line-height: 1.35em;
-                font-size:1.125em;
+                font-size: 1.125em;
                 margin: 0 0 .5em 30px;
-                max-width:600px;
+                max-width: 600px;
             }
             p {
                 font-size: .813em;
                 margin: 0 0 0 30px;
-                max-width:500px;
+                max-width: 500px;
             }
             a {
                 color: #666;
                 &:hover, &:focus {
-                    h3{
+                    h3 {
                         text-decoration: underline;
                     }
                     color: #222;
@@ -1346,3 +1346,340 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
+//
+// 個人票券
+.ticket_block {
+    ul {
+        @include li-reset;
+    }
+    &>ul>li {
+        margin-bottom: .5em;
+        &>a {
+            display: block;
+            background: $primaryColor;
+            padding: 1em;
+            color: #FFF;
+            font-size:1.125em;
+            font-weight: bold;
+            position:relative;
+            &:hover,&:focus {
+                background: darken($primaryColor,10);
+            }
+            &:after{
+                position:absolute;
+                right: 1em;
+                top:1.6em;
+                width: 12px;
+                height: 12px;
+                border:3px solid #FFF;
+                border-left: none;
+                border-top: none;
+                content:"";
+                transform:rotate(225deg);
+            }
+            &.close{
+                &:after{
+                    top:1.2em;
+                    transform:rotate(45deg);
+                }
+            }
+        }
+    }
+    .ticket-content {
+        padding: 1em;
+        background: #FEFEFE;
+        border:5px solid $primaryColor;
+        .calendar, .modify {
+            display: inline-block;
+            margin-right: 1em;
+            box-sizing: border-box;
+            @include screen('xs_mobile') {
+                display: block;
+                margin-right: 0;
+            }
+            a {
+                display: block;
+                height: 40px;
+                padding: 0 .5em;
+                font-size: .875em;
+                background: #fff;
+                box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+                text-align: center;
+                border-radius: 2px;
+                line-height: 40px;
+                min-width: 150px;
+                @include screen('xs_mobile') {
+                    width: 250px;
+                    min-width: 250px;
+                    display: block;
+                    margin: 0 auto 1em;
+                }
+                i {
+                    &:before {
+                        height: 25px;
+                        width: 25px;
+                        margin-right: .5em;
+                    }
+                }
+                img {
+                    height: 1.1em;
+                    vertical-align: middle;
+                    margin: 0 .2em;
+                }
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+        .modify {
+            a {
+                background: $secondaryColor;
+                color: #FFF;
+                &:hover, &:focus {
+                    background: darken($secondaryColor, 10)
+                }
+            }
+        }
+    }
+}
+.sub_sec {
+    @include screen('tablet') {
+        padding-left: 0;
+    }
+    p {
+        font-size: .938em;
+    }
+    .completed_wrap {
+        position: relative;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-color: #FFF;
+        background-size: contain;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+        padding: 2em 270px 2em 2em;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, .3);
+        border-radius: .3em;
+        @include screen('mobile') {
+            background: inherit;
+            padding: 2em;
+            background: none !important;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: 390px;
+            top: 0;
+            width: 800px;
+            height: 500px;
+            background-color: #fff;
+            transform-origin: bottom;
+            transform: skewX(-20deg);
+        }
+        h3 {
+            font-size: 1.625em;
+            margin: 0 0 1em 0;
+            padding-bottom: .5em;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 20;
+                left: 0;
+                bottom: 0;
+                width: 230px;
+                height: 3px;
+                background: $secondaryColor;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 10;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 3px;
+                background: $color-gray;
+            }
+        }
+        ul {
+            list-style: none;
+            @include screen('xs_mobile') {
+                padding: 0;
+            }
+            li {
+                p {
+                    font-size: 1.375em;
+                    margin: .5em 0;
+                    line-height: 1.45;
+                    span {
+                        font-size: 1.125rem;
+                        padding-left: .2em;
+                    }
+                }
+                .title {
+                    color: $secondaryColor;
+                    font-size: 1em;
+                }
+            }
+        }
+        .calendar {
+            margin: 1em 0;
+            @include screen('xs_mobile') {
+                padding: 0;
+            }
+        }
+    }
+    .serial_num, .status {
+        color: lighten($color-word, 10);
+        font-size: 1.375em;
+        span {
+            color: $color-red;
+        }
+    }
+    .ticket {
+        position: relative;
+        background: #f7f7f7;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+        padding: 1em;
+        height: 155px;
+        box-sizing: border-box;
+        margin-bottom: 1.5em;
+        p {
+            font-size: 1.125em;
+            color: lighten($color-word, 10);
+            margin: .5em 0;
+            .name {
+                font-size: 1.626rem;
+                color: $color-word;
+                padding: 0 .2em 0 .5em;
+            }
+        }
+        img {
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            width: auto;
+            height: calc(155px - 2em);
+        }
+        .download, .print {
+            position: absolute;
+            left: 30px;
+            bottom: 1em;
+            display: inline-block;
+            width: 90px;
+            padding: .2em;
+            background: lighten($color-word, 40);
+            color: #fff;
+            text-align: center;
+            font-size: .938em;
+            &:hover {
+                background: lighten($color-word, 20);
+            }
+            @include screen('xs_mobile') {
+                bottom: 3.5em;
+            }
+        }
+        .print {
+            left: 140px;
+            @include screen('xs_mobile') {
+                bottom: 1em;
+                left: 30px;
+            }
+        }
+    }
+    .precautions {
+        overflow: hidden;
+        background-color: #fff;
+        line-height: 1.5;
+        .title {
+            width: auto;
+            font-size: 1.375em;
+            position: relative;
+            padding-right: 30px;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -22px;
+                width: 1px;
+                height: 44px;
+                background: #CCC;
+                transform: rotate(20deg);
+            }
+            @include screen('xs_mobile') {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+        p {
+            display: inline-block;
+            max-width: calc(100% - 140px);
+            vertical-align: middle;
+            @include screen('xs_mobile') {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+    .grp_wrap {
+        padding: .5em 0;
+    }
+    form {
+        &.form_inline {
+            .btn_grp {
+                display: block;
+                text-align: center;
+                padding: 1em 0;
+            }
+        }
+        input[type="text"] {
+            width: 390px;
+        }
+        select {
+            width: 180px;
+        }
+    }
+    .form_content {
+        font-size: .938em;
+        color: lighten($color-word, 10);
+    }
+}
+.precautions {
+        overflow: hidden;
+        background-color: #fff;
+        line-height: 1.5;
+        .title {
+            width: auto;
+            font-size: 1.375em;
+            position: relative;
+            padding-right: 30px;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -22px;
+                width: 1px;
+                height: 44px;
+                background: #CCC;
+                transform: rotate(20deg);
+            }
+            @include screen('xs_mobile') {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+        p {
+            display: inline-block;
+            max-width: calc(100% - 140px);
+            vertical-align: middle;
+            @include screen('xs_mobile') {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }

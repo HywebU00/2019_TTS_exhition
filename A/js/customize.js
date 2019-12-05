@@ -1,15 +1,26 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 我的票券
+    if ($('.ticket_block').length > 0) {
+        $('.ticket_block ul li a').each(function(index, el) {
+            $(this).off().click(function(e) {
+                $(this).toggleClass('close');
+                $(this).siblings('.ticket-content').stop(true, true).slideToggle();
+                $(this).blur();
+                e.preventDefault();
+            });
+        });
+    }
     // 判斷ex_btn個數
-    if($('.ex_btn').length>0){
+    if ($('.ex_btn').length > 0) {
         var _btnLength = $('.ex_btn ul li').length;
-        if(_btnLength ==1){
+        if (_btnLength == 1) {
             $('.ex_btn').addClass('has_1');
-        }else if(_btnLength ==2){
+        } else if (_btnLength == 2) {
             $('.ex_btn').addClass('has_2');
-        }else if(_btnLength ==3){
+        } else if (_btnLength == 3) {
             $('.ex_btn').addClass('has_3');
-        }else if(_btnLength ==4){
+        } else if (_btnLength == 4) {
             $('.ex_btn').addClass('has_4');
         }
     }

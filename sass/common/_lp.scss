@@ -443,6 +443,7 @@
                         float: none;
                         margin: 0 8em .5em 0em;
                         line-height: 1.65em;
+                        max-width: 800px;
                         @include screen('mobile') {
                             margin-right: 0;
                             font-size: 1.25em;
@@ -457,6 +458,7 @@
                         clear: none;
                         display: block;
                         margin: 0 10em 1em 0;
+                        max-width: 800px;
                         @include screen('mobile') {
                             margin-right: 0;
                             clear: both;
@@ -1316,6 +1318,14 @@ $companyWidth :$companyUL/$companyLength;
     }
 }
 .control_panel {
+    .recaptcha{
+        width:300px;
+        float: left;
+        margin:0 .2em .5em 0;
+        img{
+            width: 100%;
+        }
+    }
     .float_left {
         float: left;
         label {
@@ -1331,6 +1341,7 @@ $companyWidth :$companyUL/$companyLength;
     background: #F1F1F1;
     overflow: hidden;
     margin-bottom: .5em;
+    font-size: .938em;
     .pagination {
         margin: 0 auto;
         width: auto;
@@ -1440,17 +1451,17 @@ $companyWidth :$companyUL/$companyLength;
                 }
                 &.active {
                     color: #333;
-                   background: #F1F1F1;
+                    background: #F1F1F1;
                     &:hover,
                     &:focus {
                         background: lighten($primaryColor, 5);
                         box-shadow: none;
                     }
                     &:focus {
-                        color:#FFF;
+                        color: #FFF;
                     }
                     &:after {
-                        top:1.4em;
+                        top: 1.4em;
                         transform: rotate(225deg);
                     }
                 }
@@ -1460,6 +1471,34 @@ $companyWidth :$companyUL/$companyLength;
                 padding: 1em 1em 2em 1em;
                 background: #FFF;
                 line-height: 1.65em;
+            }
+        }
+    }
+}
+.photo_download {
+    .img-container {
+        width: 120px;
+        margin: 0 auto;
+        @include aspect-ratio(4, 3);
+        position: relative;
+        img{
+            object-fit:cover ;
+        }
+        @include screen('xs_mobile') {
+            width:100%;
+
+        }
+    }
+    table {
+        td {
+            text-align: center;
+            font-size: .938em;
+            @include screen('xs_mobile') {
+                text-align: left;
+            }
+            .btn{
+                min-width: 2em;
+                padding:.2em .2em .2em .45em;
             }
         }
     }

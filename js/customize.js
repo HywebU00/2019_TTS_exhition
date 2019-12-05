@@ -1,6 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    // lazyload  
+
+    // lazyload
     //可以指定你想要的元素做lazyload
     $("img").lazyload({ effect: "fadeIn" });
     //燈箱slick+lightBox組合
