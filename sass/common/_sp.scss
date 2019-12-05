@@ -8,9 +8,8 @@
 .sp {
     padding-bottom: 4em;
     overflow: hidden;
-    @include screen('mobile') {
-        @include gutter;
-    }
+     @include gutter(0);
+
 }
 .bottom_menu {
     position: fixed;
@@ -1069,6 +1068,9 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     padding: 1em;
     position: relative;
     background: #FFF;
+    @include screen('mobile') {
+        width:92%;
+    }
     h2, h3 {
         margin-top: 0;
     }
