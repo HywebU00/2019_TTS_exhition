@@ -1017,6 +1017,9 @@
         li {
             i {
                 margin-right: .5em;
+                &:before{
+                    margin-left: 0;
+                }
             }
         }
     }
