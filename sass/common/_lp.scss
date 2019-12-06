@@ -1148,10 +1148,11 @@
                     line-height: 1.45em;
                     display: block;
                     overflow: hidden;
+                    min-height: 1.45em;
                     span {
                         position: absolute;
                         color: #888;
-                        top: 0;
+                        top: .1em;
                         left: 0;
                     }
                 }
@@ -1318,11 +1319,11 @@ $companyWidth :$companyUL/$companyLength;
     }
 }
 .control_panel {
-    .recaptcha{
-        width:300px;
+    .recaptcha {
+        width: 300px;
         float: left;
-        margin:0 .2em .5em 0;
-        img{
+        margin: 0 .2em .5em 0;
+        img {
             width: 100%;
         }
     }
@@ -1374,13 +1375,18 @@ $companyWidth :$companyUL/$companyLength;
             i {
                 opacity: .4;
                 &:before {
-                    margin-left: 0
+                    margin-left: 0em;
+                    margin-top: -.3em;
+                    width: 16px;
+                    height: 16px;
                 }
             }
             &:hover, &:focus, &.active {
-                border: 2px solid #AAA;
+                border: 2px solid $primaryColor;
+                background: $primaryColor;
                 i {
-                    opacity: .6;
+                    opacity: 1;
+                    filter: invert(100%);
                 }
             }
         }
@@ -1481,12 +1487,11 @@ $companyWidth :$companyUL/$companyLength;
         margin: 0 auto;
         @include aspect-ratio(4, 3);
         position: relative;
-        img{
-            object-fit:cover ;
+        img {
+            object-fit: cover;
         }
         @include screen('xs_mobile') {
-            width:100%;
-
+            width: 100%;
         }
     }
     table {
@@ -1496,9 +1501,9 @@ $companyWidth :$companyUL/$companyLength;
             @include screen('xs_mobile') {
                 text-align: left;
             }
-            .btn{
+            .btn {
                 min-width: 2em;
-                padding:.2em .2em .2em .45em;
+                padding: .2em .2em .2em .45em;
             }
         }
     }

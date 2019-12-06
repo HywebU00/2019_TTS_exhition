@@ -1848,6 +1848,9 @@
         position: relative;
         will-change: transform;
         padding-top: 4em;
+         @include screen('tablet') {
+            background-position:cover !important;
+        }
         @include screen('mobile') {
             position: fixed;
             padding-top: 5em;
