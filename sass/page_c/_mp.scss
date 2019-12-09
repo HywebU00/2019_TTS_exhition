@@ -187,6 +187,105 @@ a.more {
         overflow: hidden;
         @include screen('mobile') {}
     }
+    // 展區規劃
+    .ex_area {
+        background: lighten($primaryColor, 2);
+        @include gutter;
+        text-align: center;
+        color: #FFF;
+        padding: 1em 0;
+        overflow: hidden;
+        p {
+            color: #FFF;
+            max-width: 600px;
+            margin: 0 auto 1em;
+            padding: 0 1em;
+        }
+        h2 {
+            text-align: center;
+        }
+        .ex_link {
+            clear: both;
+            margin-bottom: 2em;
+            ul {
+                @include li-reset;
+                text-align: center;
+                @include gutter(10%);
+                li {
+                    width: 33%;
+                    display: inline-block;
+                    margin: 0 0 0 -4px;
+                    vertical-align: top;
+                    min-height: 5em;
+                    padding: 0 1em;
+                    margin-bottom: 1em;
+                    @include screen('tablet') {
+                        width: 48%;
+                        padding: 0 .5em;
+                    }
+                    a {
+                        border: 1px solid #FFF;
+                        padding: 1em .5em;
+                        display: block;
+                        overflow: hidden;
+                        height: 5em;
+                        line-height: 1.5em;
+                        color: #FFF;
+                        transition: .3s ease-out;
+                        box-sizing: border-box;
+                        &:hover, &:focus {
+                            background: rgba(0, 0, 0, .45);
+                        }
+                    }
+                }
+            }
+        }
+        .ex_data {
+            clear: both;
+            ul {
+                @include li-reset;
+                text-align: center;
+                @include gutter(10%);
+                li {
+                    width: 19%;
+                    display: inline-block;
+                    margin: 0 0 0 -4px;
+                    vertical-align: top;
+                    height: 10em;
+                    @include screen('tablet') {
+                        width: 33%;
+                        display: block;
+                        float: left;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 48%;
+                    }
+                    span {
+                        display: block;
+                        margin-bottom: .3em;
+                        &.title{
+                            background: rgba(0, 0, 0, .75);
+                            padding:.2em 1em;
+                            border-radius:3em;
+                            margin: 0 1em .5em;
+                        }
+                        &.data {
+                            font-size: 3em;
+                            font-weight: bold;
+                            margin: .5em auto;
+                            @include screen('xs_mobile') {
+                                font-size: 2.5em;
+                            }
+                        }
+                        em {
+                            font-style: normal;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
     // 展覽資訊
     .ex_info {
         @include gutter;
