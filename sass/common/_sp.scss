@@ -118,7 +118,7 @@
     @include make-lg-column(3);
     background: #F9F9F9;
     border-right: 1px solid #DDD;
-    padding: 1em 1em 10em 1em;
+    padding: 1em 1em 10em 0em;
     @include screen('mobile') {
         padding: 3em 1em 0em;
         border: none;
