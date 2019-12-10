@@ -543,6 +543,27 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <script>
+    $(function() {
+        var messageW = $('.message_modal').width();
+
+        function closeMessage() {
+            $('.message_modal').css('right', messageW * -1).hide();
+        }
+        closeMessage();
+        $('.message table td').each(function(index, el) {
+            $(this).find('a').off().click(function(e) {
+                $('.message_modal').show();
+                $('.message_modal').animate({ 'right': 0 }, 400, 'easeOutQuint');
+                e.preventDefault();
+            });
+        });
+        $('.message_modal').find('.close').off().click(function(e) {
+            closeMessage()
+            e.preventDefault();
+        });
+    });
+    </script>
 </body>
 
 </html>
