@@ -697,8 +697,10 @@ $menuItems:2;
     h1 {
         display: none;
     }
-    .searchCtrl {
-        display: none;
+     .searchCtrl {
+        display: block !important;
+        background:none !important;
+        top:.2em;
     }
     .menu {
         margin: 0;

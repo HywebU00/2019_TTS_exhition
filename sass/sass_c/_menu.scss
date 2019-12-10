@@ -7,6 +7,9 @@
     // 預設選單 ul
     clear: both;
     // border-bottom: 1px solid #FFF;
+    .searchCtrl{
+        display:none !important;
+    }
     >ul {
         text-align: center;
         margin: 0;

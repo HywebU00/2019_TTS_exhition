@@ -262,46 +262,67 @@ div.tag {
             }
             &:after {
                 content: "";
-                background: url(../images/basic/icon_other.jpg);
-                width: 21px;
+                background: url(../images/basic/icon_folder.png);
+                width: 22px;
                 height: 24px;
                 position: absolute;
                 top: 2px;
                 left: 35px;
                 text-align: right;
+                background-size:contain;
+                background-repeat:no-repeat;
             }
             &[href$="doc"]:after {
-                background: url(../images/basic/icon_doc.jpg);
+                background: url(../images/basic/icon_doc.png);
+                background-size:contain;
             }
-            &[href$="odf"]:after {
-                background: url(../images/basic/icon_odf.jpg);
+            &[href$="odp"]:after {
+                background: url(../images/basic/icon_odp.png);
+                background-size:contain;
+            }
+            &[href$="ods"]:after {
+                background: url(../images/basic/icon_ods.png);
+                background-size:contain;
+            }
+            &[href$="odt"]:after {
+                background: url(../images/basic/icon_odt.png);
+                background-size:contain;
             }
             &[href$="pdf"]:after {
-                background: url(../images/basic/icon_pdf.jpg);
+                background: url(../images/basic/icon_pdf.png);
+                background-size:contain;
             }
             &[href$="xls"]:after {
-                background: url(../images/basic/icon_xls.jpg);
+                background: url(../images/basic/icon_xls.png);
+                background-size:contain;
             }
             &[href$="ppt"]:after {
-                background: url(../images/basic/icon_ppt.jpg);
+                background: url(../images/basic/icon_ppt.png);
+                background-size:contain;
             }
             &[href$="jpg"]:after {
-                background: url(../images/basic/icon_jpg.jpg);
+                background: url(../images/basic/icon_jpg.png);
+                background-size:contain;
             }
             &[href$="mp3"]:after {
-                background: url(../images/basic/icon_mp3.jpg);
+                background: url(../images/basic/icon_mp3.png);
+                background-size:contain;
             }
             &[href$="mov"]:after {
-                background: url(../images/basic/icon_mov.jpg);
+                background: url(../images/basic/icon_mov.png);
+                background-size:contain;
             }
             &[href$="txt"]:after {
-                background: url(../images/basic/icon_txt.jpg);
+                background: url(../images/basic/icon_txt.png);
+                background-size:contain;
             }
             &[href$="dot"]:after {
-                background: url(../images/basic/icon_doc.jpg);
+                background: url(../images/basic/icon_doc.png);
+                background-size:contain;
             }
             &[href$="zip"]:after {
-                background: url(../images/basic/icon_zip.jpg);
+                background: url(../images/basic/icon_zip.png);
+                background-size:contain;
             }
         }
     }

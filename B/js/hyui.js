@@ -98,6 +98,7 @@ $(function() {
     });
     _nav.clone(true).prependTo(_mArea);
     _menu.clone(true).prependTo(_mArea);
+    $('.searchCtrl').clone().appendTo('.menu');
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();

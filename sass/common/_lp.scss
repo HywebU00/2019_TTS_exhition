@@ -101,6 +101,10 @@
     }
     .company_menu {
         margin-bottom: 1em;
+        margin-left: 1em;
+        @include screen('mobile') {
+            margin-left: 0
+        }
         &.col_2 {
             ul {
                 li {
@@ -155,6 +159,10 @@
     }
     .taitracode_list {
         margin-bottom: 1em;
+        margin-left: 1em;
+        @include screen('mobile') {
+            margin-left: 0;
+        }
         ul {
             @include li-reset;
             li {

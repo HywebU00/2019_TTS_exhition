@@ -7,6 +7,9 @@
     margin-left: 250px;
     // 預設選單 ul
     clear: both;
+    .searchCtrl{
+        display:none !important;
+    }
     >ul {
         text-align: right;
         margin: 0;

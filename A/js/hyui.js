@@ -103,6 +103,7 @@ $(function() {
     _nav.clone(true).prependTo(_mArea);
     _menu.clone(true).prependTo(_mArea);
     // 切換PC/Mobile 選單
+    $('.searchCtrl').clone().appendTo('.menu');
     function mobileMenu() {
         ww = _window.outerWidth();
         if (ww < wwSmall) {

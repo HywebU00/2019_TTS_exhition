@@ -229,6 +229,11 @@
         label {
             display: none;
         }
+        .form_inline {
+            select {
+                width: 100%;
+            }
+        }
         .member_name {
             font-size: 1.25em;
             font-weight: bold;
@@ -1742,9 +1747,9 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     .content {
         padding-left: 100px;
         position: absolute;
-        height:80%;
-        width:98%;
-        right:1%;
+        height: 80%;
+        width: 98%;
+        right: 1%;
         overflow-x: hidden !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch;

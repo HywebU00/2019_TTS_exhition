@@ -243,6 +243,7 @@
                             font-size: 3em;
                             font-weight: bold;
                             margin: .5em auto;
+                            white-space:nowrap;
                             @include screen('xs_mobile') {
                                 font-size: 2.5em;
                             }
@@ -1554,6 +1555,7 @@
                 @include gutter;
                 text-align: left;
                 font-weight: bold;
+                display:block;
                 @include text-overflow;
             }
         }

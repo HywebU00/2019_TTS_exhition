@@ -352,10 +352,15 @@ abbr[title] {
     input[type="text"]:first-child,input[type="text"]:nth-child(2), select:first-child {
         width: 20% !important;
         max-width:60px;
-
+        @include screen('xs_mobile') {
+             width: 15% !important;
+        }
     }
     input[type="text"]:last-child{
         width:50%;
+        @include screen('xs_mobile') {
+            width:49%;
+        }
     }
     // input {
     //         min-width:50px;
