@@ -216,10 +216,12 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    var hh = $('.header').outerHeight(true),
+    var hh = $('.header').outerHeight(),
         menuH = _menu.outerHeight(),
         navH = $('.navbar').height();
     $(window).bind("load scroll resize", function(e) {
+        hh = $('.header').outerHeight();
+        menuH = _menu.outerHeight();
         ww = _window.outerWidth();
         if ($(window).scrollTop() > hh - menuH) {
             if (ww >= wwSmall) {

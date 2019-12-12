@@ -4,7 +4,7 @@
 // 初始值
 @import "_style";
 //-------------------------------------------------------------繼承---------//
-$color:index($style,黃色);
+$color:index($style,洋紅色);
 
 $primaryColor:				nth($mainColor,$color);	   //主色
 $secondaryColor:			nth($subColor,$color);	   //主色
@@ -66,7 +66,7 @@ $My_line:					#DDD;					 //預設線
 @import "common/_fatfooter";				//fatfooter
 @import "common/_modal";					//pop視窗
 @import "common/_function";					//function功能區塊
-@import "common/_category";					//標籤
+@import "sass_c/_category";					//標籤
 @import "common/_share";					//社群分享
 @import "common/_tag";						//文章標籤
 @import "common/_fontsize";					//控制文章字體大小

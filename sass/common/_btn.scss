@@ -23,14 +23,14 @@ $btn-radius:.4em;
     color: $btn-font-color;
     text-shadow:1px 1px 1px RGBA(0,0,0,.3);
     @include border-radius($btn-radius);
-    @include gradient(lighten($btn-bg, 5), darken($btn-bg, 6), vertical);
+    @include gradient(lighten($btn-bg, 5), darken($btn-bg, 5), vertical);
     &:hover, &:focus {
         background-color: lighten($btn-bg, 5); // Old browsers
         border: 1px solid lighten($btn-bg, 10) !important;
         cursor: pointer;
         color: #FFF;
         outline:none;
-        @include gradient(lighten($btn-bg, 12), lighten($btn-bg, 10), vertical);
+        @include gradient(lighten($btn-bg, 12), lighten($btn-bg, 12), vertical);
     }
     &.active {
         background: lighten($btn-bg, 2);
@@ -101,7 +101,7 @@ $btn-radius:.4em;
     color:lighten($color-word,15);
 }
 .btn-primary {
-   @include btn_setting(lighten($My_secondaryColor,10), #FFF);
+   @include btn_setting(lighten($primaryColor,10), #FFF);
 }
 // 按鈕大小
 .btn-xl {

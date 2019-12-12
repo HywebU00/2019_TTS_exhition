@@ -10,6 +10,65 @@
     overflow: hidden;
     @include gutter(0);
 }
+.step {
+    //padding: 0 15px;
+    ol, ul {
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        counter-reset: num;
+        border-radius: .3em;
+        background: #dfdfdf;
+        border: 1px solid #dfdfdf;
+    }
+    li {
+        position: relative;
+        width: 33.3%;
+        float: left;
+        min-height: 3em;
+        font-size: 1.25em;
+        font-weight: bold;
+        padding: .6em .6em .6em 45px;
+        color: #7c7c7c;
+        box-sizing: border-box;
+        // border-top: 1px solid #dfdfdf;
+        // border-bottom: 1px solid #dfdfdf;
+        background: transparent;
+        @include screen('mobile') {
+            display: none;
+        }
+        .num {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            text-align: left;
+            width: 30px;
+            &:after {
+                content: ".";
+            }
+        }
+        // &:first-child {
+        //     border-radius: 4px 0 0 4px;
+        //     border-left: 1px solid #dfdfdf;
+        // }
+        // &:last-child {
+        //     border-radius: 0 4px 4px 0;
+        //     border-right: 1px solid #dfdfdf;
+        // }
+        &.this_step {
+            background: $secondaryColor;
+            color: #fff;
+            border-color: $secondaryColor;
+        }
+        &.now {
+            @include screen('mobile') {
+                display: block;
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}
 .bottom_menu {
     position: fixed;
     width: 100%;
@@ -697,7 +756,7 @@ $chooseUL:100%;
 $chooseLength:7;
 $chooseWidth :$chooseUL/$chooseLength;
 .choose_date {
-    margin-bottom: 1em;
+    margin-top: 1em;
     @include screen('mobile') {
         ul {
             width: 700px;
@@ -753,23 +812,92 @@ $chooseWidth :$chooseUL/$chooseLength;
     .addeventatc {
         white-space: nowrap;
     }
+    .choose_week {
+        text-align: right;
+        margin: .25em 0;
+        a {
+            width: 2.4em;
+            display: block;
+            background: $primaryColor;
+            display: inline-block;
+            text-align: center;
+            padding: .3em;
+            margin-left: -5px;
+            transition: .3s ease-out;
+            &.prev {
+                border-radius: 4px 0 0 4px;
+            }
+            &.next {
+                border-radius: 0 4px 4px 0;
+            }
+            &:hover, &:focus {
+                background: darken($primaryColor, 10);
+            }
+            i {
+                filter: invert(100%);
+                font-size: 1.5em;
+                margin-bottom: 0;
+                &:before {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.adv_btn {
+    text-align: right;
+    .btn {
+        font-size: .813em;
+    }
 }
 .advsearch {
-    border: 3px solid #DDD;
-    padding: 1em;
-    overflow: hidden;
-    @extend %clearfix;
+    // border: 3px solid #DDD;
+    margin-top: -3em;
+    position: relative;
+    z-index: 2;
 }
 $advsearchUL:100%;
 $advsearchLength:3;
 $advsearchWidth :$advsearchUL/$advsearchLength;
 .choose_search_item {
-    margin-bottom: 1em;
+    overflow: hidden;
+    @extend %clearfix;
+    margin: .5em 0% .2em;
+    padding: 2em 3em;
+    background: #F1F1F1;
     @include screen('mobile') {
         overflow-x: scroll;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
+        padding: 0;
+        background: transparent;
+    }
+    form {
+        font-size: .938em;
+    }
+    .form_grp {
+        border-bottom: none;
+        .form_title {
+            font-weight: bold;
+        }
+    }
+    .btn, input[type="submit"] {
+        font-size: 1rem;
+        i {
+            &:before {
+                font-size: 1.25em;
+                margin-left: 0;
+            }
+        }
+    }
+    .form_grid {
+        border-top: none;
+        background: #FFF;
+        margin: 0;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .35);
     }
     @extend %clearfix;
     ul {
@@ -781,15 +909,21 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
             float: left;
             &.active {
                 a {
+                    // color:darken($aHover,20);
+                    font-weight: bold;
+                    border-top: 3px solid darken($aHover, 10);
                     background: $aHover;
+                    color: #FFF;
                 }
             }
             a {
                 display: block;
                 padding: .7em .5em;
                 text-align: center;
-                background: $aColor;
-                color: #FFF;
+                // background:#DDD;
+                @include gradient(#FFF, #EEE, vertical);
+                border-top: 3px solid #CCC;
+                color: #222;
                 min-height: 3em;
                 span {
                     display: inline-block;
@@ -812,61 +946,91 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
+.keyword {
+    color: red !important;
+    display: inline-block;
+    margin: 0 .2em;
+}
 .result {
     ul {
         @include li-reset;
-        border-top: 1px solid #777;
         li {
             position: relative;
             min-height: 4em;
-            border-bottom: 1px solid #dedede;
-            margin: 0px 1em .3em;
+            background: #F5F5F5;
+            margin: 0px 0em 1em;
             overflow: hidden;
-            padding: .5em 0;
-            .num {
-                position: absolute;
-                top: .6em;
-                left: 0;
-                &:after {
-                    content: ".";
+            padding: .8em;
+            border-left: 5px solid #F5F5F5;
+            &:hover {
+                border-left: 5px solid $primaryColor;
+                h3 {
+                    font-weight: bold;
+                }
+                .num{
+                    font-weight: bold;
                 }
             }
-            .keyword {
-                color: red;
-                display: inline-block;
-                margin: 0 .2em;
-            }
-            h3 {
-                color: #1a0dab;
-                font-weight: normal;
-                line-height: 1.35em;
-                font-size: 1.125em;
-                margin: 0 0 .5em 30px;
-                max-width: 600px;
-            }
-            p {
-                font-size: .813em;
-                margin: 0 0 0 30px;
-                max-width: 500px;
-            }
-            a {
-                color: #666;
-                &:hover, &:focus {
-                    h3 {
-                        text-decoration: underline;
-                    }
-                    color: #222;
+            @include screen('xs_mobile') {
+                padding: 2.4em .5em 2em;
+                h3 {
+                    margin: 0 .5em .5em;
                 }
-            }
-            .pic {
-                width: 80px;
-                float: right;
-                margin: 0 .2em .2em 0;
-                border: 1px solid #DDD;
-                padding: .2em;
-                img {
+                p {
+                    margin: 0 .8em;
+                }
+                .pic {
+                    float: none;
                     width: 100%;
+                    margin: 0 auto 1em;
                 }
+            }
+        }
+        .num {
+            position: absolute;
+            top: .7em;
+            left: 1em;
+            &:after {
+                content: ".";
+            }
+        }
+        .keyword {
+            color: red;
+            display: inline-block;
+            margin: 0 .2em;
+        }
+        h3 {
+            color: #333;
+            line-height: 1.35em;
+            font-size: 1.125em;
+            margin: 0 0 .5em 30px;
+            max-width: 700px;
+            padding-bottom: .5em;
+            overflow: hidden;
+            font-weight: normal;
+            border-bottom: 1px solid #555;
+        }
+        p {
+            font-size: .813em;
+            margin: 0 0 0 30px;
+            max-width: 650px;
+            overflow: hidden;
+        }
+        a {
+            color: #666;
+            &:hover, &:focus {
+                color: #222;
+            }
+        }
+        .pic {
+            width: 160px;
+            float: right;
+            margin: 0 .5em .2em .5em;
+            border: 1px solid #DDD;
+            padding: 0;
+            background: #FFF;
+            img {
+                width: 100%;
             }
         }
     }

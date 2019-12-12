@@ -812,12 +812,13 @@
                     color: #333;
                     font-size: .813em;
                     right: 0em;
-                    float: left;
+                    margin-bottom: .2em;
+                    // float: left;
                     width: 80px;
                     top: .1em;
-                    text-align: center;
+                    text-align: left;
                     margin-right: .5em;
-                    background: #DDD;
+                    // background: #EEE;
                     @include screen('mobile') {
                         top: 1em;
                     }
@@ -856,6 +857,7 @@
                 a {
                     display: block;
                     clear: both;
+                    font-weight: bold;
                     // overflow: hidden;
                     @include aSetting_nocolor;
                     @include screen('mobile') {
@@ -868,6 +870,7 @@
         .news_list {
             @extend %common_col;
             overflow: hidden;
+
             @include screen('mobile') {
                 padding: 0 0 1em;
                 clear: both;

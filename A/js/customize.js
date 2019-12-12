@@ -1,5 +1,14 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    //
+    if($('.advsearch').length>0){
+        $('.choose_search_item').hide();
+        $('.adv_btn a').off().click(function(e) {
+             $('.choose_search_item').stop(true,true).slideToggle();
+             $(this).blur();
+            e.preventDefault();
+        });
+    }
     // 我的票券
     if ($('.ticket_block').length > 0) {
         $('.ticket_block ul li a').each(function(index, el) {

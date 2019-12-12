@@ -11,23 +11,26 @@
         }
     }
     a {
-        @include gradient(#FFF, #DDD, vertical);
-        border: 1px solid #CCC;
+        // @include gradient(#EEE, #EEE, vertical);
+        background: transparent;
+        border: 2px solid #999;
         padding: .4em 1em;
         display: block;
         color: #333;
         @include box-sizing();
-        border-radius:4px;
+        border-radius:1.5em;
         &:hover,
         &:focus {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
-            border: 1px solid darken($primaryColor, 15);
+            // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background:$aHover;
+            border: 1px solid darken($aHover, 0);
             box-shadow: none;
         }
         &.active {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background:$aHover;
+            border: 1px solid darken($aHover, 0);
         }
         span {
             font-size: .813em;

@@ -709,7 +709,7 @@ a.more {
                     color: #333;
                     font-size: .813em;
                     right: 0em;
-                    float: left;
+                    // float: left;
                     width: 80px;
                     top: .1em;
                     @include screen('mobile') {
@@ -750,6 +750,7 @@ a.more {
                 a {
                     display: block;
                     clear: both;
+                    font-weight: bold;
                     // overflow: hidden;
                     @include aSetting_nocolor;
                     @include screen('mobile') {
@@ -773,7 +774,10 @@ a.more {
                     padding: 1em;
                     li {
                         width: 90%;
-                        margin-left: 5%
+                        margin-left: 5%;
+                        time{
+                            float: left;
+                        }
                     }
                 }
             }

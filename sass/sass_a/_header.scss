@@ -265,7 +265,7 @@
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;
-                border:none !important;
+                border: none !important;
             }
         }
     }
@@ -438,7 +438,7 @@ $menuItems:2;
                 @include screen('mobile') {
                     width: 100%;
                     float: none;
-                    animation:none;
+                    animation: none;
                 }
                 .btn {
                     width: 100%;
@@ -481,7 +481,7 @@ $menuItems:2;
                 @include screen('mobile') {
                     width: 100%;
                     float: none;
-                    animation:none;
+                    animation: none;
                 }
                 input[type="text"] {
                     margin: 0;
@@ -742,6 +742,7 @@ $menuItems:2;
         margin: 0;
         >ul {
             border: none;
+            padding-right: 60px;
             >li {
                 >a {
                     color: #FFF;
