@@ -184,6 +184,7 @@
         font-size:.938em;
         padding-left: 320px;
         margin-top: .5em;
+        height: 2.2em;
         @include screen('tablet') {
             display: none;
         }

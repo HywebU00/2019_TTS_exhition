@@ -1,11 +1,19 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // toggle_calendar
+    if ($('.toggle_calendar').length > 0) {
+        $('.toggle_calendar').find('a').off().click(function(e) {
+            $('.toggle_calendar').find('a').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+    }
     //
-    if($('.advsearch').length>0){
+    if ($('.advsearch').length > 0) {
         $('.choose_search_item').hide();
         $('.adv_btn a').off().click(function(e) {
-             $('.choose_search_item').stop(true,true).slideToggle();
-             $(this).blur();
+            $('.choose_search_item').stop(true, true).slideToggle();
+            $(this).blur();
             e.preventDefault();
         });
     }
