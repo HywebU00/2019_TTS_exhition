@@ -801,6 +801,96 @@ $chooseWidth :$chooseUL/$chooseLength;
         }
     }
 }
+.addeventatc{
+    font-size:.875em !important;
+    white-space:nowrap;
+}
+.agenda_view {
+    .agenda {
+        position: relative;
+        border-top: 2px solid $secondaryColor;
+        padding:.2em 0;
+        .date {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+        }
+        .date {
+            background: $primaryColor;
+            padding: .5em;
+            color: #FFF;
+            font-size: 1.125em;
+            font-weight: bold;
+            margin-bottom: .2em;
+            span {
+                display: block;
+                position: absolute;
+                &.year,&.weekday {
+                    bottom:0em;
+                    left: 0;
+                    text-align: left;
+                    font-size:.75em;
+                    padding: 0 .5em;
+                    background:#F1F1F1;
+                    color:#666;
+                    width:4em;
+                    font-weight: normal;
+                }
+                &.weekday {
+                    right: 0;
+                    width:3em;
+                    left:auto;
+                    text-align: center;
+                }
+
+                &.day {
+                    top:.9em;
+                    left:0;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 3em;
+                    &:after {
+                        content: "";
+                    }
+                }
+                &.month {
+                    font-weight: normal;
+                    font-size: .875em;
+                    background:$secondaryColor;
+                    top:0;
+                    width: 100%;
+                    height:1.5em;
+                    line-height: 1.5em;
+                    left: 0;
+                    text-align: center;
+
+                }
+
+            }
+            &~.table_list {
+                margin-left: 85px;
+                border-left: 1px solid #DDD;
+                font-size:.938em;
+                th {
+                    background: #fff;
+                }
+                tr {
+                    &:hover {
+                        background: #F1F1F1;
+                    }
+                }
+            }
+        }
+    }
+    table {
+        a {
+            display: block;
+        }
+        time {
+            white-space: nowrap;
+        }
+    }
+}
 .calendar {
     margin-bottom: 4em;
     time {
@@ -967,7 +1057,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 h3 {
                     font-weight: bold;
                 }
-                .num{
+                .num {
                     font-weight: bold;
                 }
             }
