@@ -229,6 +229,9 @@
                     }
                     @include screen('xs_mobile') {
                         width: 50%;
+                        &:nth-child(odd):last-child{
+                            width:100%;
+                        }
                     }
                     span {
                         display: block;
@@ -652,7 +655,7 @@
                     color: #888;
                     font-size: .813em;
                     right: 0em;
-                    // float: left;
+                    float: left;
                     width: 80px;
                     top: .1em;
                     @include screen('mobile') {

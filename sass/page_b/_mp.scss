@@ -247,7 +247,10 @@
                         float: left;
                     }
                     @include screen('xs_mobile') {
-                        width: 48%;
+                        width: 50%;
+                        &:nth-child(odd):last-child{
+                            width:100%;
+                        }
                     }
                     span {
                         display: block;
@@ -813,7 +816,7 @@
                     font-size: .813em;
                     right: 0em;
                     margin-bottom: .2em;
-                    // float: left;
+                    float: left;
                     width: 80px;
                     top: .1em;
                     text-align: left;

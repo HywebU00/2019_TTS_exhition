@@ -801,9 +801,60 @@ $chooseWidth :$chooseUL/$chooseLength;
         }
     }
 }
+.calendar_btn,.modify_btn{
+    display: inline-block;
+    margin-right: 1em;
+    box-sizing:border-box;
+    @include screen('xs_mobile') {
+        display:block;
+        margin-right: 0;
+    }
+    a{
+        display: block;
+        height: 40px;
+        padding: 0 .5em;
+        font-size: .875em;
+        background: #fff;
+        box-shadow: 0 0 4px rgba(0,0,0,.4);
+        text-align: center;
+        border-radius: 2px;
+        color:#555;
+        line-height: 40px;
+        min-width: 150px;
+        &:hover,&:focus {
+            color:$aHover;
+        }
+        @include screen('xs_mobile') {
+            width:250px;
+            min-width: 250px;
+            display:block;
+            margin: 0 auto 1em;
+        }
+        i{
+            &:before{
+                height: 25px;
+                width: 25px;
+                margin-right: .5em;
+            }
+        }
+        img{
+            height: 1.1em;
+            vertical-align: middle;
+            margin:0 .2em;
+        }
+        span{
+            display: inline-block;
+        }
+    }
+
+}
 .addeventatc {
     font-size: .875em !important;
     white-space: nowrap;
+    // z-index: 9998 !important;
+}
+.addeventatc_dropdown.addeventatc-selected{
+    // z-index: 9999 !important;
 }
 .agenda_view {
     .toggle_calendar {

@@ -2,7 +2,7 @@
 .header {
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 999999;
     height: 200px;
     @include background-image(linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%));
     @extend %clearfix;

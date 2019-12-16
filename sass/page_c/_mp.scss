@@ -258,22 +258,25 @@ a.more {
                         float: left;
                     }
                     @include screen('xs_mobile') {
-                        width: 48%;
+                        width: 50%;
+                        &:nth-child(odd):last-child {
+                            width: 100%;
+                        }
                     }
                     span {
                         display: block;
                         margin-bottom: .3em;
-                        &.title{
+                        &.title {
                             background: rgba(0, 0, 0, .75);
-                            padding:.2em 1em;
-                            border-radius:3em;
+                            padding: .2em 1em;
+                            border-radius: 3em;
                             margin: 0 1em .5em;
                         }
                         &.data {
                             font-size: 3em;
                             font-weight: bold;
                             margin: .5em auto;
-                            white-space:nowrap;
+                            white-space: nowrap;
                             @include screen('xs_mobile') {
                                 font-size: 2.5em;
                             }
@@ -705,7 +708,7 @@ a.more {
                 padding-bottom: .5em;
                 border-bottom: 1px solid #DDD;
                 time {
-                    display: block;
+                    display: inline-block;
                     color: #333;
                     font-size: .813em;
                     right: 0em;
@@ -728,10 +731,10 @@ a.more {
                     float: left;
                     text-align: center;
                     background: $color-orange;
-                    &.top,&.tag_01 {
+                    &.top, &.tag_01 {
                         background: $color-orange;
                     }
-                    &.hot,&.tag_02{
+                    &.hot, &.tag_02 {
                         background: $color-red;
                     }
                     &.tag_03 {
@@ -775,7 +778,7 @@ a.more {
                     li {
                         width: 90%;
                         margin-left: 5%;
-                        time{
+                        time {
                             float: left;
                         }
                     }
@@ -962,7 +965,7 @@ a.more {
                 text-align: center;
             }
             overflow: hidden;
-            background: #000;
+            background: darken($My_primaryColor, 5);
             @include gutter($grid-gutter-width*2);
             @include screen('mobile') {
                 @include gutter;
@@ -976,6 +979,9 @@ a.more {
                 max-height: 4.5em;
                 line-height: 1.5em;
             }
+        }
+        a.more{
+            background:transparent;
         }
         .img-container {
             @include aspect-ratio(5, 2);
@@ -1785,7 +1791,7 @@ a.more {
                 @include gutter;
                 text-align: left;
                 font-weight: bold;
-                display:block;
+                display: block;
                 @include text-overflow;
             }
         }
@@ -1955,8 +1961,8 @@ a.more {
         position: relative;
         will-change: transform;
         padding-top: 4em;
-         @include screen('tablet') {
-            background-position:cover !important;
+        @include screen('tablet') {
+            background-position: cover !important;
         }
         @include screen('mobile') {
             position: fixed;
