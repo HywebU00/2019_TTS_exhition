@@ -801,59 +801,58 @@ $chooseWidth :$chooseUL/$chooseLength;
         }
     }
 }
-.calendar_btn,.modify_btn{
+.calendar_btn, .modify_btn {
     display: inline-block;
     margin-right: 1em;
-    box-sizing:border-box;
+    box-sizing: border-box;
     @include screen('xs_mobile') {
-        display:block;
+        display: block;
         margin-right: 0;
     }
-    a{
+    a {
         display: block;
         height: 40px;
         padding: 0 .5em;
         font-size: .875em;
         background: #fff;
-        box-shadow: 0 0 4px rgba(0,0,0,.4);
+        box-shadow: 0 0 4px rgba(0, 0, 0, .4);
         text-align: center;
         border-radius: 2px;
-        color:#555;
+        color: #555;
         line-height: 40px;
         min-width: 150px;
-        &:hover,&:focus {
-            color:$aHover;
+        &:hover, &:focus {
+            color: $aHover;
         }
         @include screen('xs_mobile') {
-            width:250px;
+            width: 250px;
             min-width: 250px;
-            display:block;
+            display: block;
             margin: 0 auto 1em;
         }
-        i{
-            &:before{
+        i {
+            &:before {
                 height: 25px;
                 width: 25px;
                 margin-right: .5em;
             }
         }
-        img{
+        img {
             height: 1.1em;
             vertical-align: middle;
-            margin:0 .2em;
+            margin: 0 .2em;
         }
-        span{
+        span {
             display: inline-block;
         }
     }
-
 }
 .addeventatc {
     font-size: .875em !important;
     white-space: nowrap;
     // z-index: 9998 !important;
 }
-.addeventatc_dropdown.addeventatc-selected{
+.addeventatc_dropdown.addeventatc-selected {
     // z-index: 9999 !important;
 }
 .agenda_view {
@@ -896,6 +895,7 @@ $chooseWidth :$chooseUL/$chooseLength;
         position: relative;
         border-top: 2px solid lighten($primaryColor, 10);
         padding: .2em 0;
+        min-height: 128px;
         .date {
             position: absolute;
             width: 80px;
@@ -955,11 +955,40 @@ $chooseWidth :$chooseUL/$chooseLength;
                 font-size: .938em;
                 th {
                     background: #fff;
+                    &:first-child {
+                        width: 120px;
+                    }
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+                    &:nth-child(4) {
+                        width: 20%;
+                    }
+                    &:last-child {
+                        width: 160px;
+                    }
+                    @include screen('xs_mobile') {
+                        th {
+                            &:first-child {
+                                width: auto;
+                            }
+                            &:nth-child(3) {
+                                width: auto;
+                            }
+                            &:nth-child(4) {
+                                width: auto;
+                            }
+                            &:last-child {
+                                width: auto;
+                            }
+                        }
+                    }
                 }
                 tr {
                     &:hover {
                         background: #F1F1F1;
                     }
+                    td {}
                 }
             }
         }
