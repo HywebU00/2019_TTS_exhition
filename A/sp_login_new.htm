@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- hyUI css -->
-    <link rel="stylesheet" href="css/tts_C.css">
+    <link rel="stylesheet" href="css/tts_A.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                         <a href="#" class="close"></a>
                         <div class="form_grp cate">
                             <button class="btn">全文檢索</button>
-                            <div class="dropdown-content" style="display: none;" >
+                            <div class="dropdown-content" style="display: none;">
                                 <ul>
                                     <li><a href="#">全文檢索</a></li>
                                     <li><a href="#">找廠商</a></li>
@@ -173,224 +173,76 @@
                         <li>節點</li>
                     </ul>
                 </div>
-                <h2 class="title">會員專區</h2>
+                <!-- h2節點 -->
+                <h2 class="title">登入</h2>
                 <!-- SP Start -->
                 <section class="sp">
-                    <div class="login_menu">
-                        <div class="info">
-                            <div class="member_name">王小明</div>
-                            <div class="member_company">凌網科技</div>
-                            <div class="form_grp form_inline">
-                                <label for="selectSample">請選擇瀏覽身份</label>
-                                <select name="" id="selectSample">
-                                    <option value="">請選擇瀏覽身份</option>
-                                    <option value="">買主</option>
-                                    <option value="">參展廠商</option>
-                                    <option value="">媒體</option>
-                                </select>
-                                <div class="btn-grp">
-                                    <button class="btn btn-red btn-xs">登出</button>
+                    <div class="login_new">
+                        <form class="form_grid">
+                            <div class="form_grp">
+                                <label for="username" class="form_title">請選擇身份<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <!--最外層的form 或 radio_grp class加上form_inline-->
+                                    <div class="radio_grp form_inline">
+                                        <label><input name="radioSample" type="radio" value="">參展廠商</label>
+                                        <label><input name="radioSample" type="radio" value="">參觀者</label>
+                                        <label><input name="radioSample" type="radio" value="">媒體</label>
+                                    </div>
+                                    <!-- 錯誤訊息 -->
+                                    <!-- <div class="notice_warning">請填選身份</div> -->
                                 </div>
                             </div>
-                        </div>
-                        <h3>廠商專區</h3>
-                        <ul>
-                            <li><a href="#"><i class="i_home"></i>個人化首頁</a></li>
-                            <li><a href="#"><i class="i_book"></i>產品型錄</a></li>
-                            <li><a href="#"><i class="i_man"></i>邀請買主</a></li>
-                            <li><a href="#"><i class="i_mail"></i>訊息夾</a></li>
-                            <li><a href="#"><i class="i_download"></i>其他下載</a></li>
-                            <li><a href="#"><i class="i_bookmark"></i>貼紙產生器</a></li>
-                            <li><a href="#"><i class="i_link"></i>外部連結</a></li>
-                            <li><a href="#"><i class="i_setting"></i>個人帳號管理</a>
-                                <ul>
-                                    <li><a href="#">修改密碼</a></li>
-                                    <li class="active"><a href="#">公司資料維護</a></li>
-                                    <li><a href="#">隱私權設定</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="login_content">
-                        <!-- h2節點 -->
-                        <h2>型錄列表</h2>
-                        <div class="notice_warning">尚可設定 17 筆產品型錄於前台顯示</div>
-                        <div class="control_panel">
-
-                            <div class="form_grp float_left">
-                                <div class="check_grp">
-                                <label><input type="checkbox" value="">全選</label>
-                            </div>
-                                <label for="selectSample" class="form_title">排序方式</label>
-                                <div class="form_content form_inline">
-                                    <select id="selectSample" name="">
-                                        <option value="">全部</option>
-                                        <option value="">草稿</option>
-                                    </select>
+                            <div class="form_grp">
+                                <label for="username" class="form_title">帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <input type="text" id="username" value="">
+                                    <!-- 錯誤訊息 -->
+                                    <!-- <div class="notice_warning">請輸入帳號</div> -->
                                 </div>
                             </div>
-                            <div class="btn_grp">
-                                <button class="btn btn_icon"><i class="i_add"></i>新增</button>
-                                <button class="btn btn_icon"><i class="i_box"></i>選自產品庫</button>
-                                <button class="btn btn_icon"><i class="i_move"></i>設定顯示順序</button>
-                                <button class="btn btn_icon"><i class="i_trash"></i>刪除</button>
-                            </div>
-                        </div>
-                        <div class="table_list">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th><label><input type="checkbox"></label></th>
-                                        <th>產品圖片<a hred><i class="i_sort"></i></a></th>
-                                        <th>產品名稱/產品型號<a hred><i class="i_sort"></i></th>
-                                        <th>複製</th>
-                                        <th>預覽</th>
-                                        <th>最後修改日期</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><label><input type="checkbox"></label></td>
-                                        <td><a href="#" class="pic">
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/product_01.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/product_01.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/product_01.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/product_01.jpg">
-                                                <img data-src="images/product_01.jpg" class="lazy">
-                                                <noscript><img src="images/product_01.jpg"></noscript>
-                                            </picture>
-                                        </a></td>
-                                        <td>
-                                            <h4>無敵 CD-885牛津朗文電腦辭典(兩色)_x-ray </h4>
-                                            <p>CD-885</p>
-                                            <div class="notice_error">經管理員審核不通過,理由: 不符合展出主題</div>
-                                        </td>
-                                        <td><a href="#" class="btn btn_icon" title="複製"><i class="i_copy"></i></a></td>
-                                        <td><a href="#" class="btn btn_icon"><i class="i_global"></i></a></td>
-                                        <td><time>2014/08/06 <span>14:56</span></time></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label><input type="checkbox"></label></td>
-                                        <td><a href="#" class="pic">
-                                             <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/product_02.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/product_02.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/product_02.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/product_02.jpg">
-                                                <img data-src="images/product_02.jpg" class="lazy">
-                                                <noscript><img src="images/product_02.jpg"></noscript>
-                                            </picture>
-                                        </a></td>
-                                        <td>
-                                            <h4>無敵 CD-885牛津朗文電腦辭典(兩色)_x-ray </h4>
-                                            <p>CD-885</p>
-                                            <div class="notice_error">經管理員審核不通過,理由: 不符合展出主題</div>
-                                        </td>
-                                        <td><a href="#" class="btn btn_icon" title="複製"><i class="i_copy"></i></a></td>
-                                        <td><a href="#" class="btn btn_icon"><i class="i_global"></i></a></td>
-                                        <td><time>2014/08/06 <span>14:56</span></time></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label><input type="checkbox"></label></td>
-                                        <td><a href="#" class="pic">
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/product_03.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/product_03.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/product_03.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/product_03.jpg">
-                                                <img data-src="images/product_03.jpg" class="lazy">
-                                                <noscript><img src="images/product_03.jpg"></noscript>
-                                            </picture>
-                                        </a></td>
-                                        <td>
-                                            <h4>無敵 CD-885牛津朗文電腦辭典(兩色)_x-ray </h4>
-                                            <p>CD-885</p>
-                                            <div class="notice_error">經管理員審核不通過,理由: 不符合展出主題</div>
-                                        </td>
-                                        <td><a href="#" class="btn btn_icon" title="複製"><i class="i_copy"></i></a></td>
-                                        <td><a href="#" class="btn btn_icon"><i class="i_global"></i></a></td>
-                                        <td><time>2014/08/06 <span>14:56</span></time></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label><input type="checkbox"></label></td>
-                                        <td><a href="#" class="pic">
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/product_04.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/product_04.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/product_04.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/product_04.jpg">
-                                                <img data-src="images/product_04.jpg" class="lazy">
-                                                <noscript><img src="images/product_04.jpg"></noscript>
-                                            </picture>
-                                        </a></td>
-                                        <td>
-                                            <h4>無敵 CD-885牛津朗文電腦辭典(兩色)_x-ray </h4>
-                                            <p>CD-885</p>
-                                            <div class="notice_error">經管理員審核不通過,理由: 不符合展出主題</div>
-                                        </td>
-                                        <td><a href="#" class="btn btn_icon" title="複製"><i class="i_copy"></i></a></td>
-                                        <td><a href="#" class="btn btn_icon"><i class="i_global"></i></a></td>
-                                        <td><time>2014/08/06 <span>14:56</span></time></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label><input type="checkbox"></label></td>
-                                        <td><a href="#" class="pic">
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/product_05.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/product_05.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/product_05.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/product_05.jpg">
-                                                <img data-src="images/product_05.jpg" class="lazy">
-                                                <noscript><img src="images/product_05.jpg"></noscript>
-                                            </picture>
-                                        </a></td>
-                                        <td>
-                                            <h4>無敵 CD-885牛津朗文電腦辭典(兩色)_x-ray </h4>
-                                            <p>CD-885</p>
-                                            <div class="notice_error">經管理員審核不通過,理由: 不符合展出主題</div>
-                                        </td>
-                                        <td><a href="#" class="btn btn_icon" title="複製"><i class="i_copy"></i></a></td>
-                                        <td><a href="#" class="btn btn_icon"><i class="i_global"></i></a></td>
-                                        <td><time>2014/08/06 <span>14:56</span></time></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Pagination -->
-                        <div class="pagination">
-                            <form action="" class="form_inline">
-                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                    </select> 筆， <input type="button" class="btn" value="確定">
+                            <div class="form_grp">
+                                <label for="password" class="form_title">密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <input name="password" type="password">
+                                    <!-- 錯誤訊息 -->
+                                    <!--  <div class="notice_warning">請輸入密碼</div> -->
                                 </div>
-                            </form>
-                            <ul class="page">
-                                <li class="first">
-                                    <a href="#" title="第一頁">第一頁 </a></li>
-                                <li class="prev">
-                                    <a href="#" title="回上一頁">回上一頁 </a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li class="next">
-                                    <a href="#" title="下一頁">下一頁 </a>
-                                </li>
-                                <li class="last">
-                                    <a href="#" title="最後一頁">最後一頁 </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_title">
+                                </div>
+                                <div class="form_content">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox">記住我</label>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">忘記密碼</a></li>
+                                            <li><a href="#">其他問題</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label class="form_title">驗證碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                    <input type="text" id="" value="">
+                                    <a href="#" class="btn"><i class="i_reload"></i></a>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_title"></div>
+                                <div class="form_content">
+                                    <div class="btn_grp">
+                                        <button class="btn" type="reset">清除</button>
+                                        <button class="btn btn-primary" type="submit">登入</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>為提供您更完整服務，若您無法登入，如有疑問，請聯絡 <a href="mailto:evayang@hyweb.com.tw">evayang@hyweb.com.tw</a><br>
+                            </p>
+                        </form>
                     </div>
                 </section>
                 <!-- SP End -->

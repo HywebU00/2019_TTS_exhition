@@ -813,7 +813,7 @@ $chooseWidth :$chooseUL/$chooseLength;
         overflow: hidden;
         @include screen('mobile') {
             margin-top: 0;
-            width:100%;
+            width: 100%;
         }
         a {
             border: 2px solid $aHover;
@@ -822,28 +822,28 @@ $chooseWidth :$chooseUL/$chooseLength;
             display: block;
             float: left;
             width: 50%;
-            color:#555;
+            color: #555;
             &:first-child {
                 border-radius: 6px 0 0 6px;
             }
             &:nth-child(2) {
                 border-radius: 0 6px 6px 0;
             }
-            &:hover,&:focus {
-                color:$aHover;
+            &:hover, &:focus {
+                color: $aHover;
             }
-            &.active{
-                color:#FFF;
-                background:$aHover;
-                &:hover{
-                    color:#FFF;
+            &.active {
+                color: #FFF;
+                background: $aHover;
+                &:hover {
+                    color: #FFF;
                 }
             }
         }
     }
     .agenda {
         position: relative;
-        border-top: 2px solid $secondaryColor;
+        border-top: 2px solid lighten($primaryColor, 10);
         padding: .2em 0;
         .date {
             position: absolute;
@@ -1523,43 +1523,154 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         }
     }
 }
-.signup {
+.login_new {
     position: relative;
     background: #FFF;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, .25);
     clear: both;
     width: 90%;
     margin: .5em auto 1em;
-    min-height: 480px;
-    padding: 1em;
-    padding-right: 25%;
+    min-height: 420px;
+    padding: 2em 2em 3em;
+    padding-right: 40%;
     font-size: .938em;
-    @include screen('xs_mobile') {
-        padding: 1em .5em;
+    text-align: left;
+    @include screen('mobile') {
+        padding: 1em 0em;
         width: 100%;
-        box-shadow: none;
+        margin: 0 auto 1em;
     }
     &:before {
         position: absolute;
         background: url('../images/signup.jpg') no-repeat center center;
         background-size: cover;
         top: 0;
-        width: 25%;
+        width: 35%;
         right: 0;
         height: 100%;
         content: "";
-        @include screen('xs_mobile') {
+        @include screen('mobile') {
             display: none;
         }
     }
     .form_grp {
         border-bottom: none;
+        padding: .2em 0;
+        @include screen('mobile') {
+            margin-bottom: 0;
+        }
     }
     .form_title {
         font-weight: bold;
-        text-align: right;
-        @include screen('mobile') {
+        text-align: left;
+        width: 120px;
+        @include screen('tablet') {
             text-align: left;
+            margin-bottom: .2em;
+        }
+    }
+    .form_content {
+        min-height: 2em;
+        padding-top: .2em;
+        width: calc(100% + -130px);
+        .checkbox {
+            float: left;
+            width: auto;
+            font-size: .857rem;
+        }
+        .link {
+            font-size: .857rem;
+            overflow: hidden;
+            text-align: right;
+            ul {
+                @include li-reset;
+                li {
+                    display: inline-block;
+                    a {
+                        display: block;
+                        color: #888;
+                        margin-left: 1em;
+                        &:hover, &:focus {
+                            color: $aHover;
+                        }
+                    }
+                }
+            }
+        }
+        .captcha {
+            margin-right: .3em;
+            &~input, &~a {
+                margin-top: 0;
+                vertical-align: top;
+                text-align: center;
+                width: 8em;
+                min-width: 1em;
+                margin-right: .3em;
+            }
+            &~a {
+                width: 3em;
+                padding: .43em .1em .4em;
+                &:hover, &:focus {
+                    i {
+                        opacity: .8;
+                    }
+                }
+                i {
+                    opacity: .5;
+                    &:before {
+                        font-size: 1.25em;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        @include screen('tablet') {
+            width: 100%;
+            min-height: auto;
+            padding-top: 0;
+        }
+        input[type="text"], input[type="password"] {
+            background: #F1F1F1;
+            border: 1px solid #F1F1F1;
+            margin-bottom: 0;
+            font-size: .938em;
+            &:focus {
+                background: #FFF;
+            }
+        }
+        .btn_grp {
+            text-align: left;
+            padding-top: 0;
+            padding-bottom: 0;
+            button, input {
+                width: 48%;
+            }
+            @include screen('mobile') {
+                text-align: center;
+                button, input {
+                    width: 100%;
+                }
+                *[type="reset"] {
+                    display: none;
+                }
+            }
+        }
+    }
+    p {
+        font-size: .813em;
+        position: absolute;
+        right: 41%;
+        left: 4em;
+        bottom: .5em;
+        text-align: left;
+        display: block;
+        margin: 0 0 0 auto;
+        @include screen('mobile') {
+            position: relative;
+            right: 0;
+            @include gutter;
+            margin-top: 1em;
+            left: 0;
         }
     }
 }

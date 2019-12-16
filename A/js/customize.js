@@ -8,7 +8,7 @@ $(function() {
             e.preventDefault();
         });
     }
-    //
+    //進階搜尋
     if ($('.advsearch').length > 0) {
         $('.choose_search_item').hide();
         $('.adv_btn a').off().click(function(e) {

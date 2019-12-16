@@ -1,5 +1,22 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // toggle_calendar
+    if ($('.toggle_calendar').length > 0) {
+        $('.toggle_calendar').find('a').off().click(function(e) {
+            $('.toggle_calendar').find('a').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+    }
+    //進階搜尋
+    if ($('.advsearch').length > 0) {
+        $('.choose_search_item').hide();
+        $('.adv_btn a').off().click(function(e) {
+            $('.choose_search_item').stop(true, true).slideToggle();
+            $(this).blur();
+            e.preventDefault();
+        });
+    }
     // 我的票券
     if ($('.ticket_block').length > 0) {
         $('.ticket_block ul li a').each(function(index, el) {
