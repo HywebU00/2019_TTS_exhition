@@ -9,7 +9,7 @@ require 'compass/import-once/activate'
 # B 經典設計
 # C 極簡風格
 http_path = "/"
-css_dir = "A/css/"
+css_dir = "B/css/"
 # css_dir = "B/css/"
 # css_dir = "C/css/"
 # css_dir = "css/"

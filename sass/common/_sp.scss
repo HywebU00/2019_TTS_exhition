@@ -5,6 +5,7 @@
         margin-right: 0;
     }
 }
+
 .sp {
     padding-bottom: 4em;
     // overflow: hidden;
@@ -825,8 +826,8 @@ $chooseWidth :$chooseUL/$chooseLength;
             color: $aHover;
         }
         @include screen('xs_mobile') {
-            width: 250px;
-            min-width: 250px;
+            width: 100%;
+            min-width:100%;
             display: block;
             margin: 0 auto 1em;
         }
@@ -896,10 +897,19 @@ $chooseWidth :$chooseUL/$chooseLength;
         border-top: 2px solid lighten($primaryColor, 10);
         padding: .2em 0;
         min-height: 128px;
+        overflow:hidden;
+        background:#FFF;
         .date {
             position: absolute;
             width: 80px;
             height: 120px;
+            &.top{
+                top:45px !important;
+                @include screen('mobile') {
+                    top:75px !important;
+                }
+            }
+
         }
         .date {
             background: $primaryColor;

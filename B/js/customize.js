@@ -1,5 +1,46 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 行事曆日期sticky
+    if ($('.agenda_view').length > 0) {
+        $('.agenda_view').each(function(index, el) {
+            var $date = $(this).find('.date');
+            var $daterStopper = $(this);
+            if (!!$date.offset()) { // make sure ".date" element exists
+                $(window).on("load resize", function(e) {
+                    var isFirst = false;
+                    if ($('.header').hasClass('fixed')) {
+                        isFirst = true;
+                    }
+                    var dateHeight = $date.innerHeight();
+                    var dateTop = $date.offset().top;
+                    var stickOffset = 0;
+                    var dateStopperPosition = $daterStopper.offset().top;
+                    var stopPoint = dateStopperPosition - dateHeight - stickOffset;
+                    if(isFirst) {
+                        stopPoint += 50;
+                        if(index == 0)
+                            stopPoint += 65;
+                    }
+                    var diff = 40;
+                    $(window).scroll(function() { // scroll event
+                        var windowTop = $(window).scrollTop(); // returns number
+                        // console.log(index + ':' +stopPoint + ' ' + windowTop);
+                        // console.log(index + ':' + stopPoint + ' ' + isFirst);
+                        if (stopPoint + (!isFirst&&index==0 ? 30 : 0) < windowTop-10) {
+                            $date.css({ position: 'fixed' });
+                            $date.addClass('top');
+                        } else if (dateTop < windowTop + stickOffset) {
+                            $date.css({ position: 'fixed', top: stickOffset + 30 });
+                            $date.removeClass('top');
+                        } else {
+                            $date.css({ position: 'absolute' });
+                            $date.removeClass('top');
+                        }
+                    });
+                });
+            }
+        });
+    }
     // toggle_calendar
     if ($('.toggle_calendar').length > 0) {
         $('.toggle_calendar').find('a').off().click(function(e) {
