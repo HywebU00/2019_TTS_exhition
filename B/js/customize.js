@@ -1,5 +1,18 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // img mask
+    $(window).on("load resize scroll", function(e) {
+        var window_H = $(window).innerHeight();
+        var windowTop = $(window).scrollTop();
+        // console.log('window_H' + window_H);
+        $('.section .img-container').each(function(index, el) {
+            var imgTop = Math.floor($(this).offset().top - windowTop + 130);
+            // console.log(imgTop);
+            if (imgTop < window_H && imgTop > 0) {
+                $(this).addClass('effect');
+            }
+        });
+    });
     // 行事曆日期sticky
     if ($('.agenda_view').length > 0) {
         $('.agenda_view').each(function(index, el) {

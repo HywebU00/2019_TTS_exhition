@@ -980,8 +980,8 @@ a.more {
                 line-height: 1.5em;
             }
         }
-        a.more{
-            background:transparent;
+        a.more {
+            background: transparent;
         }
         .img-container {
             @include aspect-ratio(5, 2);
@@ -2098,5 +2098,58 @@ a.more {
                 }
             }
         }
+    }
+}
+// 設定mask
+.mp_slider .img-container picture {
+    &:after,&:before{
+        display:none;
+    }
+}
+.img-container picture {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    // img.loaded {
+    //     animation: none;
+    // }
+    &:before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        left: auto;
+        right: 0;
+        background-color: $secondaryColor;
+        z-index: 100;
+    }
+    &:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        left: auto;
+        right: 0;
+        background-color: #FFF;
+        z-index: 99;
+    }
+}
+.img-container.effect picture {
+    &:before {
+        width: 0;
+        -webkit-transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
+        transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
+        visibility: hidden;
+    }
+    &:after {
+        width: 0;
+        -webkit-transition: background-color 0s .8s, visibility 0s 1.2s, width .5s .5s cubic-bezier(.215, .61, .355, 1);
+        transition: background-color 0s .8s, visibility 0s 1.2s, width .5s .5s cubic-bezier(.215, .61, .355, 1);
+        visibility: hidden;
     }
 }
