@@ -1772,18 +1772,23 @@ a.more {
                     left: 0;
                     right: 0;
                     bottom: 0;
+                    &:after{
+                        display:none;
+                    }
                     &:before {
                         content: "";
                         position: absolute;
-                        width: 3.6em;
-                        height: 3.6em;
-                        border-radius: 50%;
-                        top: 40%;
-                        left: 50%;
-                        margin-left: -1.8em;
-                        background: url(../images/play.png) no-repeat center center;
-                        background-size: cover;
-                        z-index: 1;
+                        width: 3.6em !important;
+                        height: 3.6em !important;
+                        border-radius: 50% !important;
+                        top: 40% !important;
+                        left: 50% !important;;
+                        margin-left: -1.8em !important;
+                        background: url(../images/play.png) no-repeat center center !important;
+                        background-size: cover !important;
+                        z-index: 5 !important;
+                        transition: none !important;
+                        visibility: visible !important;
                     }
                 }
             }
