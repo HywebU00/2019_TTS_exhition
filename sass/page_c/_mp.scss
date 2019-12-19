@@ -2111,7 +2111,7 @@ a.more {
         display:none;
     }
 }
-.img-container picture {
+.section .img-container picture {
     opacity: 1;
     position: absolute;
     width: 100%;
@@ -2144,7 +2144,7 @@ a.more {
         z-index: 99;
     }
 }
-.img-container.effect picture {
+.section .img-container.effect picture {
     &:before {
         width: 0;
         -webkit-transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
