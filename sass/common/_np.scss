@@ -5,9 +5,10 @@
             li {
                 width: 32.3%;
                 margin: 0px .5% 1em .5%;
-                @include screen('mobile') {
-                    width: 32.3%;
-                    float: left;
+                display: inline-block;
+                vertical-align:top;
+                @include screen('tablet') {
+                    width: 48.5%;
                     margin: 0px .5% 1em .5%;
                 }
                 @include screen('xs_mobile') {
