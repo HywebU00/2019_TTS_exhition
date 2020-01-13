@@ -164,19 +164,23 @@ $(function() {
     // 左側選單
     var left_stutus = false;
     if ($('.leftmenu').length > 0) {
-        $('.leftmenu').append('<a href="#" class="toggle_btn"></a><div class="mask"></div>');
+        $('.leftmenu').append('<a href="#" class="toggle_btn"></a><a href="#" class="close"><i class="i_close"></i></a>');
         $('.toggle_btn').removeClass('fixed');
         $('.leftmenu').siblings('.lp').addClass('padding-left');
         $('.leftmenu').siblings('.cp').addClass('padding-left');
+        $('.mask').remove();
         $(window).bind("load resize", function(e) {
             left_W = $('.leftmenu').outerWidth();
             ww = $(window).outerWidth();
             // console.log(ww);
             if ($('.product_search').length > 0 && ww <= 768) {
                 $('.product_search').prependTo('.leftmenu');
+                $('.toggle_btn').insertBefore('.leftmenu');
             }
             if ($('.product_search').length > 0 && ww > 768) {
                 $('.product_search').prependTo('.lp').show().removeAttr('style');
+                $('.product_search').prependTo('.cp').show().removeAttr('style');
+                $('.toggle_btn').appendTo('.leftmenu');
             }
             if (ww >= 768) {
                 $('.toggle_btn').removeClass('open');
@@ -187,13 +191,20 @@ $(function() {
                 left_stutus = false;
             } else {
                 $('.toggle_btn').removeClass('open');
-                $('.toggle_btn').siblings().hide();
+                // $('.toggle_btn').siblings().hide();
                 $('.mask').show();
-                left_stutus = true;
+                left_stutus = false;
+                $('.leftmenu .close').off().click(function(e) {
+                    $('.leftmenu').stop(true, true).animate({ 'top': '100%' }, 400, 'easeOutQuint');
+                    $('.mask').show();
+                    left_stutus = false;
+                    e.preventDefault();
+                });
             }
             $('.toggle_btn').off().click(function(e) {
                 if (ww >= 768) {
                     if (!left_stutus) {
+                        $(this).addClass('open');
                         $(this).siblings().hide();
                         $(this).parents('.leftmenu').addClass('hidden').siblings('.lp').addClass('width100');
                         $(this).parents('.leftmenu').addClass('hidden').siblings('.cp').addClass('width100');
@@ -210,12 +221,12 @@ $(function() {
                 } else {
                     if (!left_stutus) {
                         $(this).removeClass('open');
-                        $(this).siblings().slideUp();
+                        $('.leftmenu').stop(true, true).animate({ 'top': 0 }, 400, 'easeOutQuint');
                         $('.mask').show();
                         left_stutus = true;
                     } else {
                         $(this).addClass('open');
-                        $(this).siblings().slideDown();
+                        $('.leftmenu').stop(true, true).animate({ 'top': '100%' }, 400, 'easeOutQuint');
                         $('.mask').hide();
                         left_stutus = false;
                     }

@@ -162,9 +162,9 @@
             border-bottom: 2px solid $primaryColor;
         }
         @include screen('xs_mobile') {
-            text-align: left;
+            text-align: center;
             label {
-                display: block;
+                // display: block;
             }
         }
     }
@@ -178,7 +178,7 @@
     border-right: 1px solid #DDD;
     padding: 1em 1em 10em 0em;
     @include screen('mobile') {
-        padding: 3em 1em 0em;
+        padding: 1em 1em 10em;
         border: none;
     }
     // @include gutter();
@@ -230,6 +230,33 @@
                 }
             }
         }
+    }
+}
+.leftmenu {
+    .close {
+        display: none !important;
+        @include screen('mobile') {
+            position: absolute;
+            top: 3.5em;
+            font-size: 1.5em;
+            right: .5em;
+            display: block !important;
+            opacity: .5;
+            &:hover, &:focus {
+                opacity: 1;
+            }
+        }
+    }
+    @include screen('mobile') {
+        position: fixed;
+        transform: translateZ(0);
+        z-index: 14;
+        top: 100%;
+        padding-top: 7em;
+        left: 0;
+        width: 100%;
+        overflow-y: auto;
+        height: 100%;
     }
 }
 .login_menu {
@@ -1250,13 +1277,27 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         float: left;
         margin-right: 1%;
         text-align: center;
+        @include screen('xs_mobile') {
+            width:40%;
+        }
     }
     input[type="text"]:nth-of-type(2) {
-        width: 46%;
+        width: 20%;
         margin-right: 0%;
-        margin-left: 1%;
+        margin-right: 1%;
+        text-align: center;
+        @include screen('xs_mobile') {
+            width:40%;
+        }
+    }
+    input[type="text"]:last-child{
+        width: 46% !important;
+        margin-right: 0%;
+        margin-left: 0%;
+        text-align: left !important;
         @include screen('mobile') {
-            width: 72%;
+            width: 100% !important;
+
         }
     }
 }
@@ -1544,8 +1585,20 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
 }
 .prelogin {
     font-size: .938em;
-    border-left: 5px solid lighten($primaryColor, 10);
+    // border-left: 5px solid lighten(#888, 10);
+    border-radius:.5em;
     padding: 1em;
+    margin-bottom: 1em;
+    box-shadow:0px 2px 12px -3px rgba(0,0,0,0.4);
+    transition: .3s ease-out;
+    &:hover{
+        box-shadow:0px 2px 12px -3px rgba(0,0,0,0.6);
+    }
+    .divider{
+        font-size:1.125em;
+        color:#777;
+        margin: 0 0 1em 0;
+    }
     @include screen('mobile') {
         padding: 1em 0;
     }
@@ -1558,6 +1611,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     }
     .form_grp {
         border-bottom: none;
+        padding:.2em 0;
     }
     .check_grp, .radio_grp {
         @include screen('mobile') {
@@ -1568,6 +1622,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         width: 25%;
         text-align: right;
         float: left;
+        margin: .5em 0;
         @include gutter;
         @include screen('mobile') {
             width: 100%;
@@ -1576,10 +1631,20 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
             margin: .2em 0;
         }
     }
+    .form_content {
+        .form_grid {
+            .form_title {
+                width: 80% !important;
+            }
+        }
+    }
     .address {
         overflow: hidden;
         @include screen('mobile') {
             @include gutter;
+        }
+        .form_title {
+            width: 80%;
         }
         .form_grp {
             width: 50%;
@@ -1588,19 +1653,26 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 margin: 0;
                 padding: .1em 0;
             }
+            .form_grid {
+                .form_title {
+                    width: 80%;
+                }
+            }
             &.full {
                 width: 100%;
                 float: none;
                 margin-left: 0;
                 margin-right: 0;
-                .form_content {
-                    width: 100%;
-                }
             }
             .form_content {
                 width: 100%;
                 @include screen('mobile') {
                     @include make-row;
+                }
+                &.form_mobile{
+                    input[type="text"]{
+                        width:6em;
+                    }
                 }
             }
         }
@@ -2362,7 +2434,7 @@ form {
     &.has_counter {
         font-family: 'Century Gothic';
         counter-reset: num;
-        .form_grp{
+        .form_grp {
             border-bottom: none !important;
         }
         .form_grid,
@@ -2400,11 +2472,11 @@ form {
                 top: .5em;
                 transition: .3s ease-out;
                 z-index: 2;
-                border:none;
+                border: none;
                 &:hover, &:focus {
                     background: darken($secondaryColor, 15);
-                     border:none !important;
-                     box-shadow:none !important;
+                    border: none !important;
+                    box-shadow: none !important;
                 }
             }
         }
@@ -2469,7 +2541,7 @@ form {
         &.short {
             max-width: 80px;
             @include screen('xs_mobile') {
-                &+input[type="text"]{
+                &+input[type="text"] {
                     width: calc(100%-100px);
                 }
             }
@@ -2481,13 +2553,12 @@ form {
     }
     h3 {
         font-size: 1.375em;
-        color: $primaryColor;
+        color: darken($primaryColor,10);
         padding: 1em 1em .5em;
         margin: .5em 0;
         position: relative;
         font-size: 1.65em;
         background: inherit;
-        color: $secondaryColor;
         padding: 0;
         margin-bottom: 1em;
         // &:after {
@@ -2824,8 +2895,8 @@ form {
         display: inline-block;
         padding: 0 .5em;
         @include screen('xs_mobile') {
-            &>*{
-                display:inline-block;
+            &>* {
+                display: inline-block;
             }
         }
     }

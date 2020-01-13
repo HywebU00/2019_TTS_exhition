@@ -16,8 +16,91 @@
     width: 100% !important;
     padding-left: 2.8em !important;
 }
+.toggle_btn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    right: 0;
+    left: 0%;
+    background: #DEDEDE;
+    box-shadow: -1px -1px 0px 0px darken(#999, 10) inset;
+    @include screen('mobile') {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        display: block;
+        background: $aHover;
+        margin-bottom: .5em;
+    }
+    &.open {
+        position: absolute;
+        right: -31px;
+        &:before {
+            transform: rotate(-135deg);
+            left: 10%;
+        }
+        @include screen('mobile') {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            right: 0;
+            left: 0%;
+            &:before {
+                left: 47%;
+                top: 18%;
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &:before {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #FFF;
+        transform: rotate(45deg);
+        border-top: none;
+        border-right: none;
+        content: "";
+        top: 40%;
+        left: 32%;
+        @include screen('mobile') {
+            transform: rotate(-45deg);
+            left: 47%;
+            top: 18%;
+            background: url(../images/icon/icon_filter.svg) no-repeat center center;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            border: none;
+            transform: rotate(0deg);
+            opacity: 1;
+            filter: invert(100%);
+        }
+    }
+    &:hover {
+        @include gradient($aHover, $aColor, vertical);
+        @include screen('mobile') {
+            &:before {
+                filter: invert(100%);
+                opacity: 1;
+            }
+        }
+    }
+    &:focus {
+        background: $aHover;
+        @include screen('mobile') {
+            &:before {
+                filter: invert(100%);
+                opacity: 1;
+            }
+        }
+    }
+}
 .leftmenu {
     position: relative;
+    @include screen('mobile') {
+        padding-bottom:10em;
+    }
     &.hidden {
         background: none;
         border: none;
@@ -52,78 +135,13 @@
         @include gradient(#BBB, #CCC, horizontal);
         display: block;
         top: 0;
+        left: auto;
         right: -31px;
         z-index: 3;
-        @include screen('mobile') {
-            width: 100%;
-            height: 40px;
-            right: 0;
-            left: 0%;
-            background: #DEDEDE;
-            box-shadow: -1px -1px 0px 0px darken(#999, 10) inset;
+        &:hover,&:focus {
+            @include gradient($aColor, $aHover, horizontal);
         }
-        &.open {
-            position: absolute;
-            right: -31px;
-            &:before {
-                transform: rotate(-135deg);
-                left: 10%;
-            }
-            @include screen('mobile') {
-                position: absolute;
-                width: 100%;
-                height: 40px;
-                right: 0;
-                left: 0%;
-                &:before {
-                    left: 47%;
-                    top: 18%;
-                    transform: rotate(0deg);
-                }
-            }
-        }
-        &:before {
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            border: 3px solid #FFF;
-            transform: rotate(45deg);
-            border-top: none;
-            border-right: none;
-            content: "";
-            top: 40%;
-            left: 32%;
-            @include screen('mobile') {
-                transform: rotate(-45deg);
-                left: 47%;
-                top: 18%;
-                background: url(../images/icon/icon_filter.svg) no-repeat center center;
-                background-size: contain;
-                width: 24px;
-                height: 24px;
-                border: none;
-                transform: rotate(0deg);
-                opacity: .35;
-            }
-        }
-        &:hover {
-            @include gradient(#AAA, #BBB, horizontal);
-            @include screen('mobile') {
-                &:before {
-                    filter: invert(100%);
-                    opacity: 1;
-                }
-            }
-        }
-        &:focus {
-            background: $aHover;
-            @include screen('mobile') {
-                &:before {
-                    filter: invert(100%);
-                    opacity: 1;
-                }
-            }
-        }
+
     }
     .company_menu {
         margin-bottom: 1em;
@@ -1223,23 +1241,23 @@
     clear: both;
     overflow: hidden;
     @extend %clearfix;
-    position:relative;
+    position: relative;
     padding-right: 100px;
     @include screen('mobile') {
         padding-right: 0;
     }
-    .taiwantrade_logo{
-        width:80px;
-        overflow:hidden;
-        position:absolute;
-        top:0;
-        right:5px;
-        img{
+    .taiwantrade_logo {
+        width: 80px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        img {
             width: 100%;
         }
         @include screen('mobile') {
-            position:relative;
-            left:auto;
+            position: relative;
+            left: auto;
             float: right;
             margin-top: -45px;
         }
@@ -1265,7 +1283,7 @@
             float: left;
             width: 24%;
             @include screen('mobile') {
-                width:24%;
+                width: 24%;
             }
             i {
                 font-size: 1.25em;
@@ -1280,7 +1298,7 @@
         margin-bottom: .5em;
         overflow: hidden;
         @include screen('mobile') {
-            font-size:1.5em;
+            font-size: 1.5em;
             margin-right: 100px;
         }
     }
