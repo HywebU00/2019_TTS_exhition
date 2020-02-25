@@ -24,9 +24,13 @@ footer {
     p {
         line-height: 1.45em;
         margin-bottom: .2em;
-        a {
+        span{
             display: inline-block;
             margin: 0px .5em;
+        }
+        a {
+            display: inline-block;
+            // margin: 0px .5em;
             color: #FFF;
             img {
                 height: 2em;
