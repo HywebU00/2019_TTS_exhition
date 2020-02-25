@@ -1,6 +1,6 @@
 .menu {
     @include box-sizing;
-    margin: 2.8em auto 0;
+    margin: 2.2em auto 0;
     min-height: 2.5em;
     position: relative;
     z-index: 99;
@@ -337,6 +337,13 @@
                     &:focus {
                         background: darken($My_primaryColor, 20);
                     }
+                    img {
+                        max-width: 1.5em;
+                        max-height: 1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: .2em;
+                    }
                 }
             }
         }
@@ -369,6 +376,13 @@
                     a {
                         border: none;
                         background: rgba(0, 0, 0, .4);
+                         img {
+                        max-width: 1.5em;
+                        max-height: 1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: .2em;
+                    }
                     }
                 }
             }

@@ -171,7 +171,7 @@
     // 導覽列
     .navigation {
         &.have_language {
-            padding-right: 300px;
+            padding-right: 190px;
         }
         @extend %clearfix;
         overflow: hidden;
@@ -179,7 +179,8 @@
         margin-bottom: .5em;
         box-sizing:border-box;
         font-size:.938em;
-        height: 2.2em;
+        height: 2.5em;
+        margin-top: .25em;
         @include screen('tablet') {
             display: none;
         }
@@ -201,25 +202,32 @@
                 padding: .5em;
                 text-decoration: none;
                 @include aSetting_nocolor;
+                img{
+                    max-width:1.5em;
+                    max-height:1em;
+                    display:inline-block;
+                    vertical-align:middle;
+                    margin-right: .2em;
+                }
             }
         }
         .language {
             position: absolute;
-            right: 162px;
-            top: 0em;
+            right: 60px;
+            top: .25em;
             ul {
                 display: none;
             }
         }
         .btn_login {
-            position: absolute;
-            right: 69px;
-            top: -1px;
+            position: relative;
+            float: right;
             background: $My_primaryColor;
             color: #FFF;
             border: none;
             border-radius: 0;
             margin: 0;
+            height:34px;
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;

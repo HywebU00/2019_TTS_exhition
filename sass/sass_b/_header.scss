@@ -60,7 +60,7 @@
         }
     }
     >.container {
-        max-width: $container-max;
+        max-width: 100%;
         overflow: visible;
         @include gutter;
         position: relative; // menu
@@ -100,7 +100,7 @@
             font-size: 0em;
             position: absolute;
             right: 24px;
-            top: 11px;
+            top: 14px;
             width: 36px;
             height: 36px;
             background: $My_primaryColor;
@@ -175,7 +175,7 @@
     // 導覽列
     .navigation {
         &.have_language {
-            padding-right: 300px;
+            padding-right: 13.05em;
         }
         @extend %clearfix;
         overflow: hidden;
@@ -183,8 +183,8 @@
         box-sizing:border-box;
         font-size:.938em;
         padding-left: 320px;
-        margin-top: .5em;
-        height: 2.2em;
+        margin-top: .75em;
+        height: 2.6em;
         @include screen('tablet') {
             display: none;
         }
@@ -206,25 +206,36 @@
                 padding: .5em;
                 text-decoration: none;
                 @include aSetting_nocolor;
+                img{
+                    max-width:1.5em;
+                    max-height:1em;
+                    display:inline-block;
+                    vertical-align:middle;
+                    margin-right: .2em;
+                }
             }
         }
         .language {
             position: absolute;
-            right: 160px;
-            top: .75em;
+            right: 65px;
+            top: 1em;
+            a{
+                border:none;
+            }
             ul {
                 display: none;
             }
         }
         .btn_login {
-            position: absolute;
-            right: 65px;
-            top: .75em;
+            position: relative;
+            top: .2em;
             background: $My_primaryColor;
             color: #FFF;
+            height:2.4em;
             border: none;
             border-radius: 0;
             margin: 0;
+            float: right;
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;

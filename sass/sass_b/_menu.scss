@@ -336,6 +336,13 @@
                     &:focus {
                         background: darken($My_primaryColor, 20);
                     }
+                     img {
+                        max-width: 1.5em;
+                        max-height: 1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: .2em;
+                    }
                 }
             }
         }

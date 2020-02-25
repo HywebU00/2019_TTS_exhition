@@ -438,6 +438,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
+        background:darken($primaryColor,30);
         @include gutter(0);
         &:before {
             content: "";
@@ -1726,6 +1727,10 @@
     }
     .parallax {
         color: #FFF !important;
+        &>div{
+            position:relative;
+            z-index: 1;
+        }
         p {
             color: #FFF;
             max-width: 600px;
@@ -1752,7 +1757,8 @@
         min-height: 30em;
         width: 100%;
         position: relative;
-        will-change: transform;
+        -ms-will-change: transform;
+        -webkit-will-change: transform;
         padding-top: 4em;
         @include screen('tablet') {
             background-position: cover !important;
@@ -1801,7 +1807,7 @@
             pointer-events: none;
             margin-left: 0;
             @include gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .1), vertical);
-            z-index: -2;
+            // z-index: -2;
         }
     }
 }

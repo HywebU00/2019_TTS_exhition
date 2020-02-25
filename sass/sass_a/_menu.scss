@@ -7,8 +7,8 @@
     margin-left: 250px;
     // 預設選單 ul
     clear: both;
-    .searchCtrl{
-        display:none !important;
+    .searchCtrl {
+        display: none !important;
     }
     >ul {
         text-align: right;
@@ -337,6 +337,13 @@
                     &:focus {
                         background: darken($My_primaryColor, 20);
                     }
+                    img {
+                        max-width: 1.5em;
+                        max-height: 1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: .2em;
+                    }
                 }
             }
         }
@@ -379,9 +386,9 @@
             color: #FFF;
             border-radius: 0;
             margin: 1em auto;
-            display:block;
-            min-width:90%;
-            box-shadow:none;
+            display: block;
+            min-width: 90%;
+            box-shadow: none;
             &:hover, &:focus {
                 background: darken($My_primaryColor, 20);
             }
