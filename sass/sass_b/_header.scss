@@ -60,7 +60,7 @@
         }
     }
     >.container {
-        max-width: 100%;
+        max-width: $container-max;
         overflow: visible;
         @include gutter;
         position: relative; // menu
