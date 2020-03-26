@@ -1568,8 +1568,9 @@ a.more {
     }
     // ----------------------------------- 交通指引
     .loaction {
+        font-size: .938em;
         .loaction_intro {
-            padding: 0em;
+            padding: .5em;
             @extend %common_col;
             background: #000;
             color: #FFF;
@@ -1590,12 +1591,16 @@ a.more {
             overflow: hidden;
         }
         p {
-            margin-top: 1em;
-            display: block;
-            color: #FFF;
+            color:#FFF;
+            time {
+                display: block;
+            }
             span {
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size: 1.125em;
+                display:inline-block;
+                vertical-align:middle;
+                margin-right: 1em;
             }
         }
         .pic {
@@ -1611,7 +1616,7 @@ a.more {
         ul {
             @include li-reset;
             li {
-                margin-bottom: .5em;
+                margin-bottom: .3em;
                 @extend %li_style;
             }
         }
