@@ -337,7 +337,7 @@ $(function() {
                 });
                 $(cellDiv3, this).height(highestBox);
             });
-            $('.loaction_intro').height(loactionH);
+            $('.loaction_intro').height('auto');
         } else {
             $(cellDiv1, this).removeAttr('style');
             $(cellDiv2, this).removeAttr('style');

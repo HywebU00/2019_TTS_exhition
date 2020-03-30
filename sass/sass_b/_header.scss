@@ -159,13 +159,17 @@
             height: 60px;
             margin: 0;
             a {
-                width: 200px;
+                width: 220px;
                 height: 60px;
                 margin: 0px auto;
+                display:flex;
+                justify-content: center;
+                align-items: center;
                 img {
+                    flex:1 1 100%;
                     width: 100%;
                     height: auto;
-                    max-height: 54px;
+                    max-height: 60px;
                     margin: 0px auto 0;
                     object-fit: contain;
                 }

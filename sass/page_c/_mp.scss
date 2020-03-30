@@ -1566,41 +1566,88 @@ a.more {
             }
         }
     }
-    // ----------------------------------- 交通指引
+     // ----------------------------------- 交通指引
     .loaction {
         font-size: .938em;
+        display: flex;
+        flex-flow: row wrap;
+        @include gutter;
+        @include screen('xs_mobile') {
+             flex-flow: column wrap;
+             @include gutter(0);
+             .loaction_intro{
+                width: 100%;
+                flex:1 1 100%;
+             }
+             .pic{
+                width: 100%;
+                flex:1 1 100%;
+
+             }
+        }
+        h2 {
+            @include gutter();
+            display: flex;
+            flex: 1 1 100%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            @include screen('mobile') {
+                text-align: center;
+                justify-content: center;
+            }
+        }
         .loaction_intro {
             padding: .5em;
             @extend %common_col;
-            background: #000;
-            color: #FFF;
+            padding: 0;
             float: left;
             width: 33%;
             margin-bottom: 1em;
+            display: flex;
+            flex: 0 0 40%;
+            flex-flow: column wrap;
+            align-items: stretch;
             @include gutter;
             @include screen('mobile') {
                 float: none;
                 width: 100%;
             }
-            h2 {
-                @include gutter(0);
-            }
         }
         .pic {
             @extend %common_col;
             overflow: hidden;
+            display: flex;
+            flex: 1 1 auto;
         }
         p {
-            color:#FFF;
+            overflow: hidden;
+            display: flex;
+            flex: 1 1 auto;
+            flex-flow: wrap row;
+            border: 1px solid #DDD;
+            border-left: none;
+            border-right: none;
             time {
-                display: block;
+                display: flex;
+                flex:0 0 100%;
+                flex-flow: nowrap row;
+                justify-content: flex-start;
             }
             span {
                 font-weight: bold;
+                flex:0 0 auto;
+                // width: 80px;
+                // max-width: 80px;
                 font-size: 1.125em;
-                display:inline-block;
-                vertical-align:middle;
+                display: inline-flex;
+                vertical-align: middle;
                 margin-right: 1em;
+                &~span{
+                    flex:1 0 auto;
+                    max-width: auto;
+                    width: auto;
+                }
             }
         }
         .pic {
@@ -2090,11 +2137,15 @@ a.more {
         a {
             color: #FFF;
             display: block;
-            padding: .5em;
+            padding: .25em;
             min-height: 60px;
             line-height: 1.25em;
             box-sizing: border-box;
             border-radius: 5px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             img {
                 width: 24px;
                 height: 24px;
