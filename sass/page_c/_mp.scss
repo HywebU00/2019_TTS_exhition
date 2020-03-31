@@ -168,9 +168,9 @@ a.more {
                 padding-top: 0;
                 margin-top: 0;
             }
-            .container {
-                background: darken($primaryColor, 0);
-            }
+            // .container {
+            //     background: darken($primaryColor, 0);
+            // }
         }
     }
     .col-12 {
@@ -299,6 +299,7 @@ a.more {
         color: #FFF;
         @include screen('mobile') {
             @include gutter(0);
+            margin-bottom: 1em;
         }
         time {
             font-size: 1em;
@@ -399,10 +400,24 @@ a.more {
         }
     }
     .ex_btn {
-        padding-top: 1em;
-        padding-bottom: 1em;
         background: darken($primaryColor, 0);
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - #{$grid-gutter-width/2});
+        height: 100%;
+        margin-right: $grid-gutter-width/2;
+        display: flex;
+        flex:1;
+        justify-content: center;
+        align-items: center;
+        @include screen('mobile') {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-right: 0;
+        }
         @for $i from 1 through 4 {
             &.has_#{$i} {
                 ul {
@@ -412,64 +427,39 @@ a.more {
                 }
             }
         }
-        &.has_4 {
-            @include screen('tablet') {
-                ul {
-                    li {
-                        width: calc(100%/2 - 1px);
-                        margin-bottom: 1px;
-                        .btn {
-                            position: relative;
-                            &:before {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                top: 0;
-                                left: 0;
-                                bottom: 0;
-                                right: 0;
-                                content: "";
-                                box-shadow: 0px 0px 1px 100px rgba(255, 255, 255, .2) inset;
-                            }
-                            &:hover, &:focus {
-                                border: transparent !important;
-                                background: rgba(0, 0, 0, .4) !important;
-                                &:before {
-                                    display: block;
-                                    box-shadow: 0px 0px 1px 1px lighten($My_primaryColor, 10) inset;
-                                }
-                            }
-                            &:after {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
         ul {
-            @include li-reset;
             text-align: center;
+            @include li-reset;
             @include gutter;
             padding-left: 0;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 100%;
+            flex-flow: nowrap row;
             @include screen('mobile') {
-                padding: 1em 0;
+                padding: 0;
+                flex-flow: wrap row;
+                flex: 1 0 100%;
             }
             li {
-                // width: calc(33% -1px);
-                // width: calc(33% - 1px);
                 padding: 0;
-                display: block;
-                float: left;
-                margin: 0 1px 0 0px;
+                margin: 0 1px;
+                flex: 1 1 25%;
+                @include screen('xs_mobile') {}
                 &:last-child {
-                    margin-right: 0;
                     .btn {
                         &:after {
                             display: none;
                         }
                     }
+                }
+                a{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column wrap;
                 }
                 .btn {
                     border-radius: 0;
@@ -479,7 +469,7 @@ a.more {
                     padding: .2em !important;
                     border: none !important;
                     width: 100%;
-                    font-size: 1.25em;
+                    font-size: 1.125em;
                     text-align: center;
                     font-weight: bold;
                     box-sizing: border-box;
@@ -503,9 +493,13 @@ a.more {
                         height: 60px;
                         margin: 0px auto .3em;
                         display: block;
+                        @include screen('tablet') {
+                            width: 45px;
+                        height: 45px;
+                        }
                     }
                     &:hover, &:focus {
-                        color: lighten($My_primaryColor, 10);
+                        color: lighten($My_primaryColor, 30);
                         outline: none;
                         border: 1px solid #000;
                         box-shadow: none;
@@ -519,12 +513,42 @@ a.more {
                 }
             }
         }
+        &.has_4 {
+            @include screen('mobile') {
+                ul {
+                    li {
+                        flex: 1 1 48%;
+                        margin: 0;
+                        border:1px solid #FFF;
+                        justify-content: center;
+                        align-items: center;
+                        .btn {
+                            &:after {
+                                display: none;
+                            }
+                            position: relative;
+                            &:hover, &:focus {
+                                border: transparent !important;
+                                background: rgba(0, 0, 0, .4) !important;
+                                &:before {
+                                    display: block;
+                                    box-shadow: 0px 0px 1px 1px lighten($My_primaryColor, 10) inset;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     // ----------------------------------- 大廣告輪播
     .mp_slider {
         margin: 0;
         padding: 0;
         width: 100%;
+        @include screen('mobile') {
+            margin-bottom: 1em;
+        }
         @include gutter(0);
         .col {
             padding: 0;
@@ -1566,24 +1590,23 @@ a.more {
             }
         }
     }
-     // ----------------------------------- 交通指引
+    // ----------------------------------- 交通指引
     .loaction {
         font-size: .938em;
         display: flex;
         flex-flow: row wrap;
         @include gutter;
         @include screen('xs_mobile') {
-             flex-flow: column wrap;
-             @include gutter(0);
-             .loaction_intro{
+            flex-flow: column wrap;
+            @include gutter(0);
+            .loaction_intro {
                 width: 100%;
-                flex:1 1 100%;
-             }
-             .pic{
+                flex: 1 1 100%;
+            }
+            .pic {
                 width: 100%;
-                flex:1 1 100%;
-
-             }
+                flex: 1 1 100%;
+            }
         }
         h2 {
             @include gutter();
@@ -1630,21 +1653,21 @@ a.more {
             border-right: none;
             time {
                 display: flex;
-                flex:0 0 100%;
+                flex: 0 0 100%;
                 flex-flow: nowrap row;
                 justify-content: flex-start;
             }
             span {
                 font-weight: bold;
-                flex:0 0 auto;
+                flex: 0 0 auto;
                 // width: 80px;
                 // max-width: 80px;
                 font-size: 1.125em;
                 display: inline-flex;
                 vertical-align: middle;
                 margin-right: 1em;
-                &~span{
-                    flex:1 0 auto;
+                &~span {
+                    flex: 1 0 auto;
                     max-width: auto;
                     width: auto;
                 }
@@ -2142,7 +2165,7 @@ a.more {
             line-height: 1.25em;
             box-sizing: border-box;
             border-radius: 5px;
-            display:flex;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;

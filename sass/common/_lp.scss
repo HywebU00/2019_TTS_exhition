@@ -99,7 +99,7 @@
 .leftmenu {
     position: relative;
     @include screen('mobile') {
-        padding-bottom:10em;
+        padding-bottom: 10em;
     }
     &.hidden {
         background: none;
@@ -138,10 +138,9 @@
         left: auto;
         right: -31px;
         z-index: 3;
-        &:hover,&:focus {
+        &:hover, &:focus {
             @include gradient($aColor, $aHover, horizontal);
         }
-
     }
     .company_menu {
         margin-bottom: 1em;
@@ -1267,6 +1266,14 @@
         @include li-reset;
         margin-bottom: 1em;
         li {
+            font-size: .938em;
+            a {
+                color: darken($secondaryColor, 10);
+                &:hover {
+                    color: darken($secondaryColor, 5);
+                }
+            }
+            color:darken($secondaryColor, 10);
             i {
                 margin-right: .5em;
                 &:before {
@@ -1296,6 +1303,7 @@
         line-height: .1.45em;
         margin-top: 0;
         margin-bottom: .5em;
+        padding-bottom: .5em;
         overflow: hidden;
         @include screen('mobile') {
             font-size: 1.5em;
@@ -1334,6 +1342,11 @@
             height: 100%;
             border: 1px solid #DDD;
         }
+    }
+}
+.product_info {
+    h2 {
+        border-bottom: 1px solid #DDD;
     }
 }
 .company_grid, .company_list {

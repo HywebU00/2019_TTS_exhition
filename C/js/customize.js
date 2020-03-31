@@ -307,7 +307,9 @@ $(function() {
             cellDiv1 = $(".col-6-6").find('.col'),
             cellDiv2 = $(".topic .item").children('div'),
             cellDiv3 = $(".topic .award").children('div'),
-            loactionH = $('.loaction .pic').height();
+            loactionH = $('.loaction .pic').height(),
+            cellDiv5 = $(".col-8-4").find('.col >div'),
+            cellDiv6 = $(".col-4-8").find('.col >div')
         if (WindowWidth >= 768) {
             $('.loaction_intro').height(loactionH);
             $(".col-6-6 .container").each(function() {
@@ -318,6 +320,24 @@ $(function() {
                     }
                 });
                 $(cellDiv1, this).height(highestBox);
+            });
+            $(".col-8-4 .container").each(function() {
+                var highestBox = 0;
+                $(cellDiv5, this).each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = Math.floor($(this).height());
+                    }
+                });
+                $(cellDiv5, this).height(highestBox);
+            });
+            $(".col-4-8 .container").each(function() {
+                var highestBox = 0;
+                $(cellDiv6, this).each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = Math.floor($(this).height());
+                    }
+                });
+                $(cellDiv6, this).height(highestBox);
             });
             $(".topic .item").children('div').each(function() {
                 var highestBox = 0;
