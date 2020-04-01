@@ -308,8 +308,8 @@ $(function() {
             cellDiv2 = $(".topic .item").children('div'),
             cellDiv3 = $(".topic .award").children('div'),
             loactionH = $('.loaction .pic').height(),
-            cellDiv5 = $(".col-8-4").find('.col >div'),
-            cellDiv6 = $(".col-4-8").find('.col >div')
+            cellDiv5 = $(".col-8-4").find('.col'),
+            cellDiv6 = $(".col-4-8").find('.col')
         if (WindowWidth >= 768) {
             $('.loaction_intro').height(loactionH);
             $(".col-6-6 .container").each(function() {
@@ -362,6 +362,8 @@ $(function() {
             $(cellDiv1, this).removeAttr('style');
             $(cellDiv2, this).removeAttr('style');
             $(cellDiv3, this).removeAttr('style');
+            $(cellDiv5, this).removeAttr('style');
+            $(cellDiv6, this).removeAttr('style');
             $('.loaction_intro').removeAttr('style');
         }
     });

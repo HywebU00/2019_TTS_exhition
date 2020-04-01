@@ -27,29 +27,29 @@
 // -----------------------------------------------------6-6
 .col-6-6 {
     .col {
-        .ex_btn {
-            ul {
-                height: auto;
-                overflow: hidden;
-                li {
-                    width: 33%;
-                    display: block;
-                    float: left;
-                    vertical-align: top;
-                    height: 110px;
-                    .btn {
-                        height: 110px;
-                        img {
-                            display: block;
-                            width: 60px;
-                            height: 60px;
-                            margin: 0 auto .5em;
-                            float: none;
-                        }
-                    }
-                }
-            }
-        }
+        // .ex_btn {
+        //     ul {
+        //         height: auto;
+        //         overflow: hidden;
+        //         li {
+        //             width: 33%;
+        //             display: block;
+        //             float: left;
+        //             vertical-align: top;
+        //             height: 110px;
+        //             .btn {
+        //                 height: 110px;
+        //                 img {
+        //                     display: block;
+        //                     width: 60px;
+        //                     height: 60px;
+        //                     margin: 0 auto .5em;
+        //                     float: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         .video_bg {
             .video-container {
                 @include aspect-ratio(5, 2);
@@ -420,29 +420,7 @@
 .col-4-8 {
     //第二格
     .col:nth-child(2n) {
-        .ex_btn {
-            ul {
-                height: auto;
-                overflow: hidden;
-                li {
-                    width: 33%;
-                    display: block;
-                    float: left;
-                    vertical-align: top;
-                    height: 110px;
-                    .btn {
-                        height: 110px;
-                        img {
-                            display: block;
-                            width: 60px;
-                            height: 60px;
-                            margin: 0 auto .5em;
-                            float: none;
-                        }
-                    }
-                }
-            }
-        }
+
         .ex_news, .industry_news {
             .pic {
                 @include screen('tablet') {
