@@ -135,7 +135,7 @@ $(function() {
             e.preventDefault();
         });
     }
-    // lazyload
+    //lazyload
     // $("img.lazy").show().lazyload({
     //     placeholder: 'images/basic/placeholder.gif',
     //     effect: "fadeIn",

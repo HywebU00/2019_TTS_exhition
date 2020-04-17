@@ -6,6 +6,10 @@ h1.title {
 }
 
 .cp {
+    margin-top: -3.6em;
+    @include screen('mobile') {
+        margin-top: 0;
+    }
     .float_left {
         float: left;
         margin: 0px 1em 1em 0;

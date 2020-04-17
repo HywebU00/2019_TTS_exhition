@@ -14,6 +14,8 @@ footer {
     @include screen('mobile') {
         padding: 2em 0 1em;
         font-size: .813em;
+        position:relative;
+        z-index: 1;
     }
     .container {
         @include gutter;

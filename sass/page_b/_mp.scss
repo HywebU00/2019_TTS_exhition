@@ -222,6 +222,11 @@
                         color: #FFF;
                         transition: .3s ease-out;
                         box-sizing: border-box;
+                        background: rgba(0, 0, 0, .1);
+                         @include screen('tablet') {
+                            height: auto;
+                            min-height: 5em;
+                        }
                         &:hover, &:focus {
                             background: rgba(0, 0, 0, .45);
                         }
@@ -1732,7 +1737,8 @@
         p {
             overflow: hidden;
             display: flex;
-            flex: 1 1 auto;
+            flex: 0 1 auto;
+            padding:.5em 0;
             flex-flow: wrap row;
             border: 1px solid #DDD;
             border-left: none;
