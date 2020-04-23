@@ -38,6 +38,10 @@ $(function() {
         liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth();
+    // header add class
+    if ($('.innerpage').length > 0) {
+        $('header').addClass('inner_header');
+    }
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
@@ -195,10 +199,12 @@ $(function() {
     // 行動版查詢
     var _searchCtrl = $('.searchCtrl');
     $('.m_search').hide();
+    $('.search').find('.form_grp').hide();
     _searchCtrl.off().on('click', function(e) {
         if (!search_mode) {
             // $('.search').stop(true, false).fadeIn('400', 'easeOutQuint');
-            $('.search').stop(true, false).fadeIn(400, 'easeOutQuint');
+            $('.search').stop(true, true).fadeIn(400, 'easeOutQuint');
+             $('.search').find('.form_grp').show();
             // $('.m_search').find('input[type="text"]').focus();
             search_mode = true;
         } else {
@@ -220,16 +226,19 @@ $(function() {
         menuH = _menu.outerHeight(),
         navH = $('.navbar').height();
     $(window).bind("load scroll resize", function(e) {
-        hh = $('.header').outerHeight();
-        menuH = _menu.outerHeight();
+        hh = Math.floor($('.header').outerHeight());
+        menuH = Math.floor(_menu.outerHeight());
         ww = _window.outerWidth();
+        // console.log("header"+hh);
+        // console.log("menu"+menuH);
+        // console.log($(window).scrollTop());
         if ($(window).scrollTop() > hh - menuH) {
             if (ww >= wwSmall) {
                 $('.header').addClass('fixed');
                 // $('.header').css('margin-top', menuH - hh);
-                $('.header').css('margin-top', -46);
+                $('.header').css('margin-top', -45);
                 // $('.main').css('margin-top', -menuH);
-                $('.main').css('margin-top', 0);
+                $('.main').css('margin-top', 40);
             } else {
                 $('.header').removeClass('fixed');
                 $('.header').css('margin-top', 0);
@@ -238,7 +247,7 @@ $(function() {
         } else {
             $('.header').removeClass('fixed');
             $('.header').css('margin-top', 0);
-            $('.header').css('margin-top', -1 * $(this).scrollTop());
+            // $('.header').css('margin-top', -1 * $(this).scrollTop());
             $('.main').css('margin-top', 0);
         }
     });
@@ -446,7 +455,7 @@ $(function() {
         }, 50);
     });
 
-   function tabSet() {
+    function tabSet() {
         $('.tabs').each(function() {
             var _tab = $(this),
                 _tabItem = _tab.find('.tabItem'),

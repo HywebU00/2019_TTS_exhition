@@ -135,7 +135,7 @@ $(function() {
             e.preventDefault();
         });
     }
-    //lazyload
+    // lazyload
     // $("img.lazy").show().lazyload({
     //     placeholder: 'images/basic/placeholder.gif',
     //     effect: "fadeIn",
@@ -302,35 +302,83 @@ $(function() {
         infinite: true,
     });
     //
+    //
     $(window).on("load resize", function(e) {
-        var WindowWidth = $(window).outerWidth();
-        var cellDiv1 = $(".col-8-4").find('.col >div'),
-            cellDiv2 = $(".col-4-8").find('.col >div'),
-            loactionH = Math.floor($('.loaction .pic').height());
+        var WindowWidth = $(window).outerWidth(),
+            // cellDiv1 = $(".col-6-6").find('.col'),
+            // cellDiv3 = $(".topic .award").children('div'),
+            loactionH = $('.loaction .pic').height();
+        // cellDiv5 = $(".col-8-4").find('.col'),
+        // cellDiv6 = $(".col-4-8").find('.col')
         if (WindowWidth >= 768) {
-            $('.col-12.loaction_intro').height(loactionH);
-            $(".col-8-4 .container").each(function() {
-                var highestBox = 0;
-                $(cellDiv1, this).each(function() {
-                    if ($(this).height() > highestBox) {
-                        highestBox = Math.floor($(this).height());
-                    }
+            $('.loaction_intro').height(loactionH);
+            if ($(".col-6-6").length > 0) {
+                $(".col-6-6").each(function() {
+                    var highestBox = 0,
+                        cellDiv1 = $(this).find('.col');
+                    $(cellDiv1, this).each(function() {
+                        if ($(this).height() > highestBox) {
+                            highestBox = $(this).height();
+                        }
+                    });
+                    $(cellDiv1, this).height(highestBox);
                 });
-                $(cellDiv1, this).height(highestBox);
-            });
-            $(".col-4-8 .container").each(function() {
-                var highestBox = 0;
-                $(cellDiv2, this).each(function() {
-                    if ($(this).height() > highestBox) {
-                        highestBox = Math.floor($(this).height());
-                    }
+            }
+            if ($(".col-8-4").length > 0) {
+                $(".col-8-4").each(function() {
+                    var highestBox = 0,
+                        cellDiv5 = $(this).find('.col');
+                    $(cellDiv5, this).each(function() {
+                        if ($(this).height() > highestBox) {
+                            highestBox = Math.floor($(this).height());
+                        }
+                    });
+                    $(cellDiv5, this).height(highestBox);
                 });
-                $(cellDiv2, this).height(highestBox);
-            });
+            }
+            if ($(".col-4-8").length > 0) {
+                $(".col-4-8").each(function() {
+                    var highestBox = 0,
+                        cellDiv6 = $(this).find('.col');
+                    $(cellDiv6, this).each(function() {
+                        if ($(this).height() > highestBox) {
+                            highestBox = Math.floor($(this).height());
+                        }
+                    });
+                    $(cellDiv6, this).height(highestBox);
+                });
+            }
+            if ($(".topic .item").length > 0) {
+                $(".topic .item").children('div').each(function() {
+                    var highestBox = 0,
+                        cellDiv2 = $(this);
+                    $(cellDiv2, this).each(function() {
+                        if ($(this).height() > highestBox) {
+                            highestBox = $(this).height();
+                        }
+                    });
+                    $(cellDiv2, this).height(highestBox);
+                });
+            }
+            if ($(".award .item").length > 0) {
+                $(".award .item").children('div').each(function() {
+                    var highestBox = 0,
+                        cellDiv3 = $(this);
+                    $(cellDiv3, this).each(function() {
+                        if ($(this).height() > highestBox) {
+                            highestBox = $(this).height();
+                        }
+                    });
+                    $(cellDiv3, this).height(highestBox);
+                });
+            }
             $('.loaction_intro').height('auto');
         } else {
-            $(cellDiv1, this).removeAttr('style');
-            $(cellDiv2, this).removeAttr('style');
+            $('.col-6-6 .col').removeAttr('style');
+            $('.col-8-4 .col').removeAttr('style');
+            $('.col-4-8 .col').removeAttr('style');
+            $(".topic .item").children('div').removeAttr('style');
+            $(".award .item").children('div').removeAttr('style');
             $('.loaction_intro').removeAttr('style');
         }
     });

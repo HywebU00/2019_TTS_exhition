@@ -313,7 +313,7 @@ $(function() {
             cellDiv6 = $(".col-4-8").find('.col')
         if (WindowWidth >= 768) {
             $('.loaction_intro').height(loactionH);
-            $(".col-6-6 .container").each(function() {
+            $(".col-6-6").each(function() {
                 var highestBox = 0;
                 $(cellDiv1, this).each(function() {
                     if ($(this).height() > highestBox) {
@@ -322,7 +322,7 @@ $(function() {
                 });
                 $(cellDiv1, this).height(highestBox);
             });
-            $(".col-8-4 .container").each(function() {
+            $(".col-8-4").each(function() {
                 var highestBox = 0;
                 $(cellDiv5, this).each(function() {
                     if ($(this).height() > highestBox) {
@@ -331,7 +331,7 @@ $(function() {
                 });
                 $(cellDiv5, this).height(highestBox);
             });
-            $(".col-4-8 .container").each(function() {
+            $(".col-4-8").each(function() {
                 var highestBox = 0;
                 $(cellDiv6, this).each(function() {
                     if ($(this).height() > highestBox) {

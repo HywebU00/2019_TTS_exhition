@@ -236,11 +236,12 @@ $(function() {
     }
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
+        lazyLoad: 'ondemand',
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         autoplay: false,
         autoplaySpeed: 1500,
         pauseOnHover: true,
@@ -268,11 +269,10 @@ $(function() {
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
             }
         }]
     });
-    $('.cp_slider').slickLightbox({
+    $('.lightbox_slider').slickLightbox({
         caption: 'caption',
         useHistoryApi: 'true',
         lazy: true
@@ -302,7 +302,8 @@ $(function() {
         infinite: true,
     });
     //
-    $(window).on("load resize", function(e) {
+     //
+   $(window).on("load resize", function(e) {
         var WindowWidth = $(window).outerWidth(),
             cellDiv1 = $(".col-6-6").find('.col'),
             cellDiv2 = $(".topic .item").children('div'),
@@ -312,7 +313,7 @@ $(function() {
             cellDiv6 = $(".col-4-8").find('.col')
         if (WindowWidth >= 768) {
             $('.loaction_intro').height(loactionH);
-            $(".col-6-6 .container").each(function() {
+            $(".col-6-6").each(function() {
                 var highestBox = 0;
                 $(cellDiv1, this).each(function() {
                     if ($(this).height() > highestBox) {
@@ -321,7 +322,7 @@ $(function() {
                 });
                 $(cellDiv1, this).height(highestBox);
             });
-            $(".col-8-4 .container").each(function() {
+            $(".col-8-4").each(function() {
                 var highestBox = 0;
                 $(cellDiv5, this).each(function() {
                     if ($(this).height() > highestBox) {
@@ -330,7 +331,7 @@ $(function() {
                 });
                 $(cellDiv5, this).height(highestBox);
             });
-            $(".col-4-8 .container").each(function() {
+            $(".col-4-8").each(function() {
                 var highestBox = 0;
                 $(cellDiv6, this).each(function() {
                     if ($(this).height() > highestBox) {
@@ -691,7 +692,7 @@ $(function() {
     }
     // -------------------------------------------photo_slider
     if ($('.photo .slider').length > 0) {
-        $('.col-12  .photo .slider ul,.col-12-full  .photo .slider ul').slick({
+        $('.col-12  .photo .slider ul,col-12-full .photo .slider ul').slick({
             lazyLoad: 'ondemand',
             dots: false,
             infinite: true,

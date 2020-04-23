@@ -97,7 +97,8 @@
     }
 }
 .leftmenu {
-    position: relative;
+    position: fixed;
+
     @include screen('mobile') {
         padding-bottom: 10em;
     }
