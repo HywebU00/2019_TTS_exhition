@@ -7,16 +7,16 @@ img {
         //圓形
         @include border-radius(50%);
     }
-    &.loaded{
+    &.loaded {
         animation: img_fade .5s ease-out;
     }
 }
-@keyframes img_fade{
-    from{
-        opacity:0;
+@keyframes img_fade {
+    from {
+        opacity: 0;
     }
-    to{
-        opacity:100;
+    to {
+        opacity: 100;
     }
 }
 // 設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit
@@ -131,4 +131,26 @@ img {
 }
 .scale-down {
     object-fit: scale-down;
+}
+.grid3x3,.grid2x2,.grid4x4 {
+    .img-container{
+        background:#E1E1E1 !important;
+    }
+    img {
+        &.fill {
+            object-fit: fill !important;
+        }
+        &.contain {
+            object-fit: contain !important;
+        }
+        &.cover {
+            object-fit: cover !important;
+        }
+        &.none {
+            object-fit: none !important;
+        }
+        &.scale-down {
+            object-fit: scale-down !important;
+        }
+    }
 }
