@@ -154,6 +154,7 @@
     }
 }
 .leftmenu {
+    position:relative;
     .product_search {
         display: none;
         @include screen('mobile') {

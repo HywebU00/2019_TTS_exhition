@@ -235,12 +235,13 @@ $(function() {
             });
         });
     }
-    //燈箱slick+lightBox組合
+     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
+        lazyLoad: 'ondemand',
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1500,
@@ -269,7 +270,6 @@ $(function() {
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
             }
         }]
     });

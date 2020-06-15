@@ -139,7 +139,7 @@ h1.title {
         @extend %clearfix;
         li {
             width: 32%;
-            margin-bottom: .5em;
+            // margin-bottom: .5em;
             display: inline-block;
             vertical-align: top;
             @include screen('tablet') {

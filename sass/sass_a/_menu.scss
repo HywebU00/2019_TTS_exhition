@@ -138,10 +138,7 @@
     width: 100%;
     z-index: 99999999;
     display: none;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0, 0, 0);
+
     @include box-sizing;
     >.menu_overlay {
         background: RGBA(0, 0, 0, .5);

@@ -1,21 +1,21 @@
 // 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 .np {
     .publish {
-        ul, ol {
-            &>ul{
-                &>li{
-                    &>a{
-                        padding:0;
-                        border-radius:0;
-                        border:0;
-                    }
+        &>ul {
+            &>li {
+                &>a {
+                    padding: 0;
+                    border-radius: 0;
+                    border: 0;
                 }
             }
+        }
+        ul, ol {
             li {
                 width: 31%;
                 margin: 0px .5% 1em .5%;
                 display: inline-block;
-                vertical-align:top;
+                vertical-align: top;
                 @include screen('tablet') {
                     width: 48.5%;
                     margin: 0px .5% 1em .5%;
