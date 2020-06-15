@@ -980,7 +980,7 @@
 .product_search {
     text-align: center;
     padding: 1em;
-    margin: .3em auto 1em;
+    margin: 0em auto 1em;
     border-top: 2px solid $primaryColor;
     @include gradient(#FFF, #F7F7F7, vertical);
     @include screen('mobile') {
@@ -1242,7 +1242,7 @@
     overflow: hidden;
     @extend %clearfix;
     position: relative;
-    padding-right: 100px;
+    // padding-right: 100px;
     @include screen('mobile') {
         padding-right: 0;
     }

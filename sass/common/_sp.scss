@@ -154,7 +154,7 @@
     }
 }
 .leftmenu {
-    position:relative;
+    position: relative;
     .product_search {
         display: none;
         @include screen('mobile') {
@@ -1279,7 +1279,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         margin-right: 1%;
         text-align: center;
         @include screen('xs_mobile') {
-            width:40%;
+            width: 40%;
         }
     }
     input[type="text"]:nth-of-type(2) {
@@ -1288,17 +1288,16 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
         margin-right: 1%;
         text-align: center;
         @include screen('xs_mobile') {
-            width:40%;
+            width: 40%;
         }
     }
-    input[type="text"]:last-child{
+    input[type="text"]:last-child {
         width: 46% !important;
         margin-right: 0%;
         margin-left: 0%;
         text-align: left !important;
         @include screen('mobile') {
             width: 100% !important;
-
         }
     }
 }
@@ -1353,8 +1352,10 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                     margin-bottom: 0;
                 }
                 color:#FFF;
-                background: darken($primaryColor, 20);
+                background: darken($primaryColor, 0);
                 text-align: left;
+                border-bottom:none;
+                padding:.5em;
                 &:last-child {
                     text-align: center;
                     @include screen('mobile') {
@@ -1371,6 +1372,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 }
             }
             td {
+                padding:.5em;
                 text-align: left;
                 label {
                     margin-bottom: 0;
@@ -1382,6 +1384,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                     }
                 }
                 a {
+                    color: $aColor;
                     &:hover, &:focus {
                         color: $aHover;
                     }
@@ -1391,6 +1394,9 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     }
     .message_function {
         overflow: hidden;
+        margin-bottom: .25em;
+         background: rgb(237,237,237);
+background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(250,250,250,1) 33%);
         ul {
             @include li-reset;
             li {
@@ -1401,21 +1407,29 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 @include screen('xs_mobile') {
                     width: 33.3%;
                 }
+                &:last-child{
+                    border-right: none;
+                }
                 a {
-                    padding: 1em .5em;
+                    padding: .65em .65em;
+                    border-right: 2px solid #FFF;
                     display: block;
+                    font-size:.938em;
+                    font-weight: bold;
                     text-align: center;
-                    background: #DEDEDE;
+                    background: rgb(237,237,237);
+background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(250,250,250,1) 33%);
+                    border-bottom: 2px solid #AAA;
                     color: #444;
                     &:hover, &:focus {
-                        color: #FFF;
-                        background: darken($primaryColor, 20);
+                        color: #444;
+                        border-bottom: 2px solid darken($secondaryColor, 0);
                     }
                 }
                 &.active {
                     a {
-                        color: #FFF;
-                        background: darken($primaryColor, 20);
+                        color: darken($secondaryColor, 10);
+                        border-bottom: 2px solid darken($secondaryColor, 0);
                     }
                 }
             }
@@ -1587,17 +1601,17 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
 .prelogin {
     font-size: .938em;
     // border-left: 5px solid lighten(#888, 10);
-    border-radius:.5em;
+    border-radius: .5em;
     padding: 1em;
     margin-bottom: 1em;
-    box-shadow:0px 2px 12px -3px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.4);
     transition: .3s ease-out;
-    &:hover{
-        box-shadow:0px 2px 12px -3px rgba(0,0,0,0.6);
+    &:hover {
+        box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.6);
     }
-    .divider{
-        font-size:1.125em;
-        color:#777;
+    .divider {
+        font-size: 1.125em;
+        color: #777;
         margin: 0 0 1em 0;
     }
     @include screen('mobile') {
@@ -1612,7 +1626,7 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     }
     .form_grp {
         border-bottom: none;
-        padding:.2em 0;
+        padding: .2em 0;
     }
     .check_grp, .radio_grp {
         @include screen('mobile') {
@@ -1670,9 +1684,9 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
                 @include screen('mobile') {
                     @include make-row;
                 }
-                &.form_mobile{
-                    input[type="text"]{
-                        width:6em;
+                &.form_mobile {
+                    input[type="text"] {
+                        width: 6em;
                     }
                 }
             }
@@ -2554,7 +2568,7 @@ form {
     }
     h3 {
         font-size: 1.375em;
-        color: darken($primaryColor,10);
+        color: darken($primaryColor, 10);
         padding: 1em 1em .5em;
         margin: .5em 0;
         position: relative;
