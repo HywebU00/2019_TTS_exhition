@@ -1376,13 +1376,35 @@
             width: 46%;
             float: left;
             margin: 0 2% 1em;
-            @include screen('mobile') {
+
+            @include screen('tablet') {
                 float: none;
                 width: 96%;
                 height: auto;
                 margin: 0 auto 1em;
                 padding-top: .5em;
             }
+            @include screen('mobile') {
+                float: left;
+                width: 46%;
+                height: auto;
+                margin: 0 auto 1em;
+                padding: 0 1em 4em 1em;
+            }
+            @include screen('xs_mobile') {
+                float: none;
+                width: 96%;
+                height: auto;
+                margin: 0 auto 1em;
+                padding-top: .5em;
+            }
+            // @include screen('mobile') {
+            //     float: none;
+            //     width: 96%;
+            //     height: auto;
+            //     margin: 0 auto 1em;
+            //     padding-top: .5em;
+            // }
             .company_function {
                 position: absolute;
                 height: 2.5em;
@@ -1417,7 +1439,7 @@
                 @include li-reset;
                 li {
                     position: relative;
-                    padding-left: 6em;
+                    padding-left: 7em;
                     font-size: .938em;
                     margin-bottom: .2em;
                     max-height: 2.9em;
