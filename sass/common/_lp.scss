@@ -1312,7 +1312,8 @@
         }
     }
     .img-container {
-        width: 30%;
+        width: 50%;
+        min-width:300px;
         float: left;
         @include aspect-ratio(4, 3);
         margin: 0 1em 1em 0;

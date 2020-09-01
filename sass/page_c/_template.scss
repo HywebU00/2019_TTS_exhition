@@ -63,7 +63,7 @@ body {
         height: 9em;
         overflow: hidden;
         margin-bottom: 1em;
-        background: $My_primaryColor;
+        background:lighten($primaryColor,10);
         @include screen('tablet') {
             padding-top: 10em;
             height:4em;

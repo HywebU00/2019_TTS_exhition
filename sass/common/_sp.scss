@@ -1374,6 +1374,14 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
             td {
                 padding:.5em;
                 text-align: left;
+                &:first-child{
+                    @include screen('xs_mobile') {
+                        padding:.5em;
+                    }
+                }
+                @include screen('xs_mobile') {
+                    padding:1.25em .5em .5em;
+                }
                 label {
                     margin-bottom: 0;
                 }

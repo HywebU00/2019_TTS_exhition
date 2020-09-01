@@ -57,7 +57,8 @@ body {
         height: 6em;
         overflow: hidden;
         margin-bottom: 1em;
-        @include gradient($primaryColor, $secondaryColor, diagonal);
+        background:lighten($primaryColor,10);
+        // @include gradient($primaryColor, $secondaryColor, diagonal);
         img {
             width: 100%;
             left: 0;
