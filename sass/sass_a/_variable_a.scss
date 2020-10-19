@@ -3,11 +3,12 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor:				#047cc3;				//主色 
+$primaryColor:				#047cc3;				//主色
 $secondaryColor:			#29b4f5; 				//輔色
 $lightColor:				#FCC211;				//點綴
 $linkColor:					#21BAFF;				//連結
 $importantColor:			#FF3E4D;				//重要
+
 
 $color-blue: 				#21BAFF;
 $color-green:				#5CB85C;
@@ -29,7 +30,7 @@ $aHover:					lighten($aColor,10);
 $form-focus:				#21BAFF;				 //表單
 
 // 替換顏色
-$My_primaryColor:			$primaryColor;				//客製主色 
+$My_primaryColor:			$primaryColor;				//客製主色
 $My_secondaryColor:			$secondaryColor; 			//客製輔色
 $My_aColor:					$aColor;					//連結顏色
 $My_aHover:					$aHover;					//滑過顏色

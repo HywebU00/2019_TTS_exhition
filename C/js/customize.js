@@ -285,21 +285,17 @@ $(function() {
     $('.Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
-        fade: true,
-        asNavFor: '.Slider-nav',
-        autoplay: true,
-        autoplaySpeed: 2000,
-        infinite: true
+        arrows: false,
+        fade: false,
+        asNavFor: '.Slider-nav'
     });
     $('.Slider-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
-        dots: true,
-        arrows: true,
-        focusOnSelect: true,
-        infinite: true,
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
     });
     //
      //
