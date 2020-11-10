@@ -4,7 +4,7 @@
 // 初始值
 @import "_style";
 //-------------------------------------------------------------繼承---------//
-$color:index($style,咖啡色);
+$color:index($style,紅加黃);
 
 $primaryColor:				nth($mainColor,$color);	   //主色
 $secondaryColor:			nth($subColor,$color);	   //主色
@@ -66,20 +66,20 @@ $My_line:					#DDD;					 //預設線
 @import "common/_fatfooter";				//fatfooter
 @import "common/_modal";					//pop視窗
 @import "common/_function";					//function功能區塊
-@import "sass_b/_category";					//標籤
+@import "sass_a/_category";					//標籤
 @import "common/_share";					//社群分享
 @import "common/_tag";						//文章標籤
 @import "common/_fontsize";					//控制文章字體大小
 
 // 模組
-@import "sass_b/_header";					//header
-@import "sass_b/_language";					//語言選單
-@import "sass_b/_menu";						//menu
+@import "sass_a/_header";					//header
+@import "sass_a/_language";					//語言選單
+@import "sass_a/_menu";						//menu
 
 
 // 頁面
-@import "page_b/_template";					//版型初始設定
-@import "page_b/_mp";						//首頁
+@import "page_a/_template";					//版型初始設定
+@import "page_a/_mp";						//首頁
 @import "common/_lp";						//LP
 @import "common/_np";						//NP
 @import "common/_cp";						//CP
@@ -89,13 +89,13 @@ $My_line:					#DDD;					 //預設線
 @import "common/_sitemap";					//Sitemap
 
 // 外掛
-@import "sass_b/_slick";					//slick
+@import "sass_a/_slick";					//slick
 // 無障礙
-@import "sass_b/_nojs";						//無障礙關閉js設定
+@import "sass_a/_nojs";						//無障礙關閉js設定
 // 列印
-@import "sass_b/_print";					//列印樣式
+@import "sass_a/_print";					//列印樣式
 // 首頁模組樣式
-@import "sass_b/_grid_module";				//首頁模組樣式
+@import "sass_a/_grid_module";				//首頁模組樣式
 
 
 
