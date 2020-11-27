@@ -1788,6 +1788,7 @@ $(function() {
     }
     // chat
     var chat_status = false;
+    $('.chat_window').hide();
     $('.open_chat').off().click(function(e) {
         if(!chat_status){
             $('.chat_window').show().css('transform', 'translateX('+ 0 +'px)');
