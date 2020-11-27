@@ -1800,4 +1800,20 @@ $(function() {
             }]
         });
     }
+    // chat
+    var chat_status = false;
+    $('.open_chat').off().click(function(e) {
+        if(!chat_status){
+            $('.chat_window').show().css('transform', 'translateX('+ 0 +'px)');
+            chat_status = true;
+        }
+        e.preventDefault();
+    });
+
+    $('.chat_window').find('a.close').off().click(function(e) {
+        $('.chat_window').hide().css('transform', 'translateX('+ 360 +'px)');
+        chat_status = false;
+         e.preventDefault();
+    });
+
 });

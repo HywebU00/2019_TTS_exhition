@@ -1568,6 +1568,21 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="https://www.khhalal.com.tw/js/customize.js"></script>
+    <!-- 文字聊天視窗開關-->
+    <script>
+        $(document).ready(function() {
+            $('.chat_list').find('.list').find('a').off().click(function(e) {
+                $('.chat_list').stop().addClass('goLeft');
+                $('.chat_content').stop().addClass('show');
+                e.preventDefault();
+            });
+            $('.chat_content').find('a.back').off().click(function(e) {
+                $('.chat_list').stop().removeClass('goLeft');
+                $('.chat_content').stop().removeClass('show');
+                e.preventDefault();
+            });
+        });
+    </script>
 </body>
 
 </html>
