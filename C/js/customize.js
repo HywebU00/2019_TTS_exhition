@@ -1802,4 +1802,11 @@ $(function() {
         chat_status = false;
          e.preventDefault();
     });
+    // minimize
+    $('.chat_window').find('a.minimize').off().click(function(e) {
+        $(this).toggleClass('inverse');
+        $('.chat_window').toggleClass('half');
+         e.preventDefault();
+    });
+
 });

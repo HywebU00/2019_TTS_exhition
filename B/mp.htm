@@ -1555,6 +1555,18 @@
             <a href="javascript:confirmCookie()" class="btn-OK">OK </a>
         </div>
     </div>
+    <!-- chat 文字聊天 -->
+    <!-- js 示範寫在此網頁最下面 -->
+    <a href="#" class="open_chat"><span>99+</span></a>
+    <div class="chat_window">
+        <div class="chat_function">
+            <a href="#" class="close"></a>
+            <div class="messenger">聊聊<span>(3)</span></div>
+            <a href="#" class="minimize"></a>
+        </div>
+        <iframe src="iframe_chat.htm" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <!-- gotoTop -->
     <a href="#" class="scrollToTop">回頁首</a>
     <!-- JQ -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -1567,22 +1579,12 @@
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
-    <script src="https://www.khhalal.com.tw/js/customize.js"></script>
+    <script src="js/customize.js"></script>
     <!-- 文字聊天視窗開關-->
     <script>
-        $(document).ready(function() {
-            $('.chat_list').find('.list').find('a').off().click(function(e) {
-                $('.chat_list').stop().addClass('goLeft');
-                $('.chat_content').stop().addClass('show');
-                e.preventDefault();
-            });
-            $('.chat_content').find('a.back').off().click(function(e) {
-                $('.chat_list').stop().removeClass('goLeft');
-                $('.chat_content').stop().removeClass('show');
-                e.preventDefault();
-            });
-        });
+
     </script>
 </body>
 
 </html>
+
