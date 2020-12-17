@@ -317,7 +317,7 @@ img.img-responsive {
     background: #FFF;
     box-shadow: -5px -5px 30px -5px rgba(0, 0, 0, .25);
     transform: translateX(100%);
-    transition: .3s $cubic;
+    // transition: .3s $cubic;
     &.half {
         width: 360px;
         @media screen and (max-width: 565px) {
@@ -438,7 +438,7 @@ img.img-responsive {
     height: 100%;
     top: 0;
     left: 360px;
-    transition: .3s $cubic;
+    // transition: .3s $cubic;
     z-index: 15;
     &.goLeft {
         // transform: translateX(-40%);
@@ -662,7 +662,7 @@ img.img-responsive {
     top: 0;
     background: #d0dada;
     z-index: 11;
-    transition: .3s $cubic;
+    // transition: .3s $cubic;
     // transform: translateX(0);
     @include gradient(lighten($primaryColor, 40), #FFF, vertical);
     pointer-events: none;
@@ -699,7 +699,7 @@ img.img-responsive {
     top: 0;
     background: darken($primaryColor, 5);
     z-index: 9;
-    transition: .3s $cubic;
+    // transition: .3s $cubic;
     transform: translateX(50%);
     box-shadow: 2px 0px 5px rgba(0, 0, 0, .5);
     // opacity:0;
