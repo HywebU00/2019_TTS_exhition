@@ -548,13 +548,106 @@ img.img-responsive {
         }
         ul {
             @include li-reset;
+            padding-bottom: 4em;
             li {
-                border-bottom: 1px solid #DEDEDE;
+                border-bottom: 1px solid #CECECE;
+                position: relative;
+                padding-bottom: 20px;
+                background: rgba(200, 200, 200, .35);
+                position:relative;
+                &:hover,&:focus {
+                    background: transparent;
+                }
+                &:last-child {
+                    .more_function {
+                        .window {
+                            top: -80px;
+                            bottom: auto;
+                        }
+                    }
+                }
+                .more_function {
+                    position: absolute;
+                    right: 0;
+                    top: auto;
+                    bottom: 5px;
+                    width:50%;
+                    height: 10px;
+                    // outline: 1px solid red;
+                    a.dot {
+                        width: 80px;
+                        padding: 0;
+                        display: block;
+                        height: 15px;
+                        margin: 0 0 0 auto;
+                        background: url(../images/icon/icon_dotree.svg) no-repeat center center;
+                        background-size: 40px;
+                        // outline: 1px solid green;
+                    }
+                    .window {
+                        position: absolute;
+                        top: 5px;
+                        right: 1em;
+                        background: #FFF;
+                        border-radius: .35em;
+                        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .85);
+                        padding: .75em;
+                        min-width: 6em;
+                        display: none;
+                        &.open {
+                            display: block;
+                            z-index:999999;
+                        }
+                        ul {
+                            @include li-reset;
+                            background: #FFF;
+                            padding-bottom: 0em;
+                            li {
+                                display: block;
+                                border-bottom: 1px dashed #DEDEDE;
+                                padding: .25em;
+                                font-size: .813rem;
+                                margin-bottom: .25em;
+                                background: #FFF;
+                                &:hover {
+                                    background: none;
+                                }
+                                a {
+                                    padding: 0;
+                                    color: #555;
+                                    background:#FFF;
+                                    i {
+                                        opacity: .5;
+                                        margin-right: .5em;
+                                    }
+                                    &:hover, &:focus {
+                                        color: $aHover;
+                                        background: #FFF;
+                                        i {
+                                            opacity: .75;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 a {
                     display: flex;
                     padding: .75em 1em .5em .5em;
+                    &.bookmark{
+                        &:after{
+                            position: absolute;
+                            background:url(../images/icon/icon_bookmark_red.svg) no-repeat center center;
+                            background-size:contain;
+                            width:20px;
+                            height: 30px;
+                            content:"";
+                            right: 3em;
+                            top:.5em;
+                        }
+                    }
                     &:hover, &:focus {
-                        background: rgba(200, 200, 200, .35);
                         .summary {
                             .name {
                                 color: #333;
@@ -620,7 +713,7 @@ img.img-responsive {
                         }
                         .new_message {
                             border-radius: 50%;
-                            background: #ff6000;
+                            background: rgba(0,0,0,.55);
                             color: white;
                             position: absolute;
                             top: 0;
@@ -717,16 +810,49 @@ img.img-responsive {
             z-index: 20;
         }
     }
+    a.information{
+        width: 1.5em;
+        height: 1.5em;
+        position: absolute;
+        left: .75em;
+        top: .9em;
+        opacity:.65;
+        &:hover,&:focus {
+            opacity:1;
+        }
+    }
+    a.video{
+        width: 1.5em;
+        height: 1.5em;
+        position: absolute;
+        right: 2.5em;
+        top: .9em;
+        width:4rem;
+        padding:.25em;
+        height: 1.75rem;
+        background:rgba(0,0,0,.5);
+        border-radius:.25em;
+        opacity:.65;
+        color:#FFF;
+        font-size:.75rem;
+        text-align: center;
+        i{
+            margin-right: .25em;
+        }
+        &:hover,&:focus {
+            opacity:1;
+        }
+    }
     a.back {
         width: 1.5em;
         height: 1.5em;
         position: absolute;
-        right: .5em;
+        right: .25em;
         top: .5em;
         &:before {
             width: 8px;
             height: 8px;
-            border: 2px solid #FFF;
+            border: 3px solid #FFF;
             border-left: none;
             border-top: none;
             transform: rotate(-45deg);
@@ -743,11 +869,11 @@ img.img-responsive {
         }
     }
     .title {
-        padding: 1em .5em .25em;
+        padding: 1em .75em .25em 2em;
         height: 3.1rem;
         white-space: nowrap;
         @include text-overflow;
-        width: 80%;
+        width: 75%;
         font-size: .875rem;
         color: #FFF;
         font-weight: bold;
@@ -769,7 +895,7 @@ img.img-responsive {
             input[type="text"], textarea {
                 height: 2rem;
                 padding: .25rem;
-                background: rgba(255, 255, 255, .5);
+                background: rgba(255, 255, 255, .85);
                 border: 1px solid transparent;
                 color: #444;
                 font-size: .813rem;
