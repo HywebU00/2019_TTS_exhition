@@ -383,7 +383,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
     $(document).ready(function() {
-        $('.chat_list').find('.list>ul>li').find('a').off().click(function(e) {
+        $('.chat_list').find('.list>ul>li>a').off().click(function(e) {
             $('.chat_content').stop().addClass('show');
             $('.chat_welcome').stop().addClass('hide');
             e.preventDefault();
