@@ -665,7 +665,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
     height: 100%;
     top: 0;
     left: 360px;
-    box-shadow:0px 0px 10px rgba(0,0,0,.75);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .75);
     // transition: .3s $cubic;
     z-index: 15;
     &.goLeft {
@@ -725,6 +725,11 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                         /* Firefox 18- */
                         color: #DDD;
                     }
+                    &:focus {
+                        border: 1px solid transparent;
+                        box-shadow: none;
+                        background: rgba(0, 0, 0, .5);
+                    }
                 }
             }
         }
@@ -737,6 +742,12 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             background: rgba(0, 0, 0, .25) url(../images/basic/icon_select_arrow_white.svg) no-repeat right center;
             background-size: 16px;
             color: #FFF;
+            &:focus {
+                border: 1px solid transparent;
+                box-shadow: none;
+                background: rgba(0, 0, 0, .5) url(../images/basic/icon_select_arrow_white.svg) no-repeat right center;
+                background-size: 16px;
+            }
         }
     }
     .list {
@@ -1067,7 +1078,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
         width: 4rem;
         padding: .25em;
         height: 1.75rem;
-        background: rgba(0,0,0,.5);
+        background: rgba(0, 0, 0, .5);
         border-radius: .25em;
         opacity: .65;
         color: #FFF;
@@ -1137,10 +1148,10 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 color: #444;
                 font-size: .813rem;
                 &:focus {
-                	box-shadow:none;
-                	border: 1px solid transparent;
-                	color: #222;
-                	background: rgba(255, 255, 255, 1);
+                    box-shadow: none;
+                    border: 1px solid transparent;
+                    color: #222;
+                    background: rgba(255, 255, 255, 1);
                 }
             }
         }
