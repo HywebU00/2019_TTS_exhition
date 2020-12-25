@@ -377,6 +377,16 @@
                     </div>
                 </div>
             </div>
+            <div class="video_content">
+                <div class="camera_area">
+                    <img src="images/chat.jpg" alt="">
+                </div>
+                <div class="camera_function">
+                    <a href="#" class="end_talk"></a>
+                    <a href="#" class="end_video"></a>
+                    <a href="#" class="end_audio"></a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- JQ -->
@@ -414,6 +424,16 @@
                     container.removeClass('open');
                 }
             }
+        });
+        // 打開視訊
+        $('.chat_content').find('.video').off().click(function(e) {
+            $('.video_content').addClass('show');
+            e.preventDefault();
+        });
+        // 關閉視訊
+        $('.camera_function').find('a.end_talk').click(function(e) {
+            $('.video_content').removeClass('show');
+            e.preventDefault();
         });
     });
     </script>

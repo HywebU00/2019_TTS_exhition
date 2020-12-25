@@ -1036,4 +1036,81 @@ img.img-responsive {
             }
         }
     }
+    .video_content {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        left: 0;
+        z-index: 99;
+        background: rgba(0, 0, 0, .85);
+        display: none;
+        opacity: 0;
+        &.show {
+            display: block;
+            opacity: 1;
+        }
+        .camera_area {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            left: 0;
+            top: 0;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .camera_function {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            left: 0;
+            top: auto;
+            bottom: 0;
+            a.end_talk {
+                position: absolute;
+                top: 2em;
+                left: 50%;
+                margin-left: -2em;
+                width: 4em;
+                height: 4em;
+                background: url(../images/end.svg) no-repeat center center;
+            }
+            a.end_video {
+                position: absolute;
+                left: 3em;
+                top: 2.5em;
+                width: 3em;
+                height: 3em;
+                border: 1px solid rgba(255, 255, 255, .5);
+                background: url(../images/end_vidoe.svg) no-repeat center center;
+                background-size: 50%;
+                border-radius: 50%;
+                &:hover {
+                    background: url(../images/end_vidoe.svg) no-repeat center center rgba(0, 0, 0, .7);
+                    background-size: 50%;
+                }
+            }
+            a.end_audio {
+                position: absolute;
+                right: 3em;
+                top: 2.5em;
+                width: 3em;
+                height: 3em;
+                border: 1px solid rgba(255, 255, 255, .5);
+                background: url(../images/end_audio.svg) no-repeat center center;
+                background-size: 50%;
+                border-radius: 50%;
+                &:hover {
+                    background: url(../images/end_audio.svg) no-repeat center center rgba(0, 0, 0, .7);
+                    background-size: 50%;
+                }
+            }
+        }
+    }
 }
