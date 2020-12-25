@@ -1136,6 +1136,12 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 border: 1px solid transparent;
                 color: #444;
                 font-size: .813rem;
+                &:focus {
+                	box-shadow:none;
+                	border: 1px solid transparent;
+                	color: #222;
+                	background: rgba(255, 255, 255, 1);
+                }
             }
         }
         .btn_grp {
