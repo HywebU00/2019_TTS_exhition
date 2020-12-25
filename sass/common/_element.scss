@@ -377,7 +377,7 @@ img.img-responsive {
         height: 1.5em;
         display: block;
         position: absolute;
-        right: 1em;
+        right: .5em;
         top: .35em;
         @media screen and (max-width: 565px) {
             display: none;
@@ -391,7 +391,7 @@ img.img-responsive {
         }
         &:before {
             position: absolute;
-            top: .35em;
+            top: .25em;
             left: .25em;
             width: 10px;
             height: 10px;
