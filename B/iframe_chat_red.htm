@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- hyUI css -->
-    <link rel="stylesheet" href="css/tts_A_red.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
 
 <body class="chat_body">
@@ -377,7 +377,12 @@
                     </div>
                 </div>
             </div>
+            <!-- 視訊 -->
             <div class="video_content">
+                <div class="start_video">
+                    <a href="#">開始通話</a>
+                    <a href="#">拒絕通話</a>
+                </div>
                 <div class="camera_area">
                     <img src="images/chat.jpg" alt="">
                 </div>
@@ -434,6 +439,11 @@
         $('.camera_function').find('a.end_talk').click(function(e) {
             $('.video_content').removeClass('show');
             e.preventDefault();
+        });
+        // 開始通話關閉
+        $('.start_video').find('a').off().click(function(e) {
+            $(this).parents('.start_video').addClass('hide');
+             e.preventDefault();
         });
     });
     </script>

@@ -1300,6 +1300,34 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             display: block;
             opacity: 1;
         }
+        .start_video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #555;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            position: relative;
+            padding-top: 50%;
+            a {
+                width: 200px;
+                padding: .5em;
+                border-radius: .25em;
+                border: 1px solid #CCC;
+                text-align: center;
+                color: #FFF;
+                font-size: .938rem;
+                display: block;
+                margin: 0 auto 1em;
+                &:hover,&:focus {
+                    background:#333;
+                }
+            }
+            &.hide {
+                display: none;
+            }
+        }
         .camera_area {
             position: absolute;
             width: 100%;
