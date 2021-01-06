@@ -1311,14 +1311,14 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             z-index: 9;
             position: relative;
             padding-top: 50%;
-            span{
+            span {
                 text-align: center;
-                display:block;
+                display: block;
                 width: 90%;
                 margin: 0 auto 1em;
-                font-size:1.25rem;
-                font-weight:bold;
-                color:#FFF;
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: #FFF;
             }
             a {
                 width: 200px;
@@ -1330,8 +1330,8 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 font-size: .938rem;
                 display: block;
                 margin: 0 auto 1em;
-                &:hover,&:focus {
-                    background:#333;
+                &:hover, &:focus {
+                    background: #333;
                 }
             }
             &.hide {
@@ -1344,6 +1344,24 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             height: 70%;
             left: 0;
             top: 0;
+            .my_camera {
+                position: absolute;
+                width: 80px;
+                height: 120px;
+                top: .5em;
+                right: .5em;
+                border: 2px solid rgba(255, 255, 255, .75);
+                border-radius: .5em;
+                box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .75);
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
             img {
                 position: absolute;
                 top: 0;
@@ -1360,7 +1378,6 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             left: 0;
             top: auto;
             bottom: 0;
-
             a.end_talk {
                 position: absolute;
                 top: 3em;
@@ -1384,6 +1401,14 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                     background: url(../images/end_vidoe.svg) no-repeat center center rgba(0, 0, 0, .7);
                     background-size: 50%;
                 }
+                &.open_video {
+                    background: url(../images/start_vidoe.svg) no-repeat center center;
+                    background-size: 50%;
+                    &:hover {
+                        background: url(../images/start_vidoe.svg) no-repeat center center rgba(0, 0, 0, .7);
+                        background-size: 50%;
+                    }
+                }
             }
             a.end_audio {
                 position: absolute;
@@ -1399,8 +1424,16 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                     background: url(../images/end_audio.svg) no-repeat center center rgba(0, 0, 0, .7);
                     background-size: 50%;
                 }
+                &.open_audio {
+                    background: url(../images/start_audio.svg) no-repeat center center;
+                    background-size: 50%;
+                    &:hover {
+                        background: url(../images/start_audio.svg) no-repeat center center rgba(0, 0, 0, .7);
+                        background-size: 50%;
+                    }
+                }
             }
-            a.reverse{
+            a.reverse {
                 position: absolute;
                 right: .5em;
                 top: .5em;

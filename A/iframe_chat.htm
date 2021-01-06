@@ -387,6 +387,9 @@
                 </div>
                 <div class="camera_area">
                     <img src="images/chat.jpg" alt="">
+                    <div class="my_camera">
+                        <img src="images/chat.jpg" alt="">
+                    </div>
                 </div>
                 <div class="camera_function">
                     <a href="#" class="end_talk"></a>
@@ -448,6 +451,18 @@
             $(this).parents('.start_video').addClass('hide');
              e.preventDefault();
         });
+        //toogle video
+        $('.end_video').off().click(function(e) {
+            $(this).toggleClass('open_video');
+            e.preventDefault();
+        });
+        //toogle audio
+        $('.end_audio').off().click(function(e) {
+            $(this).toggleClass('open_audio');
+            e.preventDefault();
+        });
+
+        //toggle audio
     });
     </script>
 </body>
