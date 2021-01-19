@@ -1297,6 +1297,37 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
         background: rgba(0, 0, 0, .85);
         display: none;
         opacity: 0;
+        &.shrink {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            left: auto;
+            width: 100px;
+            height: 160px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+            border-radius: .25em;
+            .camera_area {
+                height: 100%;
+                border-radius: .25rem;
+                a.enlarge {
+                    display: none;
+                }
+                &:hover {
+                    a.enlarge {
+                        display: block;
+                    }
+                }
+                img, video {
+                    border-radius: .25rem;
+                }
+                .my_camera {
+                    display: none;
+                }
+            }
+            .camera_function {
+                display: none;
+            }
+        }
         &.show {
             display: block;
             opacity: 1;
@@ -1344,6 +1375,24 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             height: 70%;
             left: 0;
             top: 0;
+            a.enlarge {
+                position: absolute;
+                right: .25rem;
+                top: auto;
+                bottom: .25rem;
+                width: 3em;
+                height: 1.25em;
+                border: 1px solid rgba(255, 255, 255, .5);
+                background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .45);
+                background-size: contain;
+                border-radius: .25em;
+                z-index: 9;
+                display: none;
+                &:hover {
+                    background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .8);
+                    background-size: contain;
+                }
+            }
             .my_camera {
                 position: absolute;
                 width: 80px;
@@ -1353,7 +1402,8 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 border: 2px solid rgba(255, 255, 255, .75);
                 border-radius: .5em;
                 box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .75);
-                img,video {
+                display: block;
+                img, video {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -1362,7 +1412,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                     object-fit: cover;
                 }
             }
-            img,video {
+            img, video {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -1378,6 +1428,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             left: 0;
             top: auto;
             bottom: 0;
+            display: block;
             a.end_talk {
                 position: absolute;
                 top: 3em;
@@ -1446,6 +1497,22 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 z-index: 2;
                 &:hover {
                     background: url(../images/icon_reverse.svg) no-repeat center center rgba(0, 0, 0, .7);
+                    background-size: contain;
+                }
+            }
+            a.shrink {
+                position: absolute;
+                right: 4em;
+                top: .5em;
+                width: 3em;
+                height: 1.25em;
+                border: 1px solid rgba(255, 255, 255, .5);
+                background: url(../images/icon_shrink.svg) no-repeat center center rgba(0, 0, 0, .25);
+                background-size: contain;
+                border-radius: .25em;
+                z-index: 2;
+                &:hover {
+                    background: url(../images/icon_shrink.svg) no-repeat center center rgba(0, 0, 0, .7);
                     background-size: contain;
                 }
             }

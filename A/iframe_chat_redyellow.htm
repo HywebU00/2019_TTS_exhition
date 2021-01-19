@@ -387,6 +387,7 @@
                 </div>
                 <div class="camera_area">
                     <img src="images/chat.jpg" alt="">
+                    <a href="#" class="enlarge"></a>
                     <div class="my_camera">
                         <img src="images/chat.jpg" alt="">
                     </div>
@@ -396,6 +397,7 @@
                     <a href="#" class="end_video"></a>
                     <a href="#" class="end_audio"></a>
                     <a href="#" class="reverse"></a>
+                    <a href="#" class="shrink"></a>
                 </div>
             </div>
         </div>
@@ -459,6 +461,16 @@
         //toogle audio
         $('.end_audio').off().click(function(e) {
             $(this).toggleClass('open_audio');
+            e.preventDefault();
+        });
+        // 縮小
+        $('.shrink').off().click(function(event) {
+            $('.video_content').addClass('shrink');
+            e.preventDefault();
+        });
+        // 放大
+        $('.enlarge').off().click(function(event) {
+            $('.video_content').removeAttr('style').removeClass('shrink');
             e.preventDefault();
         });
     });
