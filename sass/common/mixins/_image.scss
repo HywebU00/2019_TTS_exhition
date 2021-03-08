@@ -8,7 +8,7 @@
 @mixin aspect-ratio($width, $height) {
     overflow: hidden;
     &:before {
-        display: inline-block;
+        display: block;
         content: "";
         padding-top: ($height / $width) * 100%;
     }

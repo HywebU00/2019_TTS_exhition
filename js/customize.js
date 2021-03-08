@@ -6,7 +6,7 @@ $(function() {
     $("img").lazyload({ effect: "fadeIn" });
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 4,

@@ -238,7 +238,7 @@ $(function() {
      //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         lazyLoad: 'ondemand',
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -255,7 +255,7 @@ $(function() {
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
+                dots: false
             }
         }, {
             breakpoint: 545,
