@@ -238,7 +238,8 @@ $(function() {
                 // $('.header').css('margin-top', menuH - hh);
                 $('.header').css('margin-top', -45);
                 // $('.main').css('margin-top', -menuH);
-                $('.main').css('margin-top', 40);
+                $('.main').css('margin-top', 0);
+                $('.innerpage').css('margin-top', 85);
             } else {
                 $('.header').removeClass('fixed');
                 $('.header').css('margin-top', 0);
