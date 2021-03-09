@@ -220,13 +220,14 @@ $(function() {
         menuH = Math.floor(_menu.height());
     $(window).bind("load scroll resize", function(e) {
         ww = _window.outerWidth();
+        scrollFun();
+    });
+    function scrollFun (){
         if ($(window).scrollTop() > hh - menuH) {
             _search.hide();
             if (ww >= wwSmall) {
                 $('.header').addClass('fixed');
-                // $('.header').css('margin-top', menuH - hh);
                 $('.header').css('margin-top', menuH - hh+40);
-                // $('.main').css('margin-top', -menuH);
                 $('.main').css('margin-top', hh);
 
             } else {
@@ -239,7 +240,7 @@ $(function() {
             $('.header').css('margin-top', 0);
             $('.main').css('margin-top', 0);
         }
-    });
+    }
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/
