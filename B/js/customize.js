@@ -1,5 +1,62 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    if ($('.header.online').length > 0) {
+        $('.search.online').show();
+        // header btn
+        var btnRegister = $('header.online').find('.btn_register'),
+            btnLogin = $('header.online').find('.btn_login');
+        btnLang = $('header.online').find('.top_language');
+        $('.menuBlock .menu').after('<div class="btn_block"></div>');
+        btnRegister.clone().prependTo('.btn_block');
+        btnLogin.clone().prependTo('.btn_block');
+        btnLang.clone().prependTo('.btn_block');
+        var burger = document.querySelector('.burger'),
+            header = document.querySelector('.header .online');
+        var _menuStatus = false;
+        $('.burger').click(function(e) {
+            if (!_menuStatus) {
+                $(this).parent().stop().addClass('menu-opened');
+                $('.menuBlock').stop().addClass('menu-opened');
+                $('header.online').addClass('menu-opened');
+                $('.search').stop().removeClass('search-opened');
+                _menuStatus = true;
+                _searchStatus = false;
+            } else {
+                $(this).parent().stop().removeClass('menu-opened');
+                $('.menuBlock').stop().removeClass('menu-opened');
+                $('header.online').removeClass('menu-opened');
+                $('.search').stop().removeClass('search-opened');
+                _menuStatus = false;
+            };
+            e.preventDefault();
+        });
+        var _searchStatus = false;
+        // 打開search
+        $('.top_search').off().click(function(e) {
+            if (!_searchStatus) {
+                $('.search.online').css('display','block').find('.text').css('display', 'block');
+                $('.burger-container').stop().removeClass('menu-opened')
+                $('.search').stop().addClass('search-opened');
+                $('.menuBlock').stop().removeClass('menu-opened');
+                $('header.online').stop().removeClass('menu-opened').addClass('menu-opened');
+                _searchStatus = true;
+                _menuStatus = false;
+            } else {
+                $('.search').stop().removeClass('search-opened');
+                $('.menuBlock').stop().removeClass('menu-opened');
+                $('header.online').stop().removeClass('menu-opened');
+                _searchStatus = false;
+            }
+            e.preventDefault();
+        });
+        $('.search').find('a.close').off().click(function(e) {
+            $('.search').stop().removeClass('search-opened');
+            $('.menuBlock').stop().removeClass('menu-opened');
+            $('header.online').stop().removeClass('menu-opened');
+            _searchStatus = false;
+            e.preventDefault();
+        });
+    }
     // img mask
     $(window).on("load resize scroll", function(e) {
         var window_H = $(window).innerHeight();

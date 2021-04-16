@@ -221,36 +221,7 @@ $(function() {
         $('.search').hide();
         search_mode = false;
     });
-    // 固定版頭
-    var hh = $('.header').outerHeight(),
-        menuH = _menu.outerHeight(),
-        navH = $('.navbar').height();
-    $(window).bind("load scroll resize", function(e) {
-        hh = Math.floor($('.header').outerHeight());
-        menuH = Math.floor(_menu.outerHeight());
-        ww = _window.outerWidth();
-        // console.log("header"+hh);
-        // console.log("menu"+menuH);
-        // console.log($(window).scrollTop());
-        if ($(window).scrollTop() > hh - menuH) {
-            if (ww >= wwSmall) {
-                $('.header').addClass('fixed');
-                // $('.header').css('margin-top', menuH - hh);
-                $('.header').css('margin-top', -45);
-                // $('.main').css('margin-top', -menuH);
-                $('.main').css('margin-top', 40);
-            } else {
-                $('.header').removeClass('fixed');
-                $('.header').css('margin-top', 0);
-                $('.main').css('margin-top', 0);
-            }
-        } else {
-            $('.header').removeClass('fixed');
-            $('.header').css('margin-top', 0);
-            // $('.header').css('margin-top', -1 * $(this).scrollTop());
-            $('.main').css('margin-top', 0);
-        }
-    });
+    固定
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/

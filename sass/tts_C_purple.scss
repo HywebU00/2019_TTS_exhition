@@ -75,7 +75,7 @@ $My_line:					#DDD;					 //預設線
 @import "sass_c/_header";					//header
 @import "sass_c/_language";					//語言選單
 @import "sass_c/_menu";						//menu
-
+@import "common/_onlineheader";				//only for header
 
 // 頁面
 @import "page_c/_template";					//版型初始設定
