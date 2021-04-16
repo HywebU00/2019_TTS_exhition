@@ -251,7 +251,7 @@ $menuItems: 8;
             }
         }
         .sidebarCtrl {
-            display: none;
+            display: none !important;
             left: 0px;
             @extend %mobileCtrlBtn;
             span {
@@ -273,7 +273,7 @@ $menuItems: 8;
         }
         // search
         .searchCtrl {
-            display: none;
+            display: none !important;
             right: 0px;
             font-size: 0em;
             @extend %mobileCtrlBtn;
@@ -298,6 +298,7 @@ $menuItems: 8;
         justify-self: flex-start;
         margin: 0 auto 0 0;
         padding: 0;
+        left:0;
         transition: .3s ease-out;
         background: transparent !important;
         @include box-sizing;
@@ -306,7 +307,7 @@ $menuItems: 8;
             text-align: center;
         }
         img {
-            display: block;
+            display: flex;
             max-width: 300px;
             max-height: 75px;
             margin: 0 auto;
