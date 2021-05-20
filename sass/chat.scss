@@ -559,7 +559,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
             display: none;
             &.show {
                 display: block;
-                z-index:9999;
+                z-index: 9999;
             }
         }
         @media screen and (max-width: 565px) {
@@ -1172,7 +1172,7 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 border: 1px solid transparent;
                 color: #444;
                 font-size: .813rem;
-                white-space:nowrap;
+                white-space: nowrap;
                 &:focus {
                     box-shadow: none;
                     border: 1px solid transparent;
@@ -1233,10 +1233,10 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                         background: #ffffff;
                         box-shadow: 0px 3px 3px rgba(0, 0, 0, .15);
                         color: #666;
-                        a{
-                            color:$color-blue;
-                            &:hover,&:focus {
-                                color:darken($color-blue,10);
+                        a {
+                            color: $color-blue;
+                            &:hover, &:focus {
+                                color: darken($color-blue, 10);
                             }
                         }
                         &:after {
@@ -1294,22 +1294,22 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                     float: left;
                     width: auto;
                     position: relative;
-                    a{
+                    a {
                         word-break: break-all;
-                        color:#FFF;
-                        display:block;
+                        color: #FFF;
+                        display: block;
                         text-decoration: underline;
-                        &:hover,&:focus {
-                            color:lighten($color-yellow,20);
+                        &:hover, &:focus {
+                            color: lighten($color-yellow, 20);
                         }
                     }
-                    .chat_link_info{
-                        img{
+                    .chat_link_info {
+                        img {
                             width: 50px;
                             height: 50px;
-                            border-radius:.25em;
+                            border-radius: .25em;
                             margin-bottom: .5em;
-                            display:block;
+                            display: block;
                         }
                     }
                     &:after {
@@ -1430,14 +1430,14 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                 right: 5%;
                 top: auto;
                 bottom: .25rem;
-                width: 90% ;
+                width: 90%;
                 height: 1.25em;
                 border: 1px solid rgba(255, 255, 255, .5);
                 background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .45);
                 background-size: contain;
                 border-radius: .25em;
                 z-index: 9;
-                display:none;
+                display: none;
                 &:hover {
                     background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .8);
                     background-size: contain;
@@ -1565,6 +1565,250 @@ $chat_color:#047cc3, #bc2769, #853512, #f8920f, #36810e, #008699, #7f50b4, #444,
                     background: url(../images/icon_shrink.svg) no-repeat center center rgba(0, 0, 0, .7);
                     background-size: contain;
                 }
+            }
+        }
+    }
+}
+.video_content {
+    position: fixed;
+    top: 60px;
+    width: 550px;
+    height: 550px;
+    right: 60px;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, .85);
+    display: none;
+    opacity: 0;
+    @include screen('mobile') {
+        width: 100%;
+        height: calc(100% - 60px);
+        top:60px;
+        right: 0;
+    }
+    &.shrink {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        left: auto;
+        width: 550px;
+        height: 550px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+        border-radius: .25em;
+        @include screen('mobile') {
+            width: 100%;
+            height: calc(100% - 60px);
+            right: 0;
+        }
+        .camera_area {
+            height: 80%;
+            border-radius: 0;
+            a.enlarge {
+                display: none;
+            }
+            &:hover {
+                a.enlarge {
+                    display: none;
+                }
+            }
+            img, video {
+                border-radius: .25rem;
+            }
+            .my_camera {
+                display: block;
+            }
+        }
+        .camera_function {
+            display: block;
+        }
+    }
+    &.show {
+        display: block;
+        opacity: 1;
+    }
+    .start_video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #555;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        position: relative;
+        padding-top: 30%;
+        span {
+            text-align: center;
+            display: block;
+            width: 90%;
+            margin: 0 auto 1em;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #FFF;
+        }
+        a {
+            width: 200px;
+            padding: .5em;
+            border-radius: .25em;
+            border: 1px solid #CCC;
+            text-align: center;
+            color: #FFF;
+            font-size: .938rem;
+            display: block;
+            margin: 0 auto 1em;
+            &:hover, &:focus {
+                background: #333;
+            }
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    .camera_area {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        left: 0;
+        top: 0;
+        a.enlarge {
+            position: absolute;
+            right: 5%;
+            top: auto;
+            bottom: .25rem;
+            width: 90%;
+            height: 1.25em;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .45);
+            background-size: contain;
+            border-radius: .25em;
+            z-index: 9;
+            display: none;
+            &:hover {
+                background: url(../images/icon_enlarge.svg) no-repeat center center rgba(0, 0, 0, .8);
+                background-size: contain;
+            }
+        }
+        .my_camera {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+            top: .5em;
+            right: .5em;
+            border: 2px solid rgba(255, 255, 255, .75);
+            border-radius: .5em;
+            box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .75);
+            display: block;
+            img, video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        img, video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .camera_function {
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        display: block;
+        background: #111;
+        border-radius: 0 0 .25em .25em;
+        a.end_talk {
+            position: absolute;
+            top: 3em;
+            left: 50%;
+            margin-left: -2em;
+            width: 4em;
+            height: 4em;
+            background: url(../images/end.svg) no-repeat center center;
+        }
+        a.end_video {
+            position: absolute;
+            left: 3em;
+            top: 3.5em;
+            width: 3em;
+            height: 3em;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: url(../images/end_vidoe.svg) no-repeat center center;
+            background-size: 50%;
+            border-radius: 50%;
+            &:hover {
+                background: url(../images/end_vidoe.svg) no-repeat center center rgba(0, 0, 0, .7);
+                background-size: 50%;
+            }
+            &.open_video {
+                background: url(../images/start_vidoe.svg) no-repeat center center;
+                background-size: 50%;
+                &:hover {
+                    background: url(../images/start_vidoe.svg) no-repeat center center rgba(0, 0, 0, .7);
+                    background-size: 50%;
+                }
+            }
+        }
+        a.end_audio {
+            position: absolute;
+            right: 3em;
+            top: 3.5em;
+            width: 3em;
+            height: 3em;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: url(../images/end_audio.svg) no-repeat center center;
+            background-size: 50%;
+            border-radius: 50%;
+            &:hover {
+                background: url(../images/end_audio.svg) no-repeat center center rgba(0, 0, 0, .7);
+                background-size: 50%;
+            }
+            &.open_audio {
+                background: url(../images/start_audio.svg) no-repeat center center;
+                background-size: 50%;
+                &:hover {
+                    background: url(../images/start_audio.svg) no-repeat center center rgba(0, 0, 0, .7);
+                    background-size: 50%;
+                }
+            }
+        }
+        a.reverse {
+            position: absolute;
+            right: .5em;
+            top: .5em;
+            width: 3em;
+            height: 1.25em;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: url(../images/icon_reverse.svg) no-repeat center center rgba(0, 0, 0, .25);
+            background-size: contain;
+            border-radius: .25em;
+            z-index: 2;
+            &:hover {
+                background: url(../images/icon_reverse.svg) no-repeat center center rgba(0, 0, 0, .7);
+                background-size: contain;
+            }
+        }
+        a.shrink {
+            position: absolute;
+            right: 4em;
+            top: .5em;
+            width: 3em;
+            height: 1.25em;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: url(../images/icon_shrink.svg) no-repeat center center rgba(0, 0, 0, .25);
+            background-size: contain;
+            border-radius: .25em;
+            z-index: 2;
+            &:hover {
+                background: url(../images/icon_shrink.svg) no-repeat center center rgba(0, 0, 0, .7);
+                background-size: contain;
             }
         }
     }

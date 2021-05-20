@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+     <!-- font-awesone -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_A.css">
 </head>
@@ -59,11 +61,17 @@
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
-         <!-- header Start -->
+        <!-- header Start -->
         <header class="header online">
             <div class="container">
                 <h1>
-                    <a href="../index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                    </picture>
+                    <a href="../index.htm">
+                        <picture>
+                            <source srcset="images/logo_mobile.png" media="(max-width: 575px)">
+                            <img src="images/logo.png" alt="網站標題">
+                        </picture>
+                    </a>
                 </h1>
                 <!-- 漢堡 -->
                 <div class="burger-container">
@@ -75,11 +83,11 @@
                 <!-- search按鈕 -->
                 <a href="#" class="top_search"></a>
                 <!-- 語系切換，中文版只show English，英文版只show 繁體中文 -->
-                <a href="#" class="top_language"><span>繁體中文</span></a>
+                <a href="#" class="top_language"><span><i class="fas fa-globe-americas"></i>繁體中文</span></a>
                 <!-- 登入 -->
-                <a href="#" class="btn_login"><span>登入/會員中心</span></a>
+                <a href="#" class="btn_login"><span><i class="fas fa-user"></i>登入/會員中心</span></a>
                 <!-- 預先登記 -->
-                <a href="#" class="btn_register"><span>預先登記</span></a>
+                <a href="#" class="btn_register"><span><i class="fas fa-chalkboard-teacher"></i>預先登記</span></a>
             </div>
         </header>
         <!-- header End -->
