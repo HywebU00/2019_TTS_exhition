@@ -13,15 +13,51 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- font-awesone -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_A.css">
     <link rel="stylesheet" href="css/chat.css">
 </head>
 
 <body>
+    <!-- 翻譯 -->
+    <div id="trans" style="" class="trans">
+        <div class="trans_window trans_open color_blue" style="transform: translateX(0px);">
+            <div class="trans_function">
+                <a href="#" class="close"><i class="fas fa-times"></i></a>
+                <div class="messenger">翻譯<span></span></div>
+            </div>
+            <div class="trans_inside" id="transArea">
+                <div class="trans_lang">
+                    <select id="srcLang" onchange="doTrans();">
+                        <option value="aaa">aaa</option>
+                        <option value="bbb">bbb</option>
+                        <option value="ccc">ccc</option>
+                    </select>
+                    <button type="button"><i class="fas fa-exchange-alt"></i></button>
+                    <select id="srcLang" onchange="doTrans();">
+                        <option value="aaa">aaa</option>
+                        <option value="bbb">bbb</option>
+                        <option value="ccc">ccc</option>
+                    </select>
+                </div>
+                <div class="trans_tool">
+                    <a href="javascript:clearText()" class="do_delete">clear</a>
+                </div>
+                <div class="src-text" id="transContent" contenteditable="true">在美國有很多義大利的移民，因此有許多美味的義大利餐廳，二世谷披薩的美味完全不輸給它們！我的奶奶是義大利移民經常做義大利料理，二世谷披薩就連習慣正統義大利味的我都很滿意</div>
+                <div class="trans_tool">
+                    <a href="javascript:doCopyText()" title="Hooray!" class="do_copy">copy</a>
+                    <a href="javascript:doTrans();" class="do_trans" onclick="">translate</a>
+                </div>
+                <div class="trans-text" id="resultContent">There are many Italian immigrants in the United States, so there are many delicious Italian restaurants, and the deliciousness of Niseko pizza is not lost to them! My grandmother is an Italian immigrant who often cooks Italian cuisine. Niseko pizza is very satisfying even for those who are used to the orthodox Italian taste.</div>
+            </div>
+        </div>
+        <!--end trans_window--->
+    </div>
     <!-- video dragble -->
     <!-- 視訊 -->
-    <div class="video_content show shrink ui-draggable ui-draggable-handle">
+   <!--  <div class="video_content show shrink ui-draggable ui-draggable-handle">
         <div class="start_video">
             <span>Hyweb Inc. Ltd</span>
             <span>撥打中...</span>
@@ -42,7 +78,7 @@
             <a href="#" class="reverse"></a>
             <a href="#" class="shrink"></a>
         </div>
-    </div>
+    </div> -->
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -2024,11 +2060,11 @@
                         <!-- 輸入 -->
                         <div class="type_area">
                             <div class="form_grp">
-                                <input type="text">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
                             </div>
                             <div class="btn_grp">
                                 <button type="button" class="btn btn-orange">傳送</button>
-                                <button type="button" class="btn btn-orange">翻譯</button>
+                                <button type="button" class="btn btn-green">翻譯</button>
                             </div>
                         </div>
                     </div>
