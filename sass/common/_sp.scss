@@ -1108,26 +1108,33 @@ $chooseWidth :$chooseUL/$chooseLength;
 }
 .agenda_view {
     .toggle_calendar {
-        width: 400px;
+        width: 500px;
         position: relative;
         margin: -3em 0 1em auto;
         overflow: hidden;
+        display:flex;
+        justify-content: flex-end;
         @include screen('mobile') {
             margin-top: 0;
             width: 100%;
         }
         a {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100px;
+            max-width:120px;
             border: 2px solid $aHover;
+            border-left:none;
             padding: .3em;
+            font-size:.875em;
             text-align: center;
             display: block;
-            float: left;
-            width: 50%;
             color: #555;
             &:first-child {
                 border-radius: 6px 0 0 6px;
+                border: 2px solid $aHover;
             }
-            &:nth-child(2) {
+            &:last-child{
                 border-radius: 0 6px 6px 0;
             }
             &:hover, &:focus {

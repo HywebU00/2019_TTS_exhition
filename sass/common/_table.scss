@@ -15,9 +15,10 @@ table {
         border: #ddd 1px solid;
         border-left: none;
         border-right: none;
-        word-break: break-all;
+        // word-break: break-all;
         a {
-            word-break: break-all;
+            // word-break: break-all;
+            display:inline-block;
         }
     }
     th {
